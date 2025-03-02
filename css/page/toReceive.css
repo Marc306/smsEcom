@@ -1,0 +1,157 @@
+:root {
+    --primary: #2600bc;
+    --secondary: #666666;
+    --background: #f5f5f5;
+    --error: #ff4444;
+    --success: #28a745;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.selected-transaction {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.selected-transaction a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.all-transaction, 
+.toPay-transaction, 
+.completed-transaction {
+    padding: 15px 20px;
+    width: 100%;
+    color: var(--secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.all-transaction:hover, 
+.toPay-transaction:hover, 
+.completed-transaction:hover {
+    color: var(--primary);
+    background-color: rgba(38, 0, 188, 0.05);
+}
+
+.toReceive-transaction {
+    padding: 15px 20px;
+    width: 100%;
+    border-bottom: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    position: relative;
+}
+
+.toReceive-transaction::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    animation: borderPulse 2s infinite;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 30px auto;
+    max-width: 1200px;
+    min-height: 480px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 20px;
+}
+
+.completed-items-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: rgb(245, 245, 245);
+    min-height: 490px;
+    border-radius: 8px;
+}
+
+.notFound-image-div {
+    position: relative;
+    background-color: rgb(252, 252, 252);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.notFound-image-div:hover {
+    transform: translateY(-5px);
+}
+
+.text-notFound {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: var(--secondary);
+    white-space: nowrap;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.schedule-date {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    color: #666666;
+    margin: 4px 0;
+}
+
+@keyframes borderPulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .all-transaction, .toPay-transaction, 
+    .toReceive-transaction, .completed-transaction {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .all-transaction, .toPay-transaction, 
+    .toReceive-transaction, .completed-transaction {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .text-notFound {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}

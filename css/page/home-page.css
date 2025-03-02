@@ -1,0 +1,329 @@
+:root {
+    --primary: #2600bc;
+    --secondary: #666666;
+    --background: #f5f5f5;
+    --error: #ff4444;
+    --success: #28a745;
+    --white: #ffffff;
+    --title-color: #1a008c;
+}
+
+.home-page {
+    position: relative;
+    background: linear-gradient(135deg, rgba(38, 0, 188, 0.9), rgba(0, 14, 103, 0.95));
+    overflow: hidden;
+}
+
+.home-page::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    top: -100%;
+    left: -50%;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.info-home-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.image-bcp-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInLeft 1s ease;
+}
+
+.bcp-img {
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.bcp-img:hover {
+    transform: scale(1.02);
+}
+
+.bcp-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInRight 1s ease;
+}
+
+.first-text {
+    font-size: 60px;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    animation: fadeInDown 0.8s ease;
+}
+
+.second-text {
+    font-size: 28px;
+    text-align: center;
+    color: var(--white);
+    opacity: 0.9;
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease 0.2s;
+}
+
+.text-title-box {
+    padding: 60px 0 40px;
+    background-color: var(--background);
+}
+
+.product-text-title {
+    text-align: center;
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 36px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product-text-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.contact-info {
+    background-image: url('socialMediaImage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+    z-index: 1;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.box-contact {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    animation: fadeIn 1s ease;
+}
+
+.fb-page {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.follow-us-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.follow-us-text img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.follow-us-text:hover img {
+    transform: scale(1.2);
+}
+
+.follow-us-btn {
+    border: none;
+    background: var(--white);
+    color: var(--primary);
+    padding: 12px 36px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.follow-us-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: var(--primary);
+    color: var(--white);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1160px) {
+    .navbar {
+        padding: 20px;
+    }
+    .info-home-page {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 1111px) {
+    .info-home-page {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+        padding: 20px;
+    }
+    .first-text {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    .second-text {
+        font-size: 24px;
+    }
+    .bcp-img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-home-page {
+        padding: 15px;
+    }
+    .first-text {
+        font-size: 36px;
+    }
+    .second-text {
+        font-size: 20px;
+    }
+    .bcp-img {
+        height: 300px;
+    }
+    .fb-page {
+        font-size: 36px;
+    }
+    .follow-us-text {
+        font-size: 20px;
+    }
+    .box-contact {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .first-text {
+        font-size: 28px;
+    }
+    .second-text {
+        font-size: 16px;
+    }
+    .bcp-img {
+        height: 250px;
+    }
+    .fb-page {
+        font-size: 28px;
+    }
+    .follow-us-text {
+        font-size: 16px;
+    }
+    .follow-us-btn {
+        padding: 10px 24px;
+        font-size: 16px;
+    }
+    .product-text-title {
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,33 @@
+.payment-container {
+    padding: 20px;
+    background-color: skyblue;
+    border-radius: 10px;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: start;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.payment-option input {
+    margin-right: 15px;
+}
+
+.payment-summary {
+    margin-top: 20px;
+}
+
+.gcash-logo{
+    margin-right: 15px;
+    width: 35px;
+}

@@ -1,0 +1,359 @@
+:root {
+    --primary: #2600bc;
+    --secondary: #666666;
+    --background: #f5f5f5;
+    --white: #ffffff;
+    --title-color: #1a008c;
+    --text-color: #333333;
+    --error: #ff4444;
+    --success: #28a745;
+    --price-color: #FE2727;
+    --cart-color: #27a2d2;
+}
+
+.product-details-div {
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+.details-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px 50px;
+    animation: fadeIn 0.8s ease;
+}
+
+.image-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    animation: fadeInLeft 1s ease;
+}
+
+.other-details {
+    padding: 40px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    animation: fadeInRight 1s ease;
+}
+
+.image-product, .size-chart-div, .discript-chart-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-div {
+    text-align: center;
+    background: linear-gradient(135deg, #e6f3ff, #f0f7ff);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-div:hover {
+    transform: translateY(-5px);
+}
+
+.image-product {
+    height: 410px;
+    width: 520px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-product:hover {
+    transform: scale(1.02);
+}
+
+.size-chart-image {
+    text-align: center;
+    height: 207px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.discript-chart-div span {
+    margin-top: 20px;
+    color: var(--secondary);
+}
+
+.course-text, .year-text, .gender-text, .size-text {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--title-color);
+    margin-bottom: 15px;
+}
+
+.year-text {
+    margin-bottom: 30px;
+}
+
+.limit-text-2line {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pricing-div {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(254, 39, 39, 0.05);
+    border-radius: 12px;
+}
+
+.price-text {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: var(--price-color);
+    font-weight: 700;
+}
+
+.icon-peso {
+    margin-right: 10px;
+    opacity: 0.8;
+}
+
+.product-select-size-gender {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+
+.div-select-gender {
+    flex: 1;
+}
+
+.selecting-gender, .selecting-size {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.selecting-gender:focus, .selecting-size:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(38, 0, 188, 0.1);
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.buttons-buyNow-addtocart{
+    display: flex;
+    gap: 10px;
+}
+
+.buy-now-btn, .add-to-cart-btn {
+    flex: 1;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buy-now-btn {
+    background-color: var(--price-color);
+    box-shadow: 0 4px 15px rgba(254, 39, 39, 0.3);
+}
+
+.buy-now-btn:hover {
+    background-color: #e50c0c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(254, 39, 39, 0.4);
+}
+
+.add-to-cart-btn {
+    background-color: var(--cart-color);
+    box-shadow: 0 4px 15px rgba(39, 162, 210, 0.3);
+}
+
+.add-to-cart-btn:hover {
+    background-color: #1a8ab8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 162, 210, 0.4);
+}
+
+.added-to-cart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--primary);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.added-active {
+    opacity: 1;
+    animation: bounceIn 0.5s ease;
+}
+
+.added-to-cart-icon img {
+    height: 20px;
+    margin-right: 8px;
+    animation: spin 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(0.89);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1170px) {
+    .details-div {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .other-details {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    .details-div {
+        padding: 0 20px 40px;
+    }
+    
+    .image-div {
+        padding: 30px;
+    }
+    
+    .image-product {
+        height: 312px;
+        width: 412px;
+    }
+    
+    .size-chart-image {
+        width: 410px;
+    }
+}
+
+@media (max-width: 639px) {
+    .course-text {
+        font-size: 24px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 553px) {
+    .image-div {
+        padding: 15px;
+    }
+    
+    .image-product {
+        height: 212px;
+        width: 312px;
+    }
+    
+    .size-chart-image {
+        height: 170px;
+        width: 310px;
+    }
+    
+    .other-details {
+        padding: 20px;
+    }
+    
+    .course-text {
+        font-size: 20px;
+    }
+    
+    .year-text, .gender-text, .size-text {
+        font-size: 18px;
+    }
+    
+    .price-text {
+        font-size: 24px;
+    }
+    
+    .product-select-size-gender {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .selecting-gender, .selecting-size {
+        padding: 10px 15px;
+    }
+    
+    .buy-now-btn, .add-to-cart-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
