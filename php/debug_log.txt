@@ -3058,3 +3058,1883 @@ Fetching orders for student_id: {"student_id":"s21019965"}
 Fetching orders for student_id: {"student_id":"s21019965"}
 Fetching orders for student_id: {"student_id":"s21019965"}
 Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"a7s5d4f","name":"Bachelor of Science in Education School Uniform","price":"1060.00","image":"image/products/teacherUnif3rdTo4thYear.jpg","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Gcash Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => a7s5d4f
+            [name] => Bachelor of Science in Education School Uniform
+            [price] => 1060.00
+            [image] => image/products/teacherUnif3rdTo4thYear.jpg
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Gcash Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 109 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 109
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"a7s5d4f","name":"Bachelor of Science in Education School Uniform","price":"1060.00","image":"image/products/teacherUnif3rdTo4thYear.jpg","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Gcash Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => a7s5d4f
+            [name] => Bachelor of Science in Education School Uniform
+            [price] => 1060.00
+            [image] => image/products/teacherUnif3rdTo4thYear.jpg
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Gcash Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 110 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 110
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 111 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 111
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 112 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 112
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"456rty","name":"National Service Training Program(NSTP2) ","price":"250.00","image":"image/products/istockphoto.jpg","typeItem":"books","payment_method":"Walk-In Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => 456rty
+            [name] => National Service Training Program(NSTP2) 
+            [price] => 250.00
+            [image] => image/products/istockphoto.jpg
+            [typeItem] => books
+            [payment_method] => Walk-In Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Walk-In Payment
+✅ Immediate Pickup Scheduled for Order ID: 113 on 2025-03-05
+✅ Order Placed Successfully - Order ID: 113
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 114 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 114
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 115 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 115
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 116 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 116
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 117 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 117
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 118 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 118
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 119 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 119
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"123qwe","name":"Bachelor of Science in Criminology School Uniform","price":"1070.00","image":"image/products/crim1stTo4thYear.jpg","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Gcash Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => 123qwe
+            [name] => Bachelor of Science in Criminology School Uniform
+            [price] => 1070.00
+            [image] => image/products/crim1stTo4thYear.jpg
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Gcash Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 120 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 120
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"nvgh056","name":"Bachelor of Science in Tourism Management School Uniform","price":"1100.00","image":"image/products/tourism3rdTo4thYear.jpg","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Gcash Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => nvgh056
+            [name] => Bachelor of Science in Tourism Management School Uniform
+            [price] => 1100.00
+            [image] => image/products/tourism3rdTo4thYear.jpg
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Gcash Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 121 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 121
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"fghj987","name":"Bachelor of Science in Information Technology School Uniform","price":"1065.00","image":"image/products/IT3rdTo4thYear.jpg","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Gcash Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => fghj987
+            [name] => Bachelor of Science in Information Technology School Uniform
+            [price] => 1065.00
+            [image] => image/products/IT3rdTo4thYear.jpg
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Gcash Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 122 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 122
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 123 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 123
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"fghj543","name":"Bachelor of Science in Hospitality Management School Uniform","price":"1080.00","image":"image/products/hm3rdTo4thYear.jpg","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Gcash Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => fghj543
+            [name] => Bachelor of Science in Hospitality Management School Uniform
+            [price] => 1080.00
+            [image] => image/products/hm3rdTo4thYear.jpg
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Gcash Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 124 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 124
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"fghj543","name":"Bachelor of Science in Hospitality Management School Uniform","price":"1080.00","image":"image/products/hm3rdTo4thYear.jpg","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Walk-In Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => fghj543
+            [name] => Bachelor of Science in Hospitality Management School Uniform
+            [price] => 1080.00
+            [image] => image/products/hm3rdTo4thYear.jpg
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Walk-In Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Walk-In Payment
+✅ Immediate Pickup Scheduled for Order ID: 125 on 2025-03-06
+✅ Order Placed Successfully - Order ID: 125
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}

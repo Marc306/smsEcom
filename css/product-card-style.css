@@ -122,6 +122,12 @@
     }
 }
 
+@media (max-width: 900px){
+    .center-card-box{
+        margin-top: 100px;
+    }
+}
+
 @media (max-width: 655px){
     .card-box, .card-box2{
         grid-template-columns: 1fr;

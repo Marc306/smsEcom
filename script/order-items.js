@@ -137,6 +137,7 @@ class Order {
         let orderAttributes = "";
         this.orderListItem.forEach((eachOrder) => {
             const paymentStatus = eachOrder.payment.status;
+            console.log(paymentStatus);
             let getItem = eachOrder.items.length > 0 ? eachOrder.items[0] : null;
             if (!getItem) return;
             
@@ -194,13 +195,13 @@ class Order {
                                     
                                     <label class="custom-file-upload1">
                                         Send Receipt
-                                        <input type="file" class="file-image-input1" name="receipt_image" accept=".jpg,.jpeg,.png">
+                                        <input type="file" class="file-image-input1" name="receipt_url" accept=".jpg,.jpeg,.png">
                                     </label> 
                                 </form>` : ""
                             }
 
                             <div class="button-div">
-                                <button class="cancel-button" data-product-id="${getItem.productId}" ${paymentStatus !== "Pending" ? "disabled class='disabled'" : ""}>Cancel Order</button>
+                                <button class="cancel-button" data-product-id="${getItem.productId}" ${paymentStatus !== "Pending" ? "disabled" : ""}>Cancel Order</button>
                             </div>
                         </div>
                     </div>
@@ -211,7 +212,7 @@ class Order {
             loadReceipt();
         });
 
-        if (this.orderListItem.length === 0) {
+        if (this.orderListItem.length == 0) {
             document.querySelector(".main-content").innerHTML = `
             <div class="completed-items-container">
                 <div class="notFound-image-div">
@@ -231,9 +232,40 @@ class Order {
 
     uploadReceiptImage() {
         document.querySelectorAll(".file-image-input1").forEach((input) => {
-            input.addEventListener("change", function () {
-                const form = this.closest("form"); // Find the nearest form
-                form.submit();
+            input.addEventListener("change", async function (e) {
+                e.preventDefault();
+                const form = this.closest("form");
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch("http://localhost/smsEcommerce/php/upload-receipt.php", {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        // Update UI to show receipt was uploaded
+                        const label = form.querySelector(".custom-file-upload1");
+                        if (label) {
+                            label.textContent = "Receipt Sent";
+                            label.style.background = "#ccc";
+                            label.style.cursor = "not-allowed";
+                        }
+                        
+                        // Disable the input
+                        this.disabled = true;
+                        
+                        // Show success message
+                        alert("Receipt uploaded successfully!");
+                    } else {
+                        alert(data.message || "Error uploading receipt");
+                    }
+                } catch (error) {
+                    console.error("Error:", error);
+                    alert("Error uploading receipt. Please try again.");
+                }
             });
         });
     }
@@ -288,6 +320,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tryLoad();
 });
-
-
-

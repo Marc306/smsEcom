@@ -1,14 +1,36 @@
-// const menuDiv = document.querySelector(".menu-div");
-// const sideBar2 = document.querySelector(".side-bar2");
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.querySelector('.sidebar-overlay');
 
-// menuDiv.addEventListener("click", () => {
-//     const resizeView = window.matchMedia("(max-width: 1200px)").matches;
-//     console.log("Resize view:", resizeView); // Log for debugging
+    // Function to open sidebar
+    function openSidebar() {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when sidebar is open
+    }
 
-//     if (resizeView) {
-//         sideBar2.classList.toggle("active-sidebar2");
-//         console.log("Toggled active-sidebar2 class."); // Log toggle action
-//     }
-// });
+    // Function to close sidebar
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
 
+    // Toggle sidebar when hamburger button is clicked
+    sidebarToggle?.addEventListener('click', openSidebar);
 
+    // Close sidebar when close button is clicked
+    sidebarClose?.addEventListener('click', closeSidebar);
+
+    // Close sidebar when overlay is clicked
+    overlay?.addEventListener('click', closeSidebar);
+
+    // Close sidebar when escape key is pressed
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+            closeSidebar();
+        }
+    });
+});

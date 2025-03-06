@@ -13,14 +13,14 @@
 }
 
 .home-page2 {
-    height: 50vh;
+    height: 70vh;
     background: rgb(63,183,232);
     background: linear-gradient(180deg, rgba(63,183,232,1) 0%, rgba(54,78,228,1) 50%, rgba(0,14,103,1) 100%);
     position: relative;
     overflow: hidden;
 }
 
-.home-page2::after {
+/* .home-page2::after {
     content: '';
     position: absolute;
     bottom: -50px;
@@ -29,7 +29,7 @@
     height: 100px;
     background: white;
     transform: skewY(-3deg);
-}
+} */
 
 .info-home-page {
     display: flex;

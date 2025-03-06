@@ -8,13 +8,13 @@
 }
 
 .home-page2 {
-    height: 50vh;
+    height: 70vh;
     background: linear-gradient(135deg, rgba(38, 0, 188, 0.9), rgba(0, 14, 103, 0.95));
     position: relative;
     overflow: hidden;
 }
 
-.home-page2::before {
+/* .home-page2::before {
     content: '';
     position: absolute;
     width: 200%;
@@ -23,7 +23,7 @@
     top: -100%;
     left: -50%;
     animation: rotate 30s linear infinite;
-}
+} */
 
 @keyframes rotate {
     from { transform: rotate(0deg); }

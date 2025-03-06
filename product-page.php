@@ -84,30 +84,15 @@
                     <div class="select-link" data-category="junior">Junior Year Items</div>
                     <div class="senior-year-button select-link" data-category="senior">Senior Year Items</div>
                 </div>
-                
-                
             </div>
-            <div class="right-section2">
-                <div class="showing-number-of-products">
-                    <div class="show-div">
-                        Showing <span>1</span>-<span>16</span> of <span>32</span> results 
-                    </div>
-                </div>
 
+            <div class="right-section2">
                 <div class="show-short-div">
                     <div class="d-flex">
                         <input class="form-control me-2 js-search-input" placeholder="Search">
                         <button class="btn btn-outline-success js-search-button">Search</button>
                     </div>
                 </div> 
-            </div>
-
-            <div class="burger-menu">
-                <div class="div-burger">
-                    <div class="burger-div-image">
-                        <img class="burger-imge" src="image/icon/menu.png" alt=""> 
-                    </div>
-                </div>
             </div>
         </div>
 

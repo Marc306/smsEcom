@@ -1,14 +1,14 @@
-const dropDownSearch = document.querySelector(".right-section2");
-document.querySelector(".burger-imge").addEventListener("click", () =>{
-    dropDownSearch.classList.toggle("right-section2-height");
+// const dropDownSearch = document.querySelector(".right-section2");
+// document.querySelector(".burger-imge").addEventListener("click", () =>{
+//     dropDownSearch.classList.toggle("right-section2-height");
 
-    filterSide.classList.remove("side-bar-filter-remove");
-});
-window.addEventListener("resize", () =>{
-    if(window.innerWidth > 900){
-        dropDownSearch.classList.remove("right-section2-height");
-    }
-});
+//     filterSide.classList.remove("side-bar-filter-remove");
+// });
+// window.addEventListener("resize", () =>{
+//     if(window.innerWidth > 900){
+//         dropDownSearch.classList.remove("right-section2-height");
+//     }
+// });
 
 
 

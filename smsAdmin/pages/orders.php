@@ -45,8 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             case 'confirm_payment':
                 $conn->begin_transaction();
                 
-                // Update order status to 'To Receive'
-                $stmt = $conn->prepare("UPDATE orders SET status = 'To Receive' WHERE id = ? AND status = 'To Pay'");
+                // Update order status to 'Completed' and payment status
+                $stmt = $conn->prepare("UPDATE orders SET status = 'Completed' WHERE id = ?");
                 if (!$stmt) {
                     throw new Exception($conn->error);
                 }
@@ -56,14 +56,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     throw new Exception($stmt->error);
                 }
                 
-                if ($stmt->affected_rows > 0) {
+                // Update payment status to Confirmed
+                $stmt = $conn->prepare("UPDATE payments SET status = 'Confirmed' WHERE order_id = ?");
+                if (!$stmt) {
+                    throw new Exception($conn->error);
+                }
+                
+                $stmt->bind_param("i", $id);
+                if (!$stmt->execute()) {
+                    throw new Exception($stmt->error);
+                }
+                
+                if ($stmt->affected_rows >= 0) {
                     $conn->commit();
                     $response = [
                         'success' => true,
-                        'message' => 'Payment confirmed'
+                        'message' => 'Payment confirmed and order completed'
                     ];
                 } else {
-                    throw new Exception("Order not found or cannot be marked as paid");
+                    throw new Exception("Order not found or cannot be marked as completed");
                 }
                 $stmt->close();
                 break;
@@ -180,6 +191,7 @@ $query = "
         o.created_at,
         CONCAT(s.first_name, ' ', s.last_name) as student_name,
         p.status as payment_status,
+        COALESCE(p.receipt_url, '') as receipt_url,
         GROUP_CONCAT(
             CONCAT(
                 pr.name, 
@@ -199,7 +211,7 @@ $query = "
     LEFT JOIN payments p ON o.id = p.order_id
     LEFT JOIN orders_items oi ON o.id = oi.order_id
     LEFT JOIN products pr ON oi.productId = pr.productId
-    GROUP BY o.id
+    GROUP BY o.id, o.student_id, o.total_price, o.payment_method, o.status, o.created_at, s.first_name, s.last_name, p.status, p.receipt_url
     ORDER BY o.created_at DESC
 ";
 
@@ -233,6 +245,7 @@ $result = $conn->query($query);
                             <th>Order Status</th>
                             <th>Payment Status</th>
                             <th>Created At</th>
+                            <th>Receipt</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -262,18 +275,46 @@ $result = $conn->query($query);
                         echo "<td>{$row['payment_method']}</td>";
                         echo "<td><span class='badge {$orderStatusClass}'>{$row['order_status']}</span></td>";
                         if ($row['payment_status']) {
-                            $paymentStatusClass = $row['payment_status'] === 'Pending' ? 'bg-warning' : 'bg-success';
+                            $paymentStatusClass = '';
+                            switch($row['payment_status']) {
+                                case 'Pending':
+                                    $paymentStatusClass = 'bg-warning';
+                                    break;
+                                case 'Confirmed':
+                                    $paymentStatusClass = 'bg-success';
+                                    break;
+                                default:
+                                    $paymentStatusClass = 'bg-secondary';
+                            }
                             echo "<td><span class='badge {$paymentStatusClass}'>{$row['payment_status']}</span></td>";
                         } else {
                             echo "<td>-</td>";
                         }
                         echo "<td>" . date('Y-m-d H:i:s', strtotime($row['created_at'])) . "</td>";
+                        
+                        // Receipt column
                         echo "<td>";
                         
-                        if ($row['order_status'] === 'To Pay') {
+                        if ($row['payment_method'] === 'Gcash Payment') {
+                            if (!empty($row['receipt_url'])) {
+                                echo '<a href="/smsEcommerce/smsAdmin/download-receipt.php?order_id=' . $row['id'] . '" class="btn btn-sm btn-primary">Download Receipt</a>';
+                            } else {
+                                echo '<span class="text-muted">No receipt uploaded</span>';
+                            }
+                        } else {
+                            echo "<span class='text-muted'>-</span>";
+                        }
+                        echo "</td>";
+                        
+                        echo "<td>";
+                        
+                        // Show Confirm Payment button if payment is pending
+                        if ($row['payment_status'] === 'Pending') {
                             echo "<button class='btn btn-sm btn-success me-2' onclick='confirmPayment({$row['id']})'>Confirm Payment</button>";
-                            echo "<button class='btn btn-sm btn-info' onclick='showPickupModal({$row['id']})'>Assign Pickup</button>";
-                        } else if ($row['order_status'] === 'To Receive') {
+                        }
+                        
+                        // Show Assign Pickup button for To Pay and To Receive orders
+                        if ($row['order_status'] === 'To Pay' || $row['order_status'] === 'To Receive') {
                             echo "<button class='btn btn-sm btn-info' onclick='showPickupModal({$row['id']})'>Assign Pickup</button>";
                         }
                         
@@ -336,7 +377,7 @@ function showPickupModal(orderId) {
     const alertDiv = document.getElementById('pickupDateAlert');
     alertDiv.classList.remove('d-none');
     
-    fetch('/smsAdmin/pages/orders.php', {
+    fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -368,7 +409,7 @@ function assignPickup() {
         return;
     }
     
-    fetch('/smsAdmin/pages/orders.php', {
+    fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -400,7 +441,7 @@ function markToReceive(orderId) {
         return;
     }
     
-    fetch('/smsAdmin/pages/orders.php', {
+    fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -425,7 +466,7 @@ function confirmPayment(orderId) {
         return;
     }
     
-    fetch('/smsAdmin/pages/orders.php', {
+    fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -435,7 +476,27 @@ function confirmPayment(orderId) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            location.reload();
+            // Find the row
+            const row = document.querySelector(`tr:has(button[onclick="confirmPayment(${orderId})"])`);
+            if (row) {
+                // Update order status
+                const orderStatusCell = row.querySelector('td:nth-child(7)');
+                if (orderStatusCell) {
+                    orderStatusCell.innerHTML = '<span class="badge bg-success">Completed</span>';
+                }
+                
+                // Update payment status
+                const paymentStatusCell = row.querySelector('td:nth-child(8)');
+                if (paymentStatusCell) {
+                    paymentStatusCell.innerHTML = '<span class="badge bg-success">Confirmed</span>';
+                }
+                
+                // Remove action buttons
+                const actionCell = row.querySelector('td:last-child');
+                if (actionCell) {
+                    actionCell.innerHTML = '<span class="text-success">Order Completed</span>';
+                }
+            }
         } else {
             alert(data.error || 'Error confirming payment');
         }
