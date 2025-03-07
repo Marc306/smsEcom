@@ -21,13 +21,14 @@ $conn->select_db(DB_NAME);
 // Create necessary tables
 $tables = [
     "CREATE TABLE IF NOT EXISTS products (
-        productId VARCHAR(255) PRIMARY KEY,
+        productId VARCHAR(255) NOT NULL PRIMARY KEY,
+        image VARCHAR(255) NOT NULL,
+        productDescription VARCHAR(255) NOT NULL,
         name VARCHAR(255) NOT NULL,
-        description TEXT,
+        typeItem ENUM('uniform', 'books', 'others') NOT NULL,
         price DECIMAL(10,2) NOT NULL,
-        stock INT NOT NULL,
-        category VARCHAR(50) NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        quantity INT(10) UNSIGNED NOT NULL DEFAULT 1,
+        stock INT(255) NOT NULL
     )",
     
     "CREATE TABLE IF NOT EXISTS orders (

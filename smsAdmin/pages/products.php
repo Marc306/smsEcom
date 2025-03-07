@@ -12,11 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 case 'add':
                     $productId = $conn->real_escape_string($_POST['productId']);
                     $name = $conn->real_escape_string($_POST['name']);
-                    $productDescription = $conn->real_escape_string($_POST['productDescription']);
+                    $productDescription = $_POST['productDescription'];
                     $price = floatval($_POST['price']);
                     $stock = intval($_POST['stock']);
                     $typeItem = $conn->real_escape_string($_POST['typeItem']);
-                    $image = $conn->real_escape_string($_POST['imageName']); // Store image name only
+                    $image = $_POST['image']; // Store image data
                     
                     // Begin transaction
                     $conn->begin_transaction();
@@ -188,15 +188,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Type Item</label>
-                        <select class="form-control" name="typeItem" required>
-                            <option value="Uniform">Uniform</option>
-                            <option value="Book">Book</option>
-                            <option value="Other">Other</option>
+                        <select class="form-control" name="typeItem" id="typeItem" required>
+                            <option value="uniform">Uniform</option>
+                            <option value="books">Books</option>
+                            <option value="others">Others</option>
                         </select>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3" id="textDescription">
                         <label class="form-label">Description</label>
-                        <textarea class="form-control" name="productDescription" required></textarea>
+                        <textarea class="form-control" name="productDescription" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3" id="sizeChartUpload" style="display:none;">
+                        <label class="form-label">Size Chart</label>
+                        <input type="file" class="form-control" name="sizeChart" accept="image/*">
+                        <div class="mt-2">
+                            <img id="sizeChartPreview" src="" style="max-width:100px; max-height:100px; display:none;">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Product Image</label>
+                        <input type="file" class="form-control" name="productImage" accept="image/*" required>
+                        <div class="mt-2">
+                            <img id="productImagePreview" src="" style="max-width:100px; max-height:100px; display:none;">
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Price</label>
@@ -206,16 +220,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label class="form-label">Stock</label>
                         <input type="number" class="form-control" name="stock" required>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Image Name</label>
-                        <input type="text" class="form-control" name="imageName" required>
-                        <small class="text-muted">Enter the name of the image file (e.g., product.jpg)</small>
-                    </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" form="addProductForm" class="btn btn-primary">Add Product</button>
+                <button type="button" class="btn btn-primary" id="saveProduct">Save Product</button>
             </div>
         </div>
     </div>
@@ -228,7 +237,7 @@ $(document).ready(function() {
         const productId = $(this).data('id');
         if (confirm('Are you sure you want to delete this product?')) {
             $.ajax({
-                url: '/smsAdmin/pages/products.php',
+                url: '/smsEcommerce/smsAdmin/pages/products.php',
                 type: 'POST',
                 data: {
                     action: 'delete',
@@ -257,7 +266,7 @@ $(document).ready(function() {
         const stock = $(this).val();
         
         $.ajax({
-            url: '/smsAdmin/pages/products.php',
+            url: '/smsEcommerce/smsAdmin/pages/products.php',
             type: 'POST',
             data: {
                 action: 'update_stock',
@@ -277,32 +286,101 @@ $(document).ready(function() {
         });
     });
 
-    // Handle new product submission
-    $('#saveProduct').click(function() {
-        $('#addProductForm').submit();
+    // Handle image preview and processing
+    function handleImageUpload(input, previewElement) {
+        const file = input.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    // Create canvas for resizing
+                    const canvas = document.createElement('canvas');
+                    canvas.width = 100;
+                    canvas.height = 100;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, 100, 100);
+                    
+                    // Convert to JPEG with 75% quality
+                    const resizedImage = canvas.toDataURL('image/jpeg', 0.75);
+                    previewElement.src = resizedImage;
+                    previewElement.style.display = 'block';
+                    input.dataset.base64 = resizedImage;
+                }
+                img.src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+
+    // Toggle description/size chart based on product type
+    $('#typeItem').change(function() {
+        const type = $(this).val();
+        if (type === 'uniform') {
+            $('#textDescription').hide();
+            $('#sizeChartUpload').show();
+            $('textarea[name="productDescription"]').prop('required', false);
+            $('input[name="sizeChart"]').prop('required', true);
+        } else {
+            $('#textDescription').show();
+            $('#sizeChartUpload').hide();
+            $('textarea[name="productDescription"]').prop('required', true);
+            $('input[name="sizeChart"]').prop('required', false);
+        }
     });
 
-    $('#addProductForm').submit(function(e) {
-        e.preventDefault();
+    // Handle image uploads
+    $('input[name="productImage"]').change(function() {
+        handleImageUpload(this, document.getElementById('productImagePreview'));
+    });
+
+    $('input[name="sizeChart"]').change(function() {
+        handleImageUpload(this, document.getElementById('sizeChartPreview'));
+    });
+
+    // Handle form submission
+    $('#saveProduct').click(function() {
+        const form = $('#addProductForm')[0];
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        const formData = new FormData(form);
+        const type = $('#typeItem').val();
         
+        // Handle description based on type
+        if (type === 'uniform') {
+            const sizeChartInput = $('input[name="sizeChart"]')[0];
+            if (sizeChartInput.dataset.base64) {
+                formData.set('productDescription', sizeChartInput.dataset.base64);
+            }
+        }
+
+        // Add product image
+        const productImageInput = $('input[name="productImage"]')[0];
+        if (productImageInput.dataset.base64) {
+            formData.set('image', productImageInput.dataset.base64);
+        }
+
         $.ajax({
-            url: '/smsAdmin/pages/products.php',
+            url: '/smsEcommerce/smsAdmin/pages/products.php',
             type: 'POST',
-            data: $(this).serialize(),
-            dataType: 'json',
+            data: formData,
+            processData: false,
+            contentType: false,
             success: function(response) {
                 if (response.success) {
-                    alert(response.message);
-                    $('#addProductModal').modal('hide');
+                    alert('Product added successfully');
                     location.reload();
                 } else {
-                    alert(response.error || 'Failed to add product');
+                    alert('Error: ' + response.error);
                 }
             },
-            error: function(xhr, status, error) {
-                console.error('AJAX Error:', error);
-                alert('Failed to add product. Please try again.');
+            error: function() {
+                alert('Error adding product');
             }
         });
     });
 });
+</script>

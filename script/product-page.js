@@ -1,17 +1,38 @@
 import { products, productsLoadFetch } from "../data/the-products.js";
-import { Product } from "../data/parentClass-product.js";
+import { pdl } from "../data/product-detail-list.js";
 
-class ProductPage extends Product{
+class Product{
     constructor(productList){
-        super(productList);
+        this.productList = productList;
     }
 
-    productCardCreator(product2){
-        return super.productCardCreator(product2);
+    productCardCreator(product){
+        // const idKupal = product.id;
+        // console.log(product.id)
+        return `
+        <div class="card js-card" style="width: 18rem;">
+            <img src="${product.image}" class="card-img-top js-card-image-top" data-product-info="${product.productId}">
+            <div class="card-body">
+                <p class="card-text limit-text-in-2line">${product.name}</p>
+                <div class="bottom-option">
+                    <span class="price-text">₱${product.price}</span>
+                    <span class="btn-cart js-card-image-top" data-product-info="${product.productId}">🔍</span>
+                </div>
+            </div>
+        </div>
+        `;
     }
 
     cardFunction(){
-        return super.cardFunction();
+        const allCard = document.querySelectorAll(".js-card-image-top");
+        allCard.forEach((card) => {
+            card.addEventListener("click", (event) => {
+                event.preventDefault();
+                const uniqueCard = card.dataset.productInfo; 
+                window.location.href = `product-details.php?id=${uniqueCard}`;
+                pdl.toProductDetails(uniqueCard);
+            });
+        });
     }
 
     displayProduct() {
@@ -35,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(error);
         }
 
-        const allProduct = new ProductPage(products);
+        const allProduct = new Product(products);
         allProduct.displayProduct();
     }
 

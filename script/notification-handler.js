@@ -1,7 +1,7 @@
 // Function to update cart notification
 async function updateCartNotification() {
     try {
-        const response = await fetch('php/cartData.php');
+        const response = await fetch('http://localhost/smsEcommerce/php/cartData.php');
         const data = await response.json();
         
         const cartCount = document.querySelector('.cart-count');
@@ -30,7 +30,7 @@ async function updateCartNotification() {
 // Function to update orders notification
 async function updateOrdersNotification() {
     try {
-        const response = await fetch('php/get-orders.php');
+        const response = await fetch('http://localhost/smsEcommerce/php/get-orders.php');
         const data = await response.json();
         
         const notifProfile = document.querySelector('.notif-profile');

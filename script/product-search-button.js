@@ -25,5 +25,5 @@ const filterSide = document.querySelector(".side-bar-filter");
 pointImage.addEventListener("click", () =>{
     filterSide.classList.toggle("side-bar-filter-remove");
 
-    dropDownSearch.classList.remove("right-section2-height");
+    // dropDownSearch.classList.remove("right-section2-height");
 });
