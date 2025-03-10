@@ -151,65 +151,76 @@ class Order {
             console.log(productsCategories.typeItem);
             console.log(eachOrder.payment_method);
 
-            orderAttributes += `
-            <div class="orders-container-${getItem.productId}">
-                <div class="order-div">
-                    <div class="top">
-                        <div class="center-ordersId-div">
-                            <div class="orders-id">ProductId: <span>${getItem.productId}</span></div>
-                        </div>
-                        <div class="status-item">
-                            <div class="orders-date">${eachOrder.created_at}</div>
-                            <span class="item-status">Status: <span>${eachOrder.status}</span></span>
-                        </div>
-                    </div>
-                    <div class="middle-part">
-                        <div class="left-side">
-                            <div class="image-name">
-                                <img class="item-img" src="${getItem.image}" alt="">
-                                <span class="item-naming">${getItem.name}</span>
+            if(eachOrder.status === "To Pay"){
+                orderAttributes += `
+                <div class="orders-container-${getItem.productId}">
+                    <div class="order-div">
+                        <div class="top">
+                            <div class="center-ordersId-div">
+                                <div class="orders-id">ProductId: <span>${getItem.productId}</span></div>
                             </div>
-                            <div class="methods">
-                                <span>Quantity: <span>${getItem.quantity}</span></span>
-                                <span>Payment Method: <span>${eachOrder.payment_method}</span></span>
-                                <span>Payment Status: <span>${eachOrder.payment.status}</span></span>
+                            <div class="status-item">
+                                <div class="orders-date">${eachOrder.created_at}</div>
+                                <span class="item-status">Status: <span>${eachOrder.status}</span></span>
                             </div>
                         </div>
-                        <div class="right-side">
-                            <div class="size-gender">
-                                ${
-                                    productsCategories.typeItem === "uniform" ? 
-                                    `
-                                    <span class="span-size"><span class="size-text">Size: </span>${getItem.size}</span>
-                                    <span class="span-gender"><span class="gender-text">Gender: </span>${getItem.gender}</span>   
-                                    ` : ""
-                                }
-                                
+                        <div class="middle-part">
+                            <div class="left-side">
+                                <div class="image-name">
+                                    <img class="item-img" src="${getItem.image}" alt="">
+                                    <span class="item-naming">${getItem.name}</span>
+                                </div>
+                                <div class="methods">
+                                    <span>Quantity: <span>${getItem.quantity}</span></span>
+                                    <span>Payment Method: <span>${eachOrder.payment_method}</span></span>
+                                    <span>Payment Status: <span>${eachOrder.payment.status}</span></span>
+                                </div>
                             </div>
-                            <span class="price-span">Total Price: <img src="image/icon/philippine-peso.png" alt=""><span class="price">${eachOrder.total_price}</span></span>
-
-                            ${
-                                eachOrder.payment_method === "Gcash Payment" ? 
-                                `<form class="uploadReceiptForm" action="uploadReceipt.php" method="POST" enctype="multipart/form-data">
-                                    <input type="hidden" name="order_id" value="${eachOrder.id}">
+                            <div class="right-side">
+                                <div class="size-gender">
+                                    ${
+                                        productsCategories.typeItem === "uniform" ? 
+                                        `
+                                        <span class="span-size"><span class="size-text">Size: </span>${getItem.size}</span>
+                                        <span class="span-gender"><span class="gender-text">Gender: </span>${getItem.gender}</span>   
+                                        ` : ""
+                                    }
                                     
-                                    <label class="custom-file-upload1">
-                                        Send Receipt
-                                        <input type="file" class="file-image-input1" name="receipt_url" accept=".jpg,.jpeg,.png">
-                                    </label> 
-                                </form>` : ""
-                            }
-
-                            <div class="button-div">
-                                <button class="cancel-button" data-product-id="${getItem.productId}" ${paymentStatus !== "Pending" ? "disabled" : ""}>Cancel Order</button>
+                                </div>
+                                <span class="price-span">Total Price: <img src="image/icon/philippine-peso.png" alt=""><span class="price">${eachOrder.total_price}</span></span>
+    
+                                ${
+                                    eachOrder.payment_method === "Gcash Payment" ? 
+                                    `<form class="uploadReceiptForm" action="uploadReceipt.php" method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="order_id" value="${eachOrder.id}">
+                                        
+                                        <label class="custom-file-upload1">
+                                            Send Receipt
+                                            <input type="file" class="file-image-input1" name="receipt_url" accept=".jpg,.jpeg,.png">
+                                        </label> 
+                                    </form>` : ""
+                                }
+    
+                                <div class="button-div">
+                                    <button class="cancel-button" data-product-id="${getItem.productId}" ${paymentStatus !== "Pending" ? "disabled" : ""}>Cancel Order</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            `;
-
-            loadReceipt();
+                `;
+    
+                loadReceipt();
+            }
+            else{
+                document.querySelector(".main-content").innerHTML = `
+                <div class="completed-items-container">
+                    <div class="notFound-image-div">
+                        <img src="image/icon/no-results-img.png" alt="">  
+                        <div class="text-notFound">No orders yet</div>
+                    </div> 
+                </div>`;
+            }
         });
 
         if (this.orderListItem.length == 0) {

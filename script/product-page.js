@@ -12,6 +12,7 @@ class Product{
         return `
         <div class="card js-card" style="width: 18rem;">
             <img src="${product.image}" class="card-img-top js-card-image-top" data-product-info="${product.productId}">
+            <div class="product-stock">${product.stock}</div>
             <div class="card-body">
                 <p class="card-text limit-text-in-2line">${product.name}</p>
                 <div class="bottom-option">

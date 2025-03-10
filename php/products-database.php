@@ -14,10 +14,10 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT 
-            p.productId, p.name, p.image, p.price, p.typeItem, p.productDescription,
+            p.productId, p.name, p.image, p.stock, p.price, p.typeItem, p.productDescription,
             GROUP_CONCAT(pc.productCategories) AS productCategories
         FROM products p
-        LEFT JOIN productcategories pc ON p.productId = pc.productId
+        LEFT JOIN productCategories pc ON p.productId = pc.productId
         GROUP BY p.productId;";
 
 $result = $conn->query($sql);

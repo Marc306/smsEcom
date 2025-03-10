@@ -23,22 +23,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     
                     try {
                         // Insert into products table
-                        $sql = "INSERT INTO products (productId, name, productDescription, price, stock, image) 
-                                VALUES (?, ?, ?, ?, ?, ?)";
+                        $sql = "INSERT INTO products (productId, name, productDescription, price, stock, image, typeItem) 
+                                VALUES (?, ?, ?, ?, ?, ?, ?)";
                         $stmt = $conn->prepare($sql);
-                        $stmt->bind_param("sssdds", $productId, $name, $productDescription, $price, $stock, $image);
+                        $stmt->bind_param("sssddss", $productId, $name, $productDescription, $price, $stock, $image, $typeItem);
                         
                         if (!$stmt->execute()) {
                             throw new Exception("Failed to insert product: " . $stmt->error);
                         }
                         
-                        // Insert into productcategories table
-                        $sql = "INSERT INTO productcategories (productId, productcategories) VALUES (?, ?)";
-                        $stmt = $conn->prepare($sql);
-                        $stmt->bind_param("ss", $productId, $typeItem);
-                        
-                        if (!$stmt->execute()) {
-                            throw new Exception("Failed to insert product category: " . $stmt->error);
+                        // Insert selected categories into productCategories table
+                        if (isset($_POST['categories']) && is_array($_POST['categories'])) {
+                            $sql = "INSERT INTO productCategories (productId, productcategories) VALUES (?, ?)";
+                            $stmt = $conn->prepare($sql);
+                            
+                            foreach ($_POST['categories'] as $category) {
+                                $stmt->bind_param("ss", $productId, $category);
+                                if (!$stmt->execute()) {
+                                    throw new Exception("Failed to insert product category: " . $stmt->error);
+                                }
+                            }
+                        } else {
+                            throw new Exception("Please select at least one year level category");
                         }
                         
                         $conn->commit();
@@ -56,8 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $conn->begin_transaction();
                     
                     try {
-                        // Delete from productcategories first (due to foreign key)
-                        $sql = "DELETE FROM productcategories WHERE productId = ?";
+                        // Delete from productCategories first (due to foreign key)
+                        $sql = "DELETE FROM productCategories WHERE productId = ?";
                         $stmt = $conn->prepare($sql);
                         $stmt->bind_param("s", $productId);
                         
@@ -123,7 +129,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <th>Product ID</th>
                         <th>Image</th>
                         <th>Name</th>
-                        <th>Type Item</th>
+                        <th>Type</th>
+                        <th>Categories</th>
                         <th>Price</th>
                         <th>Stock</th>
                         <th>Actions</th>
@@ -131,10 +138,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </thead>
                 <tbody>
                 <?php
-                $sql = "SELECT p.productId, p.image, p.name, pc.productcategories, p.price, p.stock 
+                $sql = "SELECT p.productId, p.image, p.name, p.typeItem, 
+                        GROUP_CONCAT(pc.productcategories) as categories, 
+                        p.price, p.stock 
                         FROM products p
-                        LEFT JOIN productcategories pc ON p.productId = pc.productId
-                        ORDER BY pc.productcategories, p.name";
+                        LEFT JOIN productCategories pc ON p.productId = pc.productId
+                        GROUP BY p.productId
+                        ORDER BY p.typeItem, p.name";
             
                 $result = $conn->query($sql);
             
@@ -144,7 +154,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo "<td>{$row['productId']}</td>";
                         echo "<td><img src='../assets/images/{$row['image']}' alt='Product Image' width='50'></td>";
                         echo "<td>{$row['name']}</td>";
-                        echo "<td>{$row['productcategories']}</td>";
+                        echo "<td>{$row['typeItem']}</td>";
+                        echo "<td>{$row['categories']}</td>";
                         echo "<td>₱{$row['price']}</td>";
                         echo "<td>
                                 <input type='number' class='form-control form-control-sm stock-input' 
@@ -158,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='7' class='text-center'>No products found</td></tr>";
+                    echo "<tr><td colspan='8' class='text-center'>No products found</td></tr>";
                 }
                 ?>
                 </tbody>
@@ -193,6 +204,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <option value="books">Books</option>
                             <option value="others">Others</option>
                         </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Product Categories (Year Levels)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="categories[]" value="freshman" id="freshman">
+                            <label class="form-check-label" for="freshman">Freshman</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="categories[]" value="sophomore" id="sophomore">
+                            <label class="form-check-label" for="sophomore">Sophomore</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="categories[]" value="junior" id="junior">
+                            <label class="form-check-label" for="junior">Junior</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="categories[]" value="senior" id="senior">
+                            <label class="form-check-label" for="senior">Senior</label>
+                        </div>
                     </div>
                     <div class="mb-3" id="textDescription">
                         <label class="form-label">Description</label>
@@ -346,6 +376,12 @@ $(document).ready(function() {
             return;
         }
 
+        // Check if at least one category is selected
+        if ($('input[name="categories[]"]:checked').length === 0) {
+            alert('Please select at least one year level category');
+            return;
+        }
+
         const formData = new FormData(form);
         const type = $('#typeItem').val();
         
@@ -370,14 +406,21 @@ $(document).ready(function() {
             processData: false,
             contentType: false,
             success: function(response) {
-                if (response.success) {
-                    alert('Product added successfully');
-                    location.reload();
-                } else {
-                    alert('Error: ' + response.error);
+                try {
+                    const result = typeof response === 'string' ? JSON.parse(response) : response;
+                    if (result.success) {
+                        alert('Product added successfully');
+                        location.reload();
+                    } else {
+                        alert('Error: ' + (result.error || 'Failed to add product'));
+                    }
+                } catch (e) {
+                    console.error('Error parsing response:', e);
+                    alert('Error adding product');
                 }
             },
-            error: function() {
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', error);
                 alert('Error adding product');
             }
         });

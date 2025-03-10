@@ -1,16 +1,16 @@
 // Function to update cart notification
 async function updateCartNotification() {
     try {
-        const response = await fetch('http://localhost/smsEcommerce/php/cartData.php');
+        const response = await fetch('http://localhost/smsEcommerce/php/cartData.php?action=getCart');
         const data = await response.json();
         
         const cartCount = document.querySelector('.cart-count');
         const notifBurger = document.querySelector('.notif-burger');
         const notifDropdown = document.querySelector('.notif');
         
-        if (data && data.length > 0) {
+        if (data.success && data.cartItems && data.cartItems.length > 0) {
             // Update cart count
-            cartCount.textContent = data.length;
+            cartCount.textContent = data.cartItems.length;
             cartCount.style.display = 'inline-flex';
             
             // Show notifications
@@ -35,7 +35,7 @@ async function updateOrdersNotification() {
         
         const notifProfile = document.querySelector('.notif-profile');
         
-        if (data && data.some(order => order.status === 'To Pay')) {
+        if (data.success && data.orders && data.orders.some(order => order.status === 'To Pay')) {
             notifProfile.style.display = 'inline-flex';
         } else {
             notifProfile.style.display = 'none';

@@ -135,20 +135,20 @@ CREATE TABLE `pickup_schedule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productcategories`
+-- Table structure for table `productCategories`
 --
 
-CREATE TABLE `productcategories` (
+CREATE TABLE `productCategories` (
   `id` int(11) NOT NULL,
   `productId` varchar(255) NOT NULL,
   `productcategories` enum('freshman','sophomore','junior','senior') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `productcategories`
+-- Dumping data for table `productCategories`
 --
 
-INSERT INTO `productcategories` (`id`, `productId`, `productcategories`) VALUES
+INSERT INTO `productCategories` (`id`, `productId`, `productcategories`) VALUES
 (1, '123qwe', 'freshman'),
 (2, '123qwe', 'sophomore'),
 (3, '123qwe', 'junior'),
@@ -306,9 +306,9 @@ ALTER TABLE `pickup_schedule`
   ADD PRIMARY KEY (`date`);
 
 --
--- Indexes for table `productcategories`
+-- Indexes for table `productCategories`
 --
-ALTER TABLE `productcategories`
+ALTER TABLE `productCategories`
   ADD PRIMARY KEY (`id`),
   ADD KEY `productId` (`productId`);
 
@@ -375,9 +375,9 @@ ALTER TABLE `payments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
--- AUTO_INCREMENT for table `productcategories`
+-- AUTO_INCREMENT for table `productCategories`
 --
-ALTER TABLE `productcategories`
+ALTER TABLE `productCategories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
@@ -422,10 +422,10 @@ ALTER TABLE `payments`
   ADD CONSTRAINT `fk_paymet` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
 
 --
--- Constraints for table `productcategories`
+-- Constraints for table `productCategories`
 --
-ALTER TABLE `productcategories`
-  ADD CONSTRAINT `productcategories_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `productCategories`
+  ADD CONSTRAINT `productCategories_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `schedules`
