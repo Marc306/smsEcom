@@ -1,6 +1,11 @@
 <?php
 require_once 'config/database.php';
 session_start();
+
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+    header("Location: login.php"); // Redirect to login if not logged in
+    exit(); // Stop further execution
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,6 +76,16 @@ session_start();
                                 <i class="fas fa-calendar me-2"></i>Pickup Schedule
                             </a>
                         </li>
+                        <li>
+                            <a href="#" class="nav-link text-white" data-page="message-chat">
+                                Messages
+                            </a>
+                        </li>
+                        <li>
+                            <a href="logout.php" class="nav-link text-white">
+                                <i class="fas fa-sign-out-alt me-2"></i>Logout
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -87,12 +102,19 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+
+
         $(document).ready(function() {
             // Load dashboard by default
             loadPage('dashboard');
 
             // Handle navigation
             $('.nav-link').click(function(e) {
+                // Skip the logout link
+                if ($(this).attr('href') === 'logout.php') {
+                    return; // Do not trigger page load for logout
+                }
+
                 e.preventDefault();
                 $('.nav-link').removeClass('active');
                 $(this).addClass('active');
@@ -105,6 +127,7 @@ session_start();
                 });
             }
         });
+
     </script>
 </body>
 </html>
