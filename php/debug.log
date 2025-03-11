@@ -1,99 +1,20 @@
-{"student_id":"efsdf","password":"sgdfgd"}
-{"student_id":"drg","password":"drgd"}
-{"student_id":"dfdf","password":"gd"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"ertr","password":"rtyr"}
-{"student_id":"s210","password":"drdrt"}
-{"student_id":"s210","password":"drdrt"}
-{"student_id":"s210","password":"drdrt"}
-{"student_id":"s210","password":"trtdrt"}
-{"student_id":"s210","password":"trtdrt"}
-{"student_id":"s210","password":"trtdrt"}
-{"student_id":"s210","password":"trtdrt"}
-{"student_id":"s210","password":"trtdrt"}
-{"student_id":"s210","password":"trtdrt"}
-{"student_id":"s210","password":"trtdrt"}
-{"student_id":"s210","password":"trtdrt"}
-{"student_id":"dty","password":"ftyft"}
-{"student_id":"rrfy","password":"ftuu"}
-{"student_id":"rty","password":"tu"}
-{"student_id":"s","password":"drt"}
-{"student_id":"ertt","password":"rt"}
-{"student_id":"rtr","password":"yt"}
-{"student_id":"fgf","password":"ry"}
-{"student_id":"dry","password":"ft"}
-{"student_id":"dry","password":"ft"}
-{"student_id":"dyr","password":"fty"}
-{"student_id":"err","password":"rtyry"}
-{"student_id":"wee","password":"erter"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21121295","password":"#Ce8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21121295","password":"#Ce8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21121295","password":"#Li8080"}
-{"student_id":"s21121295","password":"#Ce8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
-{"student_id":"s21019965","password":"#Li8080"}
+Array
+(
+    [0] => Array
+        (
+            [productId] => 24sedse
+            [name] => book
+            [image] => data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNj
+            [stock] => 6
+            [price] => 300.00
+            [typeItem] => books
+            [productDescription] => esfregdnn w4tn w4ntkntn 4w ntw4tn t
+            [productCategories] => Array
+                (
+                    [0] => freshman
+                )
+
+        )
+
+)
 {"student_id":"s21019965","password":"#Li8080"}

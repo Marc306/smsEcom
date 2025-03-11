@@ -24,6 +24,7 @@ $tables = [
         productId VARCHAR(255) NOT NULL PRIMARY KEY,
         image VARCHAR(255) NOT NULL,
         productDescription VARCHAR(255) NOT NULL,
+        sizeChart VARCHAR(255) NOT NULL,
         name VARCHAR(255) NOT NULL,
         typeItem ENUM('uniform', 'books', 'others') NOT NULL,
         price DECIMAL(10,2) NOT NULL,

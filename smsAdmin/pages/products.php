@@ -12,21 +12,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 case 'add':
                     $productId = $conn->real_escape_string($_POST['productId']);
                     $name = $conn->real_escape_string($_POST['name']);
-                    $productDescription = $_POST['productDescription'];
+                    $typeItem = $conn->real_escape_string($_POST['typeItem']);
                     $price = floatval($_POST['price']);
                     $stock = intval($_POST['stock']);
-                    $typeItem = $conn->real_escape_string($_POST['typeItem']);
-                    $image = $_POST['image']; // Store image data
+                    $image = $_POST['image']; // Store product image data
+                    
+                    // Handle description/size chart based on type
+                    $productDescription = '';
+                    $sizeChart = '';
+                    if ($typeItem === 'uniform') {
+                        $sizeChart = $_POST['sizeChart']; // Store size chart image
+                    } else {
+                        $productDescription = $conn->real_escape_string($_POST['productDescription']);
+                    }
                     
                     // Begin transaction
                     $conn->begin_transaction();
                     
                     try {
                         // Insert into products table
-                        $sql = "INSERT INTO products (productId, name, productDescription, price, stock, image, typeItem) 
-                                VALUES (?, ?, ?, ?, ?, ?, ?)";
+                        $sql = "INSERT INTO products (productId, name, productDescription, sizeChart, price, stock, image, typeItem) 
+                                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                         $stmt = $conn->prepare($sql);
-                        $stmt->bind_param("sssddss", $productId, $name, $productDescription, $price, $stock, $image, $typeItem);
+                        $stmt->bind_param("ssssddss", $productId, $name, $productDescription, $sizeChart, $price, $stock, $image, $typeItem);
                         
                         if (!$stmt->execute()) {
                             throw new Exception("Failed to insert product: " . $stmt->error);
@@ -131,6 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <th>Name</th>
                         <th>Type</th>
                         <th>Categories</th>
+                        <th>Description/Size Chart</th>
                         <th>Price</th>
                         <th>Stock</th>
                         <th>Actions</th>
@@ -138,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </thead>
                 <tbody>
                 <?php
-                $sql = "SELECT p.productId, p.image, p.name, p.typeItem, 
+                $sql = "SELECT p.productId, p.image, p.name, p.typeItem, p.productDescription, p.sizeChart,
                         GROUP_CONCAT(pc.productcategories) as categories, 
                         p.price, p.stock 
                         FROM products p
@@ -152,10 +161,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>{$row['productId']}</td>";
-                        echo "<td><img src='../assets/images/{$row['image']}' alt='Product Image' width='50'></td>";
+                        echo "<td><img src='{$row['image']}' alt='Product Image' width='50' height='50'></td>";
                         echo "<td>{$row['name']}</td>";
                         echo "<td>{$row['typeItem']}</td>";
                         echo "<td>{$row['categories']}</td>";
+                        echo "<td>";
+                        if ($row['typeItem'] === 'uniform') {
+                            echo "<img src='{$row['sizeChart']}' alt='Size Chart' width='50' height='50'>";
+                        } else {
+                            echo htmlspecialchars($row['productDescription']);
+                        }
+                        echo "</td>";
                         echo "<td>₱{$row['price']}</td>";
                         echo "<td>
                                 <input type='number' class='form-control form-control-sm stock-input' 
@@ -169,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='8' class='text-center'>No products found</td></tr>";
+                    echo "<tr><td colspan='9' class='text-center'>No products found</td></tr>";
                 }
                 ?>
                 </tbody>
@@ -382,46 +398,56 @@ $(document).ready(function() {
             return;
         }
 
-        const formData = new FormData(form);
-        const type = $('#typeItem').val();
-        
-        // Handle description based on type
-        if (type === 'uniform') {
-            const sizeChartInput = $('input[name="sizeChart"]')[0];
-            if (sizeChartInput.dataset.base64) {
-                formData.set('productDescription', sizeChartInput.dataset.base64);
-            }
-        }
-
-        // Add product image
+        // Get the product image base64 data
         const productImageInput = $('input[name="productImage"]')[0];
-        if (productImageInput.dataset.base64) {
-            formData.set('image', productImageInput.dataset.base64);
+        if (!productImageInput.dataset.base64) {
+            alert('Please select a product image');
+            return;
         }
 
+        // Prepare form data
+        const formData = {
+            action: 'add',
+            productId: $('input[name="productId"]').val(),
+            name: $('input[name="name"]').val(),
+            typeItem: $('#typeItem').val(),
+            price: $('input[name="price"]').val(),
+            stock: $('input[name="stock"]').val(),
+            image: productImageInput.dataset.base64,
+            categories: $('input[name="categories[]"]:checked').map(function() {
+                return this.value;
+            }).get()
+        };
+
+        // Handle description/size chart based on type
+        if ($('#typeItem').val() === 'uniform') {
+            const sizeChartInput = $('input[name="sizeChart"]')[0];
+            if (!sizeChartInput.dataset.base64) {
+                alert('Please select a size chart image');
+                return;
+            }
+            formData.sizeChart = sizeChartInput.dataset.base64;
+        } else {
+            formData.productDescription = $('textarea[name="productDescription"]').val();
+        }
+
+        // Submit the form
         $.ajax({
             url: '/smsEcommerce/smsAdmin/pages/products.php',
             type: 'POST',
             data: formData,
-            processData: false,
-            contentType: false,
+            dataType: 'json',
             success: function(response) {
-                try {
-                    const result = typeof response === 'string' ? JSON.parse(response) : response;
-                    if (result.success) {
-                        alert('Product added successfully');
-                        location.reload();
-                    } else {
-                        alert('Error: ' + (result.error || 'Failed to add product'));
-                    }
-                } catch (e) {
-                    console.error('Error parsing response:', e);
-                    alert('Error adding product');
+                if (response.success) {
+                    alert(response.message);
+                    location.reload();
+                } else {
+                    alert(response.error || 'Failed to add product');
                 }
             },
             error: function(xhr, status, error) {
                 console.error('AJAX Error:', error);
-                alert('Error adding product');
+                alert('Failed to add product. Please try again.');
             }
         });
     });
