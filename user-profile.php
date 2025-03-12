@@ -103,7 +103,7 @@
                     <span class="purchase-notif"></span>
                 </a>
                 
-                <a class="sidebar-link" href="#">
+                <a class="sidebar-link" href="notifications.php">
                     <img class="icon-sideBar" src="image/icon/notification.png" alt=""> 
                     <span class="a-tag">Notification</span>
                     <span class="notif-number">1</span>
