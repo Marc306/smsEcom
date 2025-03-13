@@ -4,16 +4,16 @@ require_once '../config/database.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     ob_clean();
     header('Content-Type: application/json; charset=utf-8');
-    
+
     $response = ['success' => false];
     $id = isset($_POST['id']) ? intval($_POST['id']) : 0;
-    
+
     if ($id <= 0) {
         $response['error'] = 'Invalid order ID';
         echo json_encode($response);
         exit;
     }
-    
+
     try {
         switch ($_POST['action']) {
             case 'mark_to_receive':
@@ -29,23 +29,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                 if (!$stmt->execute()) {
                     throw new Exception($stmt->error);
                 }
-                
+
                 if ($stmt->affected_rows > 0) {
                     $conn->commit();
-                    $response = [
-                        'success' => true,
-                        'message' => 'Order marked as To Receive'
-                    ];
+                    $response = ['success' => true, 'message' => 'Order marked as To Receive'];
                 } else {
                     throw new Exception("Order not found or cannot be marked as To Receive");
                 }
                 $stmt->close();
                 break;
-                
+
             case 'confirm_payment':
                 $conn->begin_transaction();
                 
-                // Update order status to 'Completed' and payment status
+                // Update order status to 'Completed'
                 $stmt = $conn->prepare("UPDATE orders SET status = 'Completed' WHERE id = ?");
                 if (!$stmt) {
                     throw new Exception($conn->error);
@@ -56,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     throw new Exception($stmt->error);
                 }
                 
-                // Update payment status to Confirmed
+                // Update payment status to 'Confirmed'
                 $stmt = $conn->prepare("UPDATE payments SET status = 'Confirmed' WHERE order_id = ?");
                 if (!$stmt) {
                     throw new Exception($conn->error);
@@ -66,51 +63,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                 if (!$stmt->execute()) {
                     throw new Exception($stmt->error);
                 }
-                
+
                 if ($stmt->affected_rows >= 0) {
                     $conn->commit();
-                    $response = [
-                        'success' => true,
-                        'message' => 'Payment confirmed and order completed'
-                    ];
+                    $response = ['success' => true, 'message' => 'Payment confirmed and order completed'];
                 } else {
                     throw new Exception("Order not found or cannot be marked as completed");
                 }
                 $stmt->close();
                 break;
-                
+
             case 'assign_pickup':
                 $date = $conn->real_escape_string($_POST['pickup_date']);
 
-                // Start transaction
                 $conn->begin_transaction();
-                
+
                 try {
                     // Get student_id from the order
                     $stmt = $conn->prepare("SELECT student_id FROM orders WHERE id = ?");
                     $stmt->bind_param("i", $id);
                     $stmt->execute();
                     $result = $stmt->get_result();
-                    
+
                     if ($result->num_rows > 0) {
                         $row = $result->fetch_assoc();
                         $student_id = $row['student_id'];
 
-                        // Ensure the date exists in `schedules`
-                        $stmt = $conn->prepare("INSERT IGNORE INTO schedules (schedule_date, order_id, student_id, status) VALUES (?, ?, ?, 'Scheduled')");
-                        $stmt->bind_param("sis", $date, $id, $student_id);
-                        
-                        if (!$stmt->execute()) {
-                            throw new Exception("Error inserting schedule: " . $stmt->error);
+                        // Check if a schedule already exists
+                        $stmt = $conn->prepare("SELECT id FROM schedules WHERE order_id = ? AND student_id = ?");
+                        $stmt->bind_param("is", $id, $student_id);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+
+                        if ($result->num_rows > 0) {
+                            // Update existing schedule
+                            $stmt = $conn->prepare("UPDATE schedules SET schedule_date = ?, status = 'Scheduled' WHERE order_id = ? AND student_id = ?");
+                            $stmt->bind_param("sis", $date, $id, $student_id);
+                        } else {
+                            // Insert new schedule
+                            $stmt = $conn->prepare("INSERT INTO schedules (schedule_date, order_id, student_id, status) VALUES (?, ?, ?, 'Scheduled')");
+                            $stmt->bind_param("sis", $date, $id, $student_id);
                         }
-                        
+
+                        if (!$stmt->execute()) {
+                            throw new Exception("Error updating/inserting schedule: " . $stmt->error);
+                        }
+
                         // Update order status to 'To Receive'
                         $stmt = $conn->prepare("UPDATE orders SET status = 'To Receive' WHERE id = ? AND status = 'To Pay'");
                         $stmt->bind_param("i", $id);
                         if (!$stmt->execute()) {
                             throw new Exception("Error updating order status: " . $stmt->error);
                         }
-                        
+
                         // Count booked slots
                         $stmt = $conn->prepare("SELECT COUNT(*) AS booked FROM schedules WHERE schedule_date = ?");
                         $stmt->bind_param("s", $date);
@@ -133,13 +138,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     $response = ['success' => false, 'message' => $e->getMessage()];
                 }
                 break;
-                
+
             case 'suggest_dates':
                 $dates = [];
-                
+
                 for ($i = 1; $i <= 7; $i++) {
                     $date = date('Y-m-d', strtotime("+$i day"));
-                    
+
                     // Get the current number of bookings for the date
                     $stmt = $conn->prepare("SELECT COUNT(*) AS booked FROM schedules WHERE schedule_date = ?");
                     $stmt->bind_param("s", $date);
@@ -153,11 +158,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                         $dates[] = [
                             'date' => $date,
                             'available' => $available,
-                            'score' => $available / 100 // Simple scoring based on availability
+                            'score' => $available / 100
                         ];
                     }
                 }
-                
+
                 // Sort by score (higher availability is prioritized)
                 usort($dates, function($a, $b) {
                     return $b['score'] - $a['score'];
@@ -170,12 +175,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         if (isset($conn) && $conn->connect_errno == 0) {
             $conn->rollback();
         }
-        $response = [
-            'success' => false,
-            'error' => $e->getMessage()
-        ];
+        $response = ['success' => false, 'error' => $e->getMessage()];
     }
-    
+
     echo json_encode($response);
     exit;
 }
@@ -402,13 +404,46 @@ function showPickupModal(orderId) {
     });
 }
 
+// function assignPickup() {
+//     const date = document.getElementById('pickupDate').value;
+//     if (!date) {
+//         alert('Please select a date');
+//         return;
+//     }
+    
+//     fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/x-www-form-urlencoded',
+//         },
+//         body: `action=assign_pickup&id=${currentOrderId}&pickup_date=${date}`
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         if (data.success) {
+//             const slotInfo = document.getElementById('slotInfo');
+//             slotInfo.textContent = `Pickup scheduled! Slot #${data.slot}`;
+//             slotInfo.classList.remove('d-none');
+//             setTimeout(() => {
+//                 const modal = bootstrap.Modal.getInstance(document.getElementById('pickupModal'));
+//                 modal.hide();
+//                 location.reload();
+//             }, 2000);
+//         } else {
+//             alert(data.message || 'Error assigning pickup date');
+//         }
+//     })
+//     .catch(error => {
+//         alert('Error assigning pickup date');
+//     });
+// }
 function assignPickup() {
     const date = document.getElementById('pickupDate').value;
     if (!date) {
         alert('Please select a date');
         return;
     }
-    
+
     fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
@@ -420,7 +455,7 @@ function assignPickup() {
     .then(data => {
         if (data.success) {
             const slotInfo = document.getElementById('slotInfo');
-            slotInfo.textContent = `Pickup scheduled! Slot #${data.slot}`;
+            slotInfo.textContent = `Pickup scheduled!`;
             slotInfo.classList.remove('d-none');
             setTimeout(() => {
                 const modal = bootstrap.Modal.getInstance(document.getElementById('pickupModal'));
@@ -428,7 +463,7 @@ function assignPickup() {
                 location.reload();
             }, 2000);
         } else {
-            alert(data.message || 'Error assigning pickup date');
+            alert(data.error || 'Error assigning pickup date');
         }
     })
     .catch(error => {

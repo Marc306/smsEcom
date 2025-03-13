@@ -5900,3 +5900,648 @@ Fetching orders for student_id: {"admin_logged_in":true,"admin_username":"admin 
 Fetching orders for student_id: {"admin_logged_in":true,"admin_username":"admin ","student_id":"s21019965"}
 Fetching orders for student_id: {"admin_logged_in":true,"admin_username":"admin ","student_id":"s21019965"}
 Fetching orders for student_id: {"admin_logged_in":true,"admin_username":"admin ","student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 128 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 128
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"324tyy","name":"uniform","price":"1100.00","image":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNj","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Gcash Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => 324tyy
+            [name] => uniform
+            [price] => 1100.00
+            [image] => data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNj
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Gcash Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 129 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 129
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+🔵 Raw JSON Input: {"type":"buy_now","product":{"productId":"324tyy","name":"uniform","price":"1100.00","image":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNj","typeItem":"uniform","gender":"Male","size":"Small","payment_method":"Gcash Payment"}}
+🟡 Decoded Request: Array
+(
+    [type] => buy_now
+    [product] => Array
+        (
+            [productId] => 324tyy
+            [name] => uniform
+            [price] => 1100.00
+            [image] => data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNj
+            [typeItem] => uniform
+            [gender] => Male
+            [size] => Small
+            [payment_method] => Gcash Payment
+        )
+
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 130 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 130
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 131 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 131
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 132 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 132
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: []
+ERROR: User not logged in.
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}

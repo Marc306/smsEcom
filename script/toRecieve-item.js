@@ -1,6 +1,6 @@
 import { ordersFetch, orders, deleteOrder } from "../data/orders-data.js";
+import { cartCounter } from "./cart-counter.js";
 import { itemCartStorage } from "../data/checkout-cart.js";
-import { loadReceipt } from "../data/fetch-receipt.js";
 import { productsLoadFetch, products } from "../data/the-products.js";
 
 class Order {
@@ -8,111 +8,82 @@ class Order {
         this.orderListItem = orderListItem;
     }
 
-    toPayOrders() {
+    toRecieveOrders() {
         let orderAttributes = "";
+        let displayedProducts = new Set(); // Track unique products
+
         this.orderListItem.forEach((eachOrder) => {
-            const paymentStatus = eachOrder.payment.status;
-            let getItem = eachOrder.items.length > 0 ? eachOrder.items[0] : null;
-            if (!getItem) return;
-            
-            let productsCategories;
-            products.forEach((eachId) =>{
-                if(getItem.productId === eachId.productId){
-                    productsCategories = eachId;
-                }
-            });
+            if (eachOrder.status !== "To Receive") return;
 
-            console.log(productsCategories.typeItem);
-            console.log(eachOrder.payment_method);
+            console.log(eachOrder);
 
-            if(eachOrder.status === "To Receive"){
+            eachOrder.items.forEach((getItem) => {
+                if (!getItem) return;
+
+                // Ensure a product is displayed only once
+                if (displayedProducts.has(getItem.productId)) return;
+                displayedProducts.add(getItem.productId);
+
+                let productsCategories = products.find(eachId => getItem.productId === eachId.productId) || {};
+
                 orderAttributes += `
-                    <div class="orders-container-${getItem.productId}">
-                        <div class="order-div">
-                            <div class="top">
-                                <div class="center-ordersId-div">
-                                    <div class="orders-id">ProductId: <span>${getItem.productId}</span></div>
+                <div class="orders-container-${getItem.productId}">
+                    <div class="order-div">
+                        <div class="top">
+                            <div class="center-ordersId-div">
+                                <div class="orders-id">ProductId: <span>${getItem.productId}</span></div>
+                            </div>
+                            <div class="status-item">
+                                <div class="orders-date">${eachOrder.created_at}</div>
+                                <div class="schedule-date">Scheduled Date: ${eachOrder.schedule_date ?? 'Not scheduled'}</div>
+                                <span class="item-status">Status: <span>${eachOrder.status}</span></span>
+                            </div>
+                        </div>
+                        <div class="middle-part">
+                            <div class="left-side">
+                                <div class="image-name">
+                                    <img class="item-img" src="${getItem.image}" alt="">
+                                    <span class="item-naming">${getItem.name}</span>
                                 </div>
-                                <div class="status-item">
-                                    <div class="orders-date">${eachOrder.created_at}</div>
-                                    <div class="schedule-date">Scheduled Date: ${eachOrder.schedule_date || 'Not scheduled'}</div>
-                                    <span class="item-status">Status: <span>${eachOrder.status}</span></span>
+                                <div class="methods">
+                                    <span>Quantity: <span>${getItem.quantity}</span></span>
+                                    <span>Payment Method: <span>${eachOrder.payment_method}</span></span>
+                                    <span>Payment Status: <span>${eachOrder.payment.status}</span></span>
                                 </div>
                             </div>
-                            <div class="middle-part">
-                                <div class="left-side">
-                                    <div class="image-name">
-                                        <img class="item-img" src="${getItem.image}" alt="">
-                                        <span class="item-naming">${getItem.name}</span>
-                                    </div>
-                                    <div class="methods">
-                                        <span>Quantity: <span>${getItem.quantity}</span></span>
-                                        <span>Payment Method: <span>${eachOrder.payment_method}</span></span>
-                                        <span>Payment Status: <span>${eachOrder.payment.status}</span></span>
-                                    </div>
-                                </div>
-                                <div class="right-side">
-                                    <div class="size-gender">
-                                        ${
-                                            productsCategories.typeItem === "uniform" ? 
-                                            `
-                                            <span class="span-size"><span class="size-text">Size: </span>${getItem.size}</span>
-                                            <span class="span-gender"><span class="gender-text">Gender: </span>${getItem.gender}</span>   
-                                            ` : ""
-                                        }
-                                        
-                                    </div>
-                                    <span class="price-span">Total Price: <img src="image/icon/philippine-peso.png" alt=""><span class="price">${eachOrder.total_price}</span></span>
-
+                            <div class="right-side">
+                                <div class="size-gender">
                                     ${
-                                        eachOrder.payment_method === "Gcash Payment" ? 
-                                        `<form class="uploadReceiptForm" action="uploadReceipt.php" method="POST" enctype="multipart/form-data">
-                                            <input type="hidden" name="order_id" value="${eachOrder.id}">
-                                            
-                                            <label class="custom-file-upload1">
-                                                Send Receipt
-                                                <input type="file" class="file-image-input1" name="receipt_url" accept=".jpg,.jpeg,.png">
-                                            </label> 
-                                        </form>` : ""
+                                        productsCategories.typeItem === "uniform" ? 
+                                        `<span class="span-size"><span class="size-text">Size: </span>${getItem.size}</span>
+                                        <span class="span-gender"><span class="gender-text">Gender: </span>${getItem.gender}</span>` : ""
                                     }
-        
-                                    <div class="button-div">
-                                        <button class="cancel-button" data-product-id="${getItem.productId}" ${paymentStatus !== "Pending" ? "disabled" : ""}>Cancel Order</button>
-                                    </div>
+                                </div>
+                                <span class="price-span">Total Price: <img src="image/icon/philippine-peso.png" alt=""><span class="price">${eachOrder.total_price}</span></span>
 
+                                <div class="button-div">
+                                    <button class="cancel-button" data-product-id="${getItem.productId}" ${eachOrder.payment.status !== "Pending" ? "disabled" : ""}>Cancel Order</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    `;
-
-                loadReceipt();
-            }
-            else{
-                document.querySelector(".main-content").innerHTML = `
-                <div class="completed-items-container">
-                    <div class="notFound-image-div">
-                        <img src="image/icon/no-results-img.png" alt="">  
-                        <div class="text-notFound">No orders yet</div>
-                    </div> 
                 </div>`;
-            }
+            });
         });
 
-        if (this.orderListItem.length === 0) {
-            document.querySelector(".main-content").innerHTML = `
+        const mainContent = document.querySelector(".main-content");
+        if (orderAttributes) {
+            mainContent.innerHTML = orderAttributes;
+        } else {
+            mainContent.innerHTML = `
             <div class="completed-items-container">
                 <div class="notFound-image-div">
                     <img src="image/icon/no-results-img.png" alt="">  
                     <div class="text-notFound">No orders yet</div>
                 </div> 
             </div>`;
-        } 
-        else{
-            console.log("cops")
         }
 
-        document.querySelector(".main-content").innerHTML = orderAttributes;
         this.cancelOrder();
     }
 
@@ -161,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const studentOrder = new Order(orders);
-        studentOrder.toPayOrders();
+        studentOrder.toRecieveOrders();
     }
 
     tryLoad();

@@ -133,14 +133,7 @@
             </div>
     
             <div class="main-content">
-                <div class="completed-items-container">
-                    <div class="notFound-image-div">
-                        <img src="image/icon/no-results-img.png" alt="">  
-                        <div class="text-notFound">
-                            No orders yet
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </main>
     </div>

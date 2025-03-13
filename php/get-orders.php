@@ -19,8 +19,9 @@ if (!$student_id) {
     exit;
 }
 
-// 🔍 Fetch orders (Fix: changed 'order_id' to 'id')
-$sql_orders = "SELECT o.id, o.total_price, o.payment_method, o.status, o.created_at, s.schedule_date 
+// 🔍 Fetch orders (Fix: Ensure schedule_date is never null)
+$sql_orders = "SELECT o.id, o.total_price, o.payment_method, o.status, o.created_at, 
+                      COALESCE(s.schedule_date, 'Not scheduled') AS schedule_date
                FROM orders o 
                LEFT JOIN schedules s ON o.id = s.order_id 
                WHERE o.student_id = ? 
@@ -32,7 +33,7 @@ $result_orders = $stmt_orders->get_result();
 
 $orders = [];
 while ($order = $result_orders->fetch_assoc()) {
-    $order_id = $order["id"]; // Fix: Use 'id' instead of 'order_id'
+    $order_id = $order["id"];
 
     // 🔍 Fetch items for this order
     $sql_items = "SELECT productId, name, image, quantity, size, gender FROM orders_items WHERE order_id = ?";
@@ -52,7 +53,7 @@ while ($order = $result_orders->fetch_assoc()) {
     $stmt_payment->bind_param("i", $order_id);
     $stmt_payment->execute();
     $result_payment = $stmt_payment->get_result();
-    $payment = $result_payment->fetch_assoc() ?? ["amount" => 0, "status" => "Pending"];
+    $payment = $result_payment->fetch_assoc() ?? ["amount" => "0.00", "status" => "Pending"];
 
     // Combine data
     $order["items"] = $items;
@@ -65,3 +66,4 @@ while ($order = $result_orders->fetch_assoc()) {
 echo json_encode(["success" => true, "orders" => $orders]);
 exit;
 ?>
+

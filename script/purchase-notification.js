@@ -1,7 +1,7 @@
 // Function to update purchase notifications
 async function updatePurchaseNotifications() {
     try {
-        const response = await fetch('php/get-orders.php');
+        const response = await fetch('./php/get-orders.php');
         const data = await response.json();
         
         // Get all purchase notification elements
