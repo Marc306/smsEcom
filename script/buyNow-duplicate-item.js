@@ -22,13 +22,13 @@ async function buyNowItemAndIfDuplicate() {
     }
 
     // Assign values to the UI
-    document.querySelector(".js-product-name")?.textContent = product.name;
-    document.querySelector(".js-product-price")?.textContent = `₱ ${product.price}`;
-    document.querySelector(".js-product-image")?.src = product.image;
+    document.querySelector(".js-product-name").textContent = product.name;
+    document.querySelector(".js-product-price").textContent = `₱ ${product.price}`;
+    document.querySelector(".js-product-image").src = product.image;
 
     if (product.typeItem === "uniform") {
-        document.querySelector(".js-product-size")?.textContent = `Size: ${product.size}`;
-        document.querySelector(".js-product-gender")?.textContent = `Gender: ${product.gender}`;
+        document.querySelector(".js-product-size").textContent = `Size: ${product.size}`;
+        document.querySelector(".js-product-gender").textContent = `Gender: ${product.gender}`;
     }
 
     const confirmPaymentBtn = document.querySelector(".js-confirm-payment");
@@ -43,7 +43,12 @@ async function buyNowItemAndIfDuplicate() {
         }
 
         try {
-            const response = await fetch("http://localhost/smsEcommerce/php/check-duplicate-orders.php", {
+            // const response = await fetch("http://localhost/smsEcommerce/php/check-duplicate-orders.php", {
+            //     method: "POST",
+            //     headers: { "Content-Type": "application/json" },
+            //     body: JSON.stringify({ productId: product.productId })
+            // });
+            const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/check-duplicate-orders.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ productId: product.productId })
@@ -74,7 +79,8 @@ async function buyNowItemAndIfDuplicate() {
 
             if (checkoutData.success) {
                 sessionStorage.removeItem("buyNowProduct");
-                window.location.href = `/smsEcommerce/user-purchase.php?payment=${paymentMethod.value}`;
+               // window.location.href = `/smsEcommerce/user-purchase.php?payment=${paymentMethod.value}`;
+               window.location.href = `https://ecommerce.schoolmanagementsystem2.com/user-purchase.php?payment=${paymentMethod.value}`;
             } else {
                 alert("Error processing order.");
             }

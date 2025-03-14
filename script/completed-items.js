@@ -1,6 +1,7 @@
 async function fetchCompletedOrders() {
     try {
-        const response = await fetch('php/get-completed-orders.php');
+        //const response = await fetch('php/get-completed-orders.php');
+        const response = await fetch('https://ecommerce.schoolmanagementsystem2.com/php/get-completed-orders.php');
         const data = await response.json();
         
         const mainContent = document.querySelector('.main-content');

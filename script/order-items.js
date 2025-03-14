@@ -328,7 +328,11 @@ class Order {
                 const formData = new FormData(form);
 
                 try {
-                    const response = await fetch("http://localhost/smsEcommerce/php/upload-receipt.php", {
+                    // const response = await fetch("http://localhost/smsEcommerce/php/upload-receipt.php", {
+                    //     method: "POST",
+                    //     body: formData
+                    // });
+                    const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/upload-receipt.php", {
                         method: "POST",
                         body: formData
                     });

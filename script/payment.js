@@ -88,7 +88,12 @@ function checkoutNowBtn() {
 
         console.log("🟡 Checkout Request Data:", JSON.stringify(requestData, null, 2));
 
-        fetch("http://localhost/smsEcommerce/php/payment-logic.php", {
+        // fetch("http://localhost/smsEcommerce/php/payment-logic.php", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify(requestData),
+        // })
+        fetch("https://ecommerce.schoolmanagementsystem2.com/php/payment-logic.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(requestData),

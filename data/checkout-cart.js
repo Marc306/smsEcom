@@ -117,7 +117,6 @@
 
 // export const itemCartStorage = new AddToCart();
 
-
 class AddToCart {
     cartItems = [];
 
@@ -127,7 +126,7 @@ class AddToCart {
 
     async cartStorage(){
         try{
-            const response = await fetch("http://localhost/smsEcommerce/php/cartData.php?action=getCart");
+            const response = await fetch("http://ecommerce.schoolmanagementsystem2.com/php/cartData.php?action=getCart");
             const data = await response.json();
             this.cartItems = data.cartItems || [];
             return this.cartItems;
@@ -141,7 +140,7 @@ class AddToCart {
 
     async addToCartUnifroms(itemId, itemGender, itemSize){
         try{
-            const response = await fetch("http://localhost/smsEcommerce/php/cartData.php?action=add", {
+            const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/cartData.php?action=add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -176,7 +175,7 @@ class AddToCart {
 
     async addToCartBooks(itemID){
         try{
-            const response = await fetch("http://localhost/smsEcommerce/php/cartData.php?action=add", {
+            const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/cartData.php?action=add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -209,7 +208,7 @@ class AddToCart {
 
     async deleteItemCartStorage(idOfTheItem){
         try {
-            const response = await fetch("http://localhost/smsEcommerce/php/cart-action.php?action=delete", {
+            const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/cart-action.php?action=delete", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -232,7 +231,7 @@ class AddToCart {
 
     async updateSizeUniform(productId, newUniformSize){
         try{
-            const response = await fetch("http://localhost/smsEcommerce/php/cart-action.php", {
+            const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/cart-action.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

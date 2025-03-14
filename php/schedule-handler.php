@@ -23,12 +23,12 @@ function createSchedule($conn, $order_id, $student_id) {
 
     // If no available slot, assign the next available day
     if (!$availableSlot) {
-        $availableSlot = date('Y-m-d H:i:s', strtotime("+1 day 09:00:00"));
+        $availableSlot = date('Y-m-d H:i:s', strtotime("+2 day 09:00:00"));
     }
 
     // Insert into schedules table
     $stmt = $conn->prepare("INSERT INTO schedules (order_id, student_id, schedule_date) VALUES (?, ?, ?)");
-    $stmt->bind_param("iis", $order_id, $student_id, $availableSlot);
+    $stmt->bind_param("iss", $order_id, $student_id, $availableSlot);
     $stmt->execute();
     $stmt->close();
 

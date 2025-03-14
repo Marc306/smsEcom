@@ -62,7 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
             setButtonLoading(true);
 
             // Send data to server
-            const response = await fetch('php/submit-message.php', {
+            // const response = await fetch('php/submit-message.php', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify(formData)
+            // });
+            const response = await fetch('https://ecommerce.schoolmanagementsystem2.com/php/submit-message.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

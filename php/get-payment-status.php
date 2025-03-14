@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json");
-require_once "config.php"; // Database connection
+require_once "connection.php"; // Database connection
 
 if (!isset($_GET['order_id'])) {
     echo json_encode(["error" => "Order ID is required"]);

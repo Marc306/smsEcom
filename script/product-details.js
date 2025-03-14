@@ -171,7 +171,7 @@ class Details {
             sessionStorage.setItem("buyNowProduct", JSON.stringify(productDetails));
     
             // ✅ Ensure correct redirection
-            window.location.href = "/smsEcommerce/payment-option.php";
+            window.location.href = "https://ecommerce.schoolmanagementsystem2.com/payment-option.php";
         });
     }
      

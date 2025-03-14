@@ -1,4 +1,4 @@
-const API_URL = "http://localhost/smsEcommerce/php/schedule-handler.php"; 
+const API_URL = "https://ecommerce.schoolmanagementsystem2.com/php/schedule-handler.php"; 
 
 async function assignPickupSchedule(orderId, studentId, paymentMethod) {
     try {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Schedule Gcash/Kasunduan after payment confirmation
 async function checkPaymentAndSchedule(orderId, studentId, paymentMethod) {
-    const paymentStatus = await fetch(`http://localhost/smsEcommerce/php/get-payment-status.php?order_id=${orderId}`)
+    const paymentStatus = await fetch(`https://ecommerce.schoolmanagementsystem2.com/php/get-payment-status.php?order_id=${orderId}`)
         .then(res => res.json());
 
     if (paymentStatus.status === "Confirmed") {

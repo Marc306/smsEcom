@@ -1,7 +1,7 @@
 export class StockHandler { 
     async fetchStockData() {
         try {
-            const response = await fetch("php/monitoring-stacks.php");
+            const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/monitoring-stacks.php");
 
             if (!response.ok) {
                 throw new Error(`HTTP Error! Status: ${response.status}`);

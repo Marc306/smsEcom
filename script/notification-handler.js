@@ -1,7 +1,8 @@
 // Function to update cart notification
 async function updateCartNotification() {
     try {
-        const response = await fetch('http://localhost/smsEcommerce/php/cartData.php?action=getCart');
+        // const response = await fetch('http://localhost/smsEcommerce/php/cartData.php?action=getCart');
+        const response = await fetch('https://ecommerce.schoolmanagementsystem2.com/php/cartData.php?action=getCart');
         const data = await response.json();
         
         const cartCount = document.querySelector('.cart-count');

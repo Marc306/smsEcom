@@ -1,8 +1,12 @@
 <?php
-define('DB_HOST', 'localhost:3307');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'studentaccount');
+// define('DB_HOST', 'localhost:3307');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
+// define('DB_NAME', 'studentaccount');
+define('DB_HOST', 'localhost');
+define('DB_USER', 'ecom_Marc306');
+define('DB_PASS', 'OG*ED2e^2P%Atv0g');
+define('DB_NAME', 'ecom_studentaccount');
 
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS);
 

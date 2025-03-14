@@ -379,7 +379,14 @@ function showPickupModal(orderId) {
     const alertDiv = document.getElementById('pickupDateAlert');
     alertDiv.classList.remove('d-none');
     
-    fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    // fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     body: `action=suggest_dates&id=${orderId}`
+    // })
+    fetch('https://ecommerce.schoolmanagementsystem2.com/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -444,7 +451,14 @@ function assignPickup() {
         return;
     }
 
-    fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    // fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     body: `action=assign_pickup&id=${currentOrderId}&pickup_date=${date}`
+    // })
+    fetch('https://ecommerce.schoolmanagementsystem2.com/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -476,7 +490,14 @@ function markToReceive(orderId) {
         return;
     }
     
-    fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    // fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     body: `action=mark_to_receive&id=${orderId}`
+    // })
+    fetch('https://ecommerce.schoolmanagementsystem2.com/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -501,7 +522,14 @@ function confirmPayment(orderId) {
         return;
     }
     
-    fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    // fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    //     method: 'POST',
+    //     headers: {
+    //         'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //     body: `action=confirm_payment&id=${orderId}`
+    // })
+    fetch('https://ecommerce.schoolmanagementsystem2.com/smsAdmin/pages/orders.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
