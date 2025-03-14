@@ -1,4 +1,4 @@
-<?php
+<?php 
 require_once '../config/database.php';
 
 // Handle product operations
@@ -15,36 +15,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $typeItem = $conn->real_escape_string($_POST['typeItem']);
                     $price = floatval($_POST['price']);
                     $stock = intval($_POST['stock']);
-                    $image = $_POST['image']; // Store product image data
-                    
-                    // Handle description/size chart based on type
-                    $productDescription = '';
-                    $sizeChart = '';
-                    if ($typeItem === 'uniform') {
-                        $sizeChart = $_POST['sizeChart']; // Store size chart image
-                    } else {
-                        $productDescription = $conn->real_escape_string($_POST['productDescription']);
+                    $productDescription = isset($_POST['productDescription']) ? $conn->real_escape_string($_POST['productDescription']) : '';
+                
+                    // Define the correct upload directory
+                    $productImageDir = "../../../uploadIMGProducts/";
+                
+                    // Ensure the directory exists
+                    if (!is_dir($productImageDir)) {
+                        mkdir($productImageDir, 0777, true);
                     }
-                    
-                    // Begin transaction
+                
+                    // Process image upload
+                    $newImagePath = "";
+                    if (!empty($_FILES['productImage']['name'])) {
+                        $imageFileName = basename($_FILES['productImage']['name']);
+                        $targetFilePath = $productImageDir . $imageFileName;
+                        $imageFileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
+                
+                        // Validate file type (Allow only JPG, PNG, JPEG)
+                        $allowedTypes = ['jpg', 'jpeg', 'png'];
+                        if (!in_array($imageFileType, $allowedTypes)) {
+                            throw new Exception("Invalid image file type. Only JPG, JPEG, and PNG allowed.");
+                        }
+                
+                        // Move uploaded file to the upload directory
+                        if (move_uploaded_file($_FILES['productImage']['tmp_name'], $targetFilePath)) {
+                            $newImagePath = $targetFilePath; // Save the new image path
+                        } else {
+                            throw new Exception("Error uploading product image.");
+                        }
+                    } else {
+                        throw new Exception("No image uploaded.");
+                    }
+                
+                    // Start transaction
                     $conn->begin_transaction();
-                    
                     try {
-                        // Insert into products table
-                        $sql = "INSERT INTO products (productId, name, productDescription, sizeChart, price, stock, image, typeItem) 
-                                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                        // Insert product details into products table
+                        $sql = "INSERT INTO studentaccount.products (productId, name, productDescription, price, stock, image, typeItem) 
+                                VALUES (?, ?, ?, ?, ?, ?, ?)";
                         $stmt = $conn->prepare($sql);
-                        $stmt->bind_param("ssssddss", $productId, $name, $productDescription, $sizeChart, $price, $stock, $image, $typeItem);
-                        
+                        $stmt->bind_param("sssddss", $productId, $name, $productDescription, $price, $stock, $newImagePath, $typeItem);
+                
                         if (!$stmt->execute()) {
                             throw new Exception("Failed to insert product: " . $stmt->error);
                         }
-                        
+                
                         // Insert selected categories into productCategories table
-                        if (isset($_POST['categories']) && is_array($_POST['categories'])) {
-                            $sql = "INSERT INTO productCategories (productId, productcategories) VALUES (?, ?)";
+                        if (!empty($_POST['categories']) && is_array($_POST['categories'])) {
+                            $sql = "INSERT INTO studentaccount.productCategories (productId, productcategories) VALUES (?, ?)";
                             $stmt = $conn->prepare($sql);
-                            
+                
                             foreach ($_POST['categories'] as $category) {
                                 $stmt->bind_param("ss", $productId, $category);
                                 if (!$stmt->execute()) {
@@ -52,16 +73,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 }
                             }
                         } else {
-                            throw new Exception("Please select at least one year level category");
+                            throw new Exception("Please select at least one year level category.");
                         }
-                        
+                
+                        // Commit the transaction
                         $conn->commit();
-                        $response = ['success' => true, 'message' => 'Product added successfully'];
+                        $response = ['success' => true, 'message' => 'Product added successfully with image uploaded.'];
                     } catch (Exception $e) {
                         $conn->rollback();
-                        throw $e;
+                        $response['error'] = $e->getMessage();
                     }
-                    break;
+                    break;                                                              
 
                 case 'delete':
                     $productId = $conn->real_escape_string($_POST['productId']);
@@ -139,55 +161,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <th>Name</th>
                         <th>Type</th>
                         <th>Categories</th>
-                        <th>Description/Size Chart</th>
+                        <th>Description</th>
                         <th>Price</th>
                         <th>Stock</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php
-                $sql = "SELECT p.productId, p.image, p.name, p.typeItem, p.productDescription, p.sizeChart,
-                        GROUP_CONCAT(pc.productcategories) as categories, 
-                        p.price, p.stock 
-                        FROM products p
-                        LEFT JOIN productCategories pc ON p.productId = pc.productId
-                        GROUP BY p.productId
-                        ORDER BY p.typeItem, p.name";
-            
-                $result = $conn->query($sql);
-            
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>{$row['productId']}</td>";
-                        echo "<td><img src='{$row['image']}' alt='Product Image' width='50' height='50'></td>";
-                        echo "<td>{$row['name']}</td>";
-                        echo "<td>{$row['typeItem']}</td>";
-                        echo "<td>{$row['categories']}</td>";
-                        echo "<td>";
-                        if ($row['typeItem'] === 'uniform') {
-                            echo "<img src='{$row['sizeChart']}' alt='Size Chart' width='50' height='50'>";
-                        } else {
-                            echo htmlspecialchars($row['productDescription']);
+                    <?php
+                    $sql = "SELECT p.productId, p.image, p.name, p.typeItem, p.productDescription,
+                            GROUP_CONCAT(pc.productcategories SEPARATOR ', ') as categories, 
+                            p.price, p.stock 
+                            FROM studentaccount.products p
+                            LEFT JOIN studentaccount.productCategories pc ON p.productId = pc.productId
+                            GROUP BY p.productId
+                            ORDER BY p.typeItem, p.name";
+
+                    $result = $conn->query($sql);
+
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $imagePath = "../../../uploadIMGProducts/" . $row['image']; // Corrected path
+
+                            echo "<tr>";
+                            echo "<td>{$row['productId']}</td>";
+                            echo "<td><img src='{$imagePath}' alt='Product Image' width='50' height='50' style='object-fit:cover;'></td>";
+                            echo "<td>{$row['name']}</td>";
+                            echo "<td>{$row['typeItem']}</td>";
+                            echo "<td>{$row['categories']}</td>";
+                            echo "<td>" . htmlspecialchars($row['productDescription']) . "</td>";
+                            echo "<td>₱" . number_format($row['price'], 2) . "</td>";
+                            echo "<td>
+                                    <input type='number' class='form-control form-control-sm stock-input' 
+                                        value='{$row['stock']}' data-id='{$row['productId']}' style='width: 80px'>
+                                </td>";
+                            echo "<td>
+                                    <button class='btn btn-danger btn-sm delete-product' data-id='{$row['productId']}'>
+                                        <i class='fas fa-trash'></i>
+                                    </button>
+                                </td>";
+                            echo "</tr>";
                         }
-                        echo "</td>";
-                        echo "<td>₱{$row['price']}</td>";
-                        echo "<td>
-                                <input type='number' class='form-control form-control-sm stock-input' 
-                                    value='{$row['stock']}' data-id='{$row['productId']}' style='width: 80px'>
-                            </td>";
-                        echo "<td>
-                                <button class='btn btn-danger btn-sm delete-product' data-id='{$row['productId']}'>
-                                    <i class='fas fa-trash'></i>
-                                </button>
-                            </td>";
-                        echo "</tr>";
+                    } else {
+                        echo "<tr><td colspan='9' class='text-center'>No products found</td></tr>";
                     }
-                } else {
-                    echo "<tr><td colspan='9' class='text-center'>No products found</td></tr>";
-                }
-                ?>
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -203,7 +221,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <form id="addProductForm">
+                <form id="addProductForm" enctype="multipart/form-data">
                     <input type="hidden" name="action" value="add">
                     <div class="mb-3">
                         <label class="form-label">Product ID</label>
@@ -240,23 +258,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <label class="form-check-label" for="senior">Senior</label>
                         </div>
                     </div>
-                    <div class="mb-3" id="textDescription">
+                    <div class="mb-3">
                         <label class="form-label">Description</label>
                         <textarea class="form-control" name="productDescription" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3" id="sizeChartUpload" style="display:none;">
-                        <label class="form-label">Size Chart</label>
-                        <input type="file" class="form-control" name="sizeChart" accept="image/*">
-                        <div class="mt-2">
-                            <img id="sizeChartPreview" src="" style="max-width:100px; max-height:100px; display:none;">
-                        </div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Product Image</label>
                         <input type="file" class="form-control" name="productImage" accept="image/*" required>
-                        <div class="mt-2">
-                            <img id="productImagePreview" src="" style="max-width:100px; max-height:100px; display:none;">
-                        </div>
+                        <img id="productImagePreview" style="max-width:100px; max-height:100px; display:none;">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Price</label>
@@ -359,34 +368,15 @@ $(document).ready(function() {
         }
     }
 
-    // Toggle description/size chart based on product type
-    $('#typeItem').change(function() {
-        const type = $(this).val();
-        if (type === 'uniform') {
-            $('#textDescription').hide();
-            $('#sizeChartUpload').show();
-            $('textarea[name="productDescription"]').prop('required', false);
-            $('input[name="sizeChart"]').prop('required', true);
-        } else {
-            $('#textDescription').show();
-            $('#sizeChartUpload').hide();
-            $('textarea[name="productDescription"]').prop('required', true);
-            $('input[name="sizeChart"]').prop('required', false);
-        }
-    });
-
     // Handle image uploads
     $('input[name="productImage"]').change(function() {
         handleImageUpload(this, document.getElementById('productImagePreview'));
     });
 
-    $('input[name="sizeChart"]').change(function() {
-        handleImageUpload(this, document.getElementById('sizeChartPreview'));
-    });
-
-    // Handle form submission
     $('#saveProduct').click(function() {
         const form = $('#addProductForm')[0];
+
+        // Check if form is valid
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
@@ -398,45 +388,25 @@ $(document).ready(function() {
             return;
         }
 
-        // Get the product image base64 data
+        // Create FormData object
+        const formData = new FormData(form);
+        formData.append("action", "add");
+
+        // Validate product image upload
         const productImageInput = $('input[name="productImage"]')[0];
-        if (!productImageInput.dataset.base64) {
+        if (!productImageInput.files.length) {
             alert('Please select a product image');
             return;
         }
 
-        // Prepare form data
-        const formData = {
-            action: 'add',
-            productId: $('input[name="productId"]').val(),
-            name: $('input[name="name"]').val(),
-            typeItem: $('#typeItem').val(),
-            price: $('input[name="price"]').val(),
-            stock: $('input[name="stock"]').val(),
-            image: productImageInput.dataset.base64,
-            categories: $('input[name="categories[]"]:checked').map(function() {
-                return this.value;
-            }).get()
-        };
-
-        // Handle description/size chart based on type
-        if ($('#typeItem').val() === 'uniform') {
-            const sizeChartInput = $('input[name="sizeChart"]')[0];
-            if (!sizeChartInput.dataset.base64) {
-                alert('Please select a size chart image');
-                return;
-            }
-            formData.sizeChart = sizeChartInput.dataset.base64;
-        } else {
-            formData.productDescription = $('textarea[name="productDescription"]').val();
-        }
-
-        // Submit the form
+        // Submit the form using AJAX
         $.ajax({
-            url: '/smsEcommerce/smsAdmin/pages/products.php',
+            url: '/smsEcommerce/smsAdmin/pages/products.php', // Change to actual upload script
             type: 'POST',
             data: formData,
             dataType: 'json',
+            processData: false,  // Important for file uploads
+            contentType: false,  // Important for file uploads
             success: function(response) {
                 if (response.success) {
                     alert(response.message);
@@ -446,10 +416,12 @@ $(document).ready(function() {
                 }
             },
             error: function(xhr, status, error) {
-                console.error('AJAX Error:', error);
-                alert('Failed to add product. Please try again.');
+                console.error('AJAX Error:', xhr.responseText);
+                alert('Failed to add product. Check console for details.');
             }
         });
     });
+
 });
 </script>
+

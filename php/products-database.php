@@ -1,4 +1,4 @@
-<?php
+<?php 
 header('Content-Type: application/json');
 
 $servername = "localhost:3307";
@@ -27,6 +27,15 @@ $products = [];
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $row['productCategories'] = explode(",", $row['productCategories']); // Convert CSV string to an array
+        
+        // Define the image directory
+        $imageDirectory = "../uploadIMGProducts/";
+        
+        // Ensure image path is properly set
+        if (!empty($row['image'])) {
+            $row['image'] = $imageDirectory . basename($row['image']);
+        }
+        
         $products[] = $row;
     }
 }
@@ -36,3 +45,5 @@ echo json_encode($products, JSON_PRETTY_PRINT);
 
 $conn->close();
 ?>
+
+
