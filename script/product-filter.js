@@ -1,8 +1,9 @@
-import { products, productsLoadFetch } from "../data/the-products.js"
-import { Product } from "../data/parentClass-product.js"
+import { products, productsLoadFetch } from "../data/the-products.js";
+import { Product } from "../data/parentClass-product.js";
 
-class FilterSideProduct extends Product{
+class FilterSideProduct extends Product {
     storageProduct;
+    stockData = []; // Store fetched stock data
 
     constructor(productList) {
         super(productList);
@@ -10,76 +11,78 @@ class FilterSideProduct extends Product{
         this.funckie();
     }
 
-    productCardCreator(filterProduct){
-        return super.productCardCreator(filterProduct);
+    async productCardCreator(filterProduct, stockData) { // Pass stockData
+        return super.productCardCreator(filterProduct, stockData);
     }
 
-    cardFunction(){
+    cardFunction() {
         return super.cardFunction();
     }
 
-    asdc(){
+    asdc() {
         this.storageProduct = JSON.parse(localStorage.getItem("selectedCategory"));
-        if(!this.storageProduct){
+        if (!this.storageProduct) {
             this.storageProduct = this.productList;
         }
     }
 
     selectedCategory() {
         document.querySelectorAll(".select-link").forEach((eachSideBtn) => {
-            eachSideBtn.addEventListener("click", () => {
+            eachSideBtn.addEventListener("click", async () => {
                 const selectedCategory = eachSideBtn.getAttribute("data-category");
                 console.log("Selected Category:", selectedCategory);
                 const categoryFilter = selectedCategory;
-    
-                let filteredProducts = "";
-                if (categoryFilter === 'all'){
+
+                let filteredProducts = [];
+                if (categoryFilter === "all") {
                     filteredProducts = this.productList;
-                } 
-                else{
-                    filteredProducts = this.productList.filter(product =>{
-                        return product.productCategories.includes(categoryFilter);
-                    });
+                } else {
+                    filteredProducts = this.productList.filter((product) =>
+                        product.productCategories.includes(categoryFilter)
+                    );
                 }
                 localStorage.setItem("selectedCategory", JSON.stringify(filteredProducts));
 
                 this.asdc();
-                this.funckie();
+                await this.funckie(); // ✅ Ensure stock updates when filtering
             });
         });
     }
 
-    funckie(){
+    async funckie() {
         console.log(this.storageProduct);
         let abccc = "";
-        this.storageProduct.forEach((storedProduct) =>{
-            console.log(storedProduct)
-            abccc += this.productCardCreator(storedProduct);
 
+        for (const storedProduct of this.storageProduct) {
             console.log(storedProduct);
-        });
+            abccc += await this.productCardCreator(storedProduct, this.stockData); // ✅ Pass stockData
+        }
 
         document.querySelector(".card-box").innerHTML = abccc;
         this.cardFunction();
-    } 
-    
+    }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     async function fetchProductFilterLoad() {
         try {
             await productsLoadFetch();
-    
+            const productSelect = new FilterSideProduct(products);
+
+            // ✅ Fetch stock data and store it
+            productSelect.stockData = await productSelect.stockHandler.fetchStockData();
+            
+            // ✅ Ensure stock data is used
+            await productSelect.funckie(); 
+            productSelect.selectedCategory();
         } catch (error) {
             console.log(error);
         }
-        
-        const productSelect = new FilterSideProduct(products);
-        productSelect.selectedCategory();
     }
 
     fetchProductFilterLoad();
 });
+
 
 
 

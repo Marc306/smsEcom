@@ -34,9 +34,9 @@ class Details {
                 
                 ${
                     matchingIdProduct.typeItem === "books"
-                        ? ""
+                        ? `<p>${matchingIdProduct.productDescription}</p>`
                         : `<div class="size-chart-div">
-                            <img class="size-chart-image" src="${matchingIdProduct.productDescription}" alt="">
+                            <img class="size-chart-image" src="/image/size-chart.jpg" alt="">
                         </div>`
                 }
             </div>
@@ -46,7 +46,7 @@ class Details {
             <div class="details-text">
                 <div class="product-name">
                     <p class="course-text limit-text-2line">${matchingIdProduct.name}</p>
-                    <p class="year-text">(1st year to 4th year)</p>
+                    ${matchingIdProduct.typeItem === "uniform" ? `<p class="year-text">${matchingIdProduct.productDescription}</p>` : ""}
                 </div>
 
                 <div class="pricing-div">
