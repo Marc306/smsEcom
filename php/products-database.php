@@ -1,5 +1,7 @@
 <?php 
 header('Content-Type: application/json');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // $servername = "localhost:3307";
 // $username = "root"; 
@@ -20,9 +22,9 @@ if ($conn->connect_error) {
 
 $sql = "SELECT 
             p.productId, p.name, p.image, p.price, p.typeItem, p.productDescription,
-            GROUP_CONCAT(pc.productCategories) AS productCategories
+            GROUP_CONCAT(pc.productcategories) AS productcategories
         FROM products p
-        LEFT JOIN productCategories pc ON p.productId = pc.productId
+        LEFT JOIN productcategories pc ON p.productId = pc.productId
         GROUP BY p.productId;";
 
 $result = $conn->query($sql);
@@ -31,7 +33,7 @@ $products = [];
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $row['productCategories'] = explode(",", $row['productCategories']); // Convert CSV string to an array
+        $row['productcategories'] = explode(",", $row['productcategories']); // Convert CSV string to an array
         
         // Define the image directory
         $imageDirectory = "../uploadIMGProducts/";
