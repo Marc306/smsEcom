@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Set loading state
             setButtonLoading(true);
 
-            // Send data to server
-            // const response = await fetch('php/submit-message.php', {
+            //Send data to server
+            // const response = await fetch('http://localhost/smsEcommerce/php/submit-message.php', {
             //     method: 'POST',
             //     headers: {
             //         'Content-Type': 'application/json'

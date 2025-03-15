@@ -2,6 +2,7 @@
 async function updatePurchaseNotifications() {
     try {
         const response = await fetch('https://ecommerce.schoolmanagementsystem2.com/php/get-orders.php');
+        // const response = await fetch('http://localhost/smsEcommerce/php/get-orders.php');
         const data = await response.json();
         
         // Get all purchase notification elements

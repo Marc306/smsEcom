@@ -126,7 +126,8 @@ class AddToCart {
 
     async cartStorage(){
         try{
-            const response = await fetch("http://ecommerce.schoolmanagementsystem2.com/php/cartData.php?action=getCart");
+            const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/cartData.php?action=getCart");
+            // const response = await fetch("http://localhost/smsEcommerce/php/cartData.php?action=getCart");
             const data = await response.json();
             this.cartItems = data.cartItems || [];
             return this.cartItems;
@@ -152,6 +153,18 @@ class AddToCart {
                     quantity: 1,
                 }),
             });
+            // const response = await fetch("http://localhost/smsEcommerce/php/cartData.php?action=add", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({
+            //         productId: itemId,
+            //         gender: itemGender,
+            //         size: itemSize,
+            //         quantity: 1,
+            //     }),
+            // });
 
             const addedNotif = document.querySelector(`.js-added-to-cart-${itemId}`);
             const data = await response.json();
@@ -185,6 +198,16 @@ class AddToCart {
                     quantity: 1,
                 }),
             });
+            // const response = await fetch("http://localhost/smsEcommerce/php/cartData.php?action=add", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({
+            //         productId: itemID,
+            //         quantity: 1,
+            //     }),
+            // });
 
             const addedNotif = document.querySelector(`.js-added-to-cart-${itemID}`);
             const data = await response.json();
@@ -215,6 +238,13 @@ class AddToCart {
                 },
                 body: JSON.stringify({ action: "delete", productId: idOfTheItem }),
             });
+            // const response = await fetch("http://localhost/smsEcommerce/php/cart-action.php?action=delete", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({ action: "delete", productId: idOfTheItem }),
+            // });
 
             const data = await response.json();
             if(data.success){
@@ -242,6 +272,17 @@ class AddToCart {
                     newSize: newUniformSize,
                 }),
             });
+            // const response = await fetch("http://localhost/smsEcommerce/php/cart-action.php", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({
+            //         action: "update_size",
+            //         productId: productId,
+            //         newSize: newUniformSize,
+            //     }),
+            // });
     
             const data = await response.json();
             if (data.success){

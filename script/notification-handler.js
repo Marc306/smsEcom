@@ -31,7 +31,8 @@ async function updateCartNotification() {
 // Function to update orders notification
 async function updateOrdersNotification() {
     try {
-        const response = await fetch('http://localhost/smsEcommerce/php/get-orders.php');
+        // const response = await fetch('http://localhost/smsEcommerce/php/get-orders.php');
+        const response = await fetch('https://ecommerce.schoolmanagementsystem2.com/php/get-orders.php');
         const data = await response.json();
         
         const notifProfile = document.querySelector('.notif-profile');

@@ -12,6 +12,7 @@
     // $username = "root";
     // $password = "";
     // $dbname = "studentaccount";
+
     $servername = "localhost"; // Change if your database is hosted elsewhere
     $username = "ecom_Marc306";        // Default XAMPP username is 'root'
     $password = "OG*ED2e^2P%Atv0g";            // Default XAMPP password is empty

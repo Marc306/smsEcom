@@ -79,7 +79,7 @@ async function buyNowItemAndIfDuplicate() {
 
             if (checkoutData.success) {
                 sessionStorage.removeItem("buyNowProduct");
-               // window.location.href = `/smsEcommerce/user-purchase.php?payment=${paymentMethod.value}`;
+                //window.location.href = `http://localhost/smsEcommerce/user-purchase.php?payment=${paymentMethod.value}`;
                window.location.href = `https://ecommerce.schoolmanagementsystem2.com/user-purchase.php?payment=${paymentMethod.value}`;
             } else {
                 alert("Error processing order.");

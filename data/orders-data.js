@@ -3,6 +3,7 @@ export let orders = [];
 export async function ordersFetch() {
     try {
         const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/get-orders.php");
+        // const response = await fetch("http://localhost/smsEcommerce/php/get-orders.php");
         const ordersItem = await response.json();
 
         orders = ordersItem.orders;
@@ -23,6 +24,13 @@ export async function deleteOrder(productId) {
             },
             body: JSON.stringify({ action: "delete", productId }),
         });
+        // const response = await fetch("http://localhost/smsEcommerce/php/order-cancel.php", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({ action: "delete", productId }),
+        // });
 
         console.log("Raw response:", response);
 

@@ -292,7 +292,7 @@ $(document).ready(function() {
         const productId = $(this).data('id');
         if (confirm('Are you sure you want to delete this product?')) {
             $.ajax({
-                // url: '/smsEcommerce/smsAdmin/pages/products.php',
+                // url: 'http://localhost/smsEcommerce/smsAdmin/pages/products.php',
                 url: 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/pages/products.php',
                 type: 'POST',
                 data: {
@@ -322,7 +322,7 @@ $(document).ready(function() {
         const stock = $(this).val();
         
         $.ajax({
-            // url: '/smsEcommerce/smsAdmin/pages/products.php',
+            // url: 'http://localhost/smsEcommerce/smsAdmin/pages/products.php',
             url: 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/pages/products.php',
             type: 'POST',
             data: {
@@ -403,7 +403,7 @@ $(document).ready(function() {
 
         // Submit the form using AJAX
         $.ajax({
-            // url: '/smsEcommerce/smsAdmin/pages/products.php', // Change to actual upload script
+            // url: 'http://localhost/smsEcommerce/smsAdmin/pages/products.php', // Change to actual upload script
             url: 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/pages/products.php',
             type: 'POST',
             data: formData,

@@ -172,6 +172,7 @@ class Details {
     
             // ✅ Ensure correct redirection
             window.location.href = "https://ecommerce.schoolmanagementsystem2.com/payment-option.php";
+            // window.location.href = "http://localhost/smsEcommerce/payment-option.php";
         });
     }
      

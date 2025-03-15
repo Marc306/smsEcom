@@ -379,7 +379,7 @@ function showPickupModal(orderId) {
     const alertDiv = document.getElementById('pickupDateAlert');
     alertDiv.classList.remove('d-none');
     
-    // fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    // fetch('http://localhost/smsEcommerce/smsAdmin/pages/orders.php', {
     //     method: 'POST',
     //     headers: {
     //         'Content-Type': 'application/x-www-form-urlencoded',
@@ -451,7 +451,7 @@ function assignPickup() {
         return;
     }
 
-    // fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    // fetch('http://localhost/smsEcommerce/smsAdmin/pages/orders.php', {
     //     method: 'POST',
     //     headers: {
     //         'Content-Type': 'application/x-www-form-urlencoded',
@@ -490,7 +490,7 @@ function markToReceive(orderId) {
         return;
     }
     
-    // fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    // fetch('http://localhost/smsEcommerce/smsAdmin/pages/orders.php', {
     //     method: 'POST',
     //     headers: {
     //         'Content-Type': 'application/x-www-form-urlencoded',
@@ -522,7 +522,7 @@ function confirmPayment(orderId) {
         return;
     }
     
-    // fetch('/smsEcommerce/smsAdmin/pages/orders.php', {
+    // fetch('http://localhost/smsEcommerce/smsAdmin/pages/orders.php', {
     //     method: 'POST',
     //     headers: {
     //         'Content-Type': 'application/x-www-form-urlencoded',

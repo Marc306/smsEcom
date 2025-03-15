@@ -6886,3 +6886,73 @@ Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true
 Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
 Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
 Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+=== CHECKOUT DEBUG LOG ===
+🟢 Session student_id: {"student_id":"s21019965"}
+🔵 Raw JSON Input: {"type":"cart","payment_method":"Gcash Payment"}
+🟡 Decoded Request: Array
+(
+    [type] => cart
+    [payment_method] => Gcash Payment
+)
+
+🟣 Extracted Payment Method: Gcash Payment
+📅 Schedule Created for Order ID: 133 (Status: Pending)
+✅ Order Placed Successfully - Order ID: 133
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: {"student_id":"s21019965","admin_logged_in":true,"admin_username":"admin"}
+Fetching orders for student_id: []
+ERROR: User not logged in.

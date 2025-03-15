@@ -14,9 +14,13 @@
 
 export let infoOfStudent;
 export function fetchDataInfo(){
+    // const dataInfo = fetch("http://localhost/smsEcommerce/php/profileInfo.php").then((response) =>{
+    //     return response.json();
+    // })
     const dataInfo = fetch("https://ecommerce.schoolmanagementsystem2.com/php/profileInfo.php").then((response) =>{
         return response.json();
-    }).then((dataResponse) =>{
+    })
+    .then((dataResponse) =>{
         infoOfStudent = dataResponse;
         console.log(dataResponse);
     }).catch((error) => {

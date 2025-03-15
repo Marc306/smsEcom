@@ -174,8 +174,8 @@ $(document).ready(function() {
     // Initialize DataTable with responsive features
     var notificationsTable = $('#notificationsTable').DataTable({
         "ajax": {
-            //"url": "/smsEcommerce/smsAdmin/functions/get_notifications.php",
-            url: 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/functions/get_notifications.php',
+            //"url": "http://localhost/smsEcommerce/smsAdmin/functions/get_notifications.php",
+            "url": 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/functions/get_notifications.php',
             "type": "GET",
             "error": function(xhr, error, thrown) {
                 console.error('DataTables Ajax error:', error);
@@ -271,7 +271,7 @@ $(document).ready(function() {
         console.log('Submitting Data:', formData); // Debugging
 
         $.ajax({
-            //url: '/smsEcommerce/smsAdmin/functions/add_notification.php',
+            // url: 'http://localhost/smsEcommerce/smsAdmin/functions/add_notification.php',
             url: 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/functions/add_notification.php',
             type: 'POST',
             data: formData,
