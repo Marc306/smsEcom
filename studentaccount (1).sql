@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Generation Time: Mar 02, 2025 at 04:29 PM
+-- Generation Time: Mar 15, 2025 at 09:37 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `studentaccount`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `adminaccount`
+--
+
+CREATE TABLE `adminaccount` (
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `adminaccount`
+--
+
+INSERT INTO `adminaccount` (`username`, `password`) VALUES
+('admin', '123');
 
 -- --------------------------------------------------------
 
@@ -45,7 +63,7 @@ CREATE TABLE `cart` (
 CREATE TABLE `completed_orders` (
   `id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
-  `student_id` varchar(255) NOT NULL,
+  `student_id` varchar(20) NOT NULL,
   `productId` varchar(255) NOT NULL,
   `quantity` int(11) NOT NULL DEFAULT 1,
   `total_price` decimal(10,2) NOT NULL,
@@ -73,6 +91,32 @@ CREATE TABLE `message_chat` (
 
 INSERT INTO `message_chat` (`id`, `name`, `email`, `subject`, `message`, `sent`) VALUES
 (1, 'andrew', 'lics@gmail.com', 'qwertyu', 'wqertyuioijknbvcxzsdf', '2025-03-02 12:46:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notifications`
+--
+
+CREATE TABLE `notifications` (
+  `id` int(11) NOT NULL,
+  `student_id` varchar(20) NOT NULL,
+  `message` text NOT NULL,
+  `notification_type` enum('product_update','order_status','reminder') NOT NULL,
+  `is_read` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `notifications`
+--
+
+INSERT INTO `notifications` (`id`, `student_id`, `message`, `notification_type`, `is_read`, `created_at`) VALUES
+(1, 's21019965', 'Keep moving forward', 'reminder', 1, '2025-03-12 08:22:27'),
+(2, 's21019965', 'admin notification', 'reminder', 1, '2025-03-12 08:41:50'),
+(3, 's21019965', 'testing read notification', 'reminder', 1, '2025-03-12 08:50:49'),
+(4, 's21019965', 'notification', 'reminder', 1, '2025-03-12 09:06:45'),
+(5, 's21019965', 'test for the century', 'reminder', 1, '2025-03-12 09:33:35');
 
 -- --------------------------------------------------------
 
@@ -135,43 +179,21 @@ CREATE TABLE `pickup_schedule` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productCategories`
+-- Table structure for table `productcategories`
 --
 
-CREATE TABLE `productCategories` (
+CREATE TABLE `productcategories` (
   `id` int(11) NOT NULL,
   `productId` varchar(255) NOT NULL,
   `productcategories` enum('freshman','sophomore','junior','senior') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `productCategories`
+-- Dumping data for table `productcategories`
 --
 
-INSERT INTO `productCategories` (`id`, `productId`, `productcategories`) VALUES
-(1, '123qwe', 'freshman'),
-(2, '123qwe', 'sophomore'),
-(3, '123qwe', 'junior'),
-(4, '123qwe', 'senior'),
-(5, '456rty', 'freshman'),
-(6, 'ewq321\r\n', 'freshman'),
-(7, 'ewq321\r\n', 'sophomore'),
-(8, 'ewq321\r\n', 'junior'),
-(9, 'ewq321\r\n', 'senior'),
-(10, 'fghj987', 'junior'),
-(11, 'fghj987', 'senior'),
-(12, 'a7s5d4f', 'junior'),
-(13, 'a7s5d4f', 'senior'),
-(14, 'fghj543', 'junior'),
-(15, 'fghj543', 'senior'),
-(16, 'po3i445', 'freshman'),
-(17, 'po3i445', 'sophomore'),
-(18, 'mnjk567', 'junior'),
-(19, 'mnjk567', 'senior'),
-(20, 'jjk340', 'freshman'),
-(21, 'jjk340', 'sophomore'),
-(22, 'nvgh056', 'junior'),
-(23, 'nvgh056', 'senior');
+INSERT INTO `productcategories` (`id`, `productId`, `productcategories`) VALUES
+(71, '123rtyu', 'freshman');
 
 -- --------------------------------------------------------
 
@@ -195,17 +217,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`productId`, `image`, `productDescription`, `name`, `typeItem`, `price`, `quantity`, `stock`) VALUES
-('123qwe', 'image/products/crim1stTo4thYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bachelor of Science in Criminology School Uniform', 'uniform', '1070.00', 1, 0),
-('456rty', 'image/products/istockphoto.jpg', '', 'National Service Training Program(NSTP2) ', 'books', '250.00', 1, 50),
-('a7s5d4f', 'image/products/teacherUnif3rdTo4thYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bachelor of Science in Education School Uniform', 'uniform', '1060.00', 1, 40),
-('cvbn678', 'image/products/comEng3rdTo4thYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bachelor of Science in Computer Engineering School Uniform', 'uniform', '1087.00', 1, 70),
-('ewq321\r\n', 'image/products/psych1stTo4thYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bachelor of Science Psychology School Uniforms', 'uniform', '1050.00', 1, 100),
-('fghj543', 'image/products/hm3rdTo4thYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bachelor of Science in Hospitality Management School Uniform', 'uniform', '1080.00', 1, 60),
-('fghj987', 'image/products/IT3rdTo4thYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bachelor of Science in Information Technology School Uniform', 'uniform', '1065.00', 1, 55),
-('jjk340', 'image/products/tourism1stTo2ndYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bachelor of Science in Tourism Management School Uniform', 'uniform', '1095.00', 1, 30),
-('mnjk567', 'image/products/business3rdTo4thYear.jpg', 'image/products/IMG_20240919_151403.jpg\r\n', 'Bachelor of Science in Business Administrator School Uniform', 'uniform', '1077.00', 1, 43),
-('nvgh056', 'image/products/tourism3rdTo4thYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bachelor of Science in Tourism Management School Uniform', 'uniform', '1100.00', 1, 8),
-('po3i445', 'image/products/comonUnif1stTo2ndYear.jpg', 'image/products/IMG_20240919_151403.jpg', 'Bestlink Regular School Uniform', 'uniform', '1090.00', 1, 27);
+('123rtyu', '../../../uploadIMGProducts/p.a.jpg', 'weretu oituwor woowi uor', 'book 1', 'books', '200.00', 1, 11);
 
 -- --------------------------------------------------------
 
@@ -259,6 +271,12 @@ INSERT INTO `students` (`id`, `student_id`, `password`, `first_name`, `middle_na
 --
 
 --
+-- Indexes for table `adminaccount`
+--
+ALTER TABLE `adminaccount`
+  ADD PRIMARY KEY (`username`);
+
+--
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
@@ -269,13 +287,22 @@ ALTER TABLE `cart`
 -- Indexes for table `completed_orders`
 --
 ALTER TABLE `completed_orders`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `student_id` (`student_id`),
+  ADD KEY `productId` (`productId`);
 
 --
 -- Indexes for table `message_chat`
 --
 ALTER TABLE `message_chat`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `student_id` (`student_id`);
 
 --
 -- Indexes for table `orders`
@@ -306,9 +333,9 @@ ALTER TABLE `pickup_schedule`
   ADD PRIMARY KEY (`date`);
 
 --
--- Indexes for table `productCategories`
+-- Indexes for table `productcategories`
 --
-ALTER TABLE `productCategories`
+ALTER TABLE `productcategories`
   ADD PRIMARY KEY (`id`),
   ADD KEY `productId` (`productId`);
 
@@ -342,7 +369,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 
 --
 -- AUTO_INCREMENT for table `completed_orders`
@@ -357,34 +384,40 @@ ALTER TABLE `message_chat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
 
 --
 -- AUTO_INCREMENT for table `orders_items`
 --
 ALTER TABLE `orders_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
--- AUTO_INCREMENT for table `productCategories`
+-- AUTO_INCREMENT for table `productcategories`
 --
-ALTER TABLE `productCategories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+ALTER TABLE `productcategories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `schedules`
 --
 ALTER TABLE `schedules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `students`
@@ -401,6 +434,19 @@ ALTER TABLE `students`
 --
 ALTER TABLE `cart`
   ADD CONSTRAINT `fk_cart_student_id` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `completed_orders`
+--
+ALTER TABLE `completed_orders`
+  ADD CONSTRAINT `fk_completed_orders_products` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_completed_orders_students` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`);
+
+--
+-- Constraints for table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD CONSTRAINT `fk_notifications_students` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `orders`
@@ -422,10 +468,10 @@ ALTER TABLE `payments`
   ADD CONSTRAINT `fk_paymet` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`);
 
 --
--- Constraints for table `productCategories`
+-- Constraints for table `productcategories`
 --
-ALTER TABLE `productCategories`
-  ADD CONSTRAINT `productCategories_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `productcategories`
+  ADD CONSTRAINT `productcategories_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `schedules`
