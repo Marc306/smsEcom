@@ -172,8 +172,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $sql = "SELECT p.productId, p.image, p.name, p.typeItem, p.productDescription,
                             GROUP_CONCAT(pc.productcategories SEPARATOR ', ') as categories, 
                             p.price, p.stock 
-                            FROM studentaccount.products p
-                            LEFT JOIN studentaccount.productCategories pc ON p.productId = pc.productId
+                            FROM ecom_studentaccount.products p
+                            LEFT JOIN ecom_studentaccount.productcategories pc ON p.productId = pc.productId
                             GROUP BY p.productId
                             ORDER BY p.typeItem, p.name";
 
