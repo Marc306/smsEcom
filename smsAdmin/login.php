@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'] ?? '';
 
     // Prepare query to get user details based on username
-    $stmt = $conn->prepare("SELECT username, password FROM adminAccount WHERE username = ?");
+    $stmt = $conn->prepare("SELECT username, password FROM adminaccount WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
