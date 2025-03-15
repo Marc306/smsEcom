@@ -117,6 +117,7 @@
 
 // export const itemCartStorage = new AddToCart();
 
+
 class AddToCart {
     cartItems = [];
 

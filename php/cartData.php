@@ -7,7 +7,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Database connection
-$conn = new mysqli("localhost:3307", "root", "", "studentaccount");
+// $conn = new mysqli("localhost:3307", "root", "", "studentaccount");
+$conn = new mysqli("localhost", "ecom_Marc306", "OG*ED2e^2P%Atv0g", "ecom_studentaccount");
 if ($conn->connect_error) {
     http_response_code(500);
     echo json_encode(["success" => false, "message" => "Database connection failed: " . $conn->connect_error]);
