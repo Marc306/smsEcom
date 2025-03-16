@@ -62,7 +62,7 @@ $gender = isset($data["product"]["gender"]) ? $data["product"]["gender"] : null;
 
 // Fetch product details and category
 if ($buy_now && $product_id) {
-    $sql_product = "SELECT productId, name, image, price, category FROM products WHERE productId = ?";
+    $sql_product = "SELECT productId, name, image, price, typeItem FROM products WHERE productId = ?";
     $stmt_product = $conn->prepare($sql_product);
     $stmt_product->bind_param("s", $product_id);
     $stmt_product->execute();
@@ -77,7 +77,7 @@ if ($buy_now && $product_id) {
     $total_price = $product["price"] * $quantity;
 
     // Ensure size and gender are NULL if the item is a book
-    if (strtolower($product["category"]) === "book") {
+    if (strtolower($product["typeItem"]) === "book") {
         $size = null;
         $gender = null;
     }
@@ -96,7 +96,7 @@ if ($buy_now && $product_id) {
     $sql_cart = "SELECT c.productId, p.name, p.image, p.price, c.quantity, 
                         NULLIF(c.size, '') AS size, 
                         NULLIF(c.gender, '') AS gender, 
-                        p.category 
+                        p.typeItem 
                  FROM cart c 
                  JOIN products p ON c.productId = p.productId 
                  WHERE c.student_id = ?";
@@ -109,7 +109,7 @@ if ($buy_now && $product_id) {
     $total_price = 0;
     while ($row = $result_cart->fetch_assoc()) {
         // Ensure size and gender are NULL if the item is a book
-        if (strtolower($row["category"]) === "book") {
+        if (strtolower($row["typeItem"]) === "book") {
             $row["size"] = null;
             $row["gender"] = null;
         }
@@ -182,8 +182,6 @@ try {
     file_put_contents($debug_log_file, "❌ Transaction Failed: " . $e->getMessage() . "\n", FILE_APPEND);
 }
 ?>
-
-
 
 
 
