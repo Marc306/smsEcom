@@ -89,17 +89,21 @@ function checkoutNowBtn() {
 
         let buyNowProduct = JSON.parse(sessionStorage.getItem("buyNowProduct"));
 
-        let requestData = buyNowProduct
-            ? { type: "buy_now", product: { ...buyNowProduct, payment_method: paymentMethod } }
-            : { type: "cart", payment_method: paymentMethod };
+        let requestData = { 
+            type: buyNowProduct ? "buy_now" : "cart", 
+            payment_method: paymentMethod 
+        };
+
+        if (buyNowProduct) {
+            requestData.product = { ...buyNowProduct };
+            if (buyNowProduct.category !== "book") {
+                requestData.product.gender = buyNowProduct.gender;
+                requestData.product.size = buyNowProduct.size;
+            }
+        }
 
         console.log("🟡 Checkout Request Data Sent:", JSON.stringify(requestData, null, 2));
 
-         // fetch("http://localhost/smsEcommerce/php/payment-logic.php", {
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify(requestData),
-        // })
         fetch("https://ecommerce.schoolmanagementsystem2.com/php/payment-logic.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },

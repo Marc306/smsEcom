@@ -4,6 +4,9 @@ require "connection.php";
 
 header("Content-Type: application/json");
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Debug Log File
 $debug_log_file = "debug_log.txt";
 file_put_contents($debug_log_file, "=== CHECKOUT DEBUG LOG ===\n", FILE_APPEND);
