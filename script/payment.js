@@ -69,28 +69,41 @@ import { ordersFetch } from "../data/orders-data.js";
 function checkoutNowBtn() {
     document.getElementById("confirmCheckout").addEventListener("click", function () {
         let selectedMethod = document.querySelector('input[name="payment_method"]:checked');
-    
+
         if (!selectedMethod) {
             alert("Please select a payment method.");
             return;
         }
-    
+
         let paymentMethod = selectedMethod.value.trim();
         console.log("🟢 Selected Payment Method (Before Sending):", paymentMethod);
 
         let buyNowProduct = JSON.parse(sessionStorage.getItem("buyNowProduct"));
+        let cartItems = JSON.parse(localStorage.getItem("cartItems")) || []; // Fallback for cart checkout
 
         let requestData = buyNowProduct 
-            ? { type: "buy_now", product: { ...buyNowProduct, payment_method: paymentMethod } }
-            : { type: "cart", payment_method: paymentMethod };
+            ? {
+                type: "buy_now",
+                product: {
+                    ...buyNowProduct,
+                    size: buyNowProduct.typeItem === "Uniform" ? buyNowProduct.size || null : null,
+                    gender: buyNowProduct.typeItem === "Uniform" ? buyNowProduct.gender || null : null,
+                    payment_method: paymentMethod
+                }
+            }
+            : {
+                type: "cart",
+                payment_method: paymentMethod,
+                cart: cartItems.map(item => ({
+                    productId: item.productId,
+                    quantity: item.quantity,
+                    size: item.typeItem === "Uniform" ? item.size || null : null,
+                    gender: item.typeItem === "Uniform" ? item.gender || null : null
+                }))
+            };
 
         console.log("🟡 Checkout Request Data:", JSON.stringify(requestData, null, 2));
 
-        // fetch("http://localhost/smsEcommerce/php/payment-logic.php", {
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify(requestData),
-        // })
         fetch("https://ecommerce.schoolmanagementsystem2.com/php/payment-logic.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -114,7 +127,7 @@ function checkoutNowBtn() {
                     "Walk-In Payment": "user-purchase.php",
                     "Kasunduan": "kasunduan-form.php"
                 }[paymentMethod] || "user-purchase.php";
-                
+
                 window.location.href = redirectPage;
             } else {
                 console.error("❌ Checkout Failed:", data.error);

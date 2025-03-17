@@ -23,25 +23,20 @@ $data = json_decode($raw_input, true);
 
 // Debug raw request
 file_put_contents($debug_log_file, "🔵 Raw JSON Input: " . $raw_input . "\n", FILE_APPEND);
-file_put_contents($debug_log_file, "🟡 Decoded Request: " . print_r($data, true) . "\n", FILE_APPEND);
 
 // Extract payment method
 $payment_method = trim($data["payment_method"] ?? ($data["product"]["payment_method"] ?? ""));
 
-// Debug extracted payment method
-file_put_contents($debug_log_file, "🟣 Extracted Payment Method: " . $payment_method . "\n", FILE_APPEND);
-
 // Allowed payment methods
 $valid_methods = ["Kasunduan", "Walk-In Payment", "Gcash Payment"];
 
-// Validate payment method
 if (!in_array($payment_method, $valid_methods, true)) {
     file_put_contents($debug_log_file, "❌ Invalid Payment Method Detected: " . $payment_method . "\n", FILE_APPEND);
     echo json_encode(["success" => false, "error" => "Invalid payment method."]);
     exit;
 }
 
-// Verify student exists in database
+// Verify student exists
 $sql_verify_student = "SELECT student_id FROM students WHERE student_id = ?";
 $stmt_verify_student = $conn->prepare($sql_verify_student);
 $stmt_verify_student->bind_param("s", $student_id);
@@ -53,12 +48,25 @@ if ($result_verify_student->num_rows === 0) {
     exit;
 }
 
-// Extract additional data
+// Extract product details
 $buy_now = $data["type"] === "buy_now";
 $product_id = $data["product"]["productId"] ?? null;
 $quantity = $data["product"]["quantity"] ?? 1;
-$size = trim($data["product"]["size"] ?? null);
-$gender = trim($data["product"]["gender"] ?? null);
+$size = trim($data["product"]["size"] ?? "");
+$gender = trim($data["product"]["gender"] ?? "");
+$typeItem = trim($data["product"]["typeItem"] ?? "");  // Extracting typeItem
+
+// Validate size and gender for uniforms
+if ($typeItem === "uniform") {
+    if (empty($size) || empty($gender)) {
+        echo json_encode(["success" => false, "error" => "Size and gender are required for uniforms."]);
+        exit;
+    }
+} else {
+    // If not a uniform, set size and gender to NULL
+    $size = $size ?: NULL;
+    $gender = $gender ?: NULL;
+}
 
 // Fetch product details
 if ($buy_now && $product_id) {
@@ -86,10 +94,11 @@ if ($buy_now && $product_id) {
         "gender" => $gender
     ]];
 } else {
-    // Fetch cart items if not buy now
+    // Fetch cart items
     $sql_cart = "SELECT c.productId, p.name, p.image, p.price, c.quantity, 
-                        COALESCE(NULLIF(c.size, ''), null) AS size, 
-                        COALESCE(NULLIF(c.gender, ''), null) AS gender 
+                        COALESCE(NULLIF(c.size, ''), NULL) AS size, 
+                        COALESCE(NULLIF(c.gender, ''), NULL) AS gender,
+                        p.typeItem
                  FROM cart c 
                  JOIN products p ON c.productId = p.productId 
                  WHERE c.student_id = ?";
@@ -101,6 +110,11 @@ if ($buy_now && $product_id) {
     $cart_items = [];
     $total_price = 0;
     while ($row = $result_cart->fetch_assoc()) {
+        if ($row["typeItem"] === "uniform" && (empty($row["size"]) || empty($row["gender"]))) {
+            echo json_encode(["success" => false, "error" => "Size and gender are required for all uniforms in the cart."]);
+            exit;
+        }
+
         $cart_items[] = $row;
         $total_price += $row["price"] * $row["quantity"];
     }
@@ -111,14 +125,14 @@ if ($buy_now && $product_id) {
     }
 }
 
-// Insert order into orders table
+// Insert order
 $sql_order = "INSERT INTO orders (student_id, total_price, payment_method, status) VALUES (?, ?, ?, 'To Pay')";
 $stmt_order = $conn->prepare($sql_order);
 $stmt_order->bind_param("sds", $student_id, $total_price, $payment_method);
 $stmt_order->execute();
 $order_id = $stmt_order->insert_id;
 
-// Insert items into orders_items table
+// Insert order items
 $sql_item = "INSERT INTO orders_items (order_id, productId, name, image, quantity, size, gender) VALUES (?, ?, ?, ?, ?, ?, ?)";
 $stmt_item = $conn->prepare($sql_item);
 foreach ($cart_items as $item) {
@@ -134,15 +148,13 @@ $stmt_payment->execute();
 
 // Insert schedule based on payment method
 if ($payment_method === "Kasunduan" || $payment_method === "Gcash Payment") {
-    // Kasunduan and Gcash Payment require scheduling later
     $sql_schedule = "INSERT INTO schedules (order_id, student_id, schedule_date, status) VALUES (?, ?, NULL, 'Pending')";
     $stmt_schedule = $conn->prepare($sql_schedule);
     $stmt_schedule->bind_param("is", $order_id, $student_id);
     $stmt_schedule->execute();
     file_put_contents($debug_log_file, "📅 Schedule Created for Order ID: $order_id (Status: Pending)\n", FILE_APPEND);
 } elseif ($payment_method === "Walk-In Payment") {
-    // Walk-In Payments get an immediate pickup schedule
-    $pickup_date = date("Y-m-d"); // Today’s date
+    $pickup_date = date("Y-m-d");
     $sql_schedule = "INSERT INTO schedules (order_id, student_id, schedule_date, status) VALUES (?, ?, ?, 'Scheduled')";
     $stmt_schedule = $conn->prepare($sql_schedule);
     $stmt_schedule->bind_param("iss", $order_id, $student_id, $pickup_date);
@@ -165,3 +177,4 @@ file_put_contents($debug_log_file, "✅ Order Placed Successfully - Order ID: $o
 echo json_encode(["success" => true, "message" => "Order placed successfully!", "order_id" => $order_id, "student_id" => $student_id]);
 exit;
 ?>
+
