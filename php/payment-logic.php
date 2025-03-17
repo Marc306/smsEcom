@@ -88,8 +88,8 @@ if ($buy_now && $product_id) {
 } else {
     // Fetch cart items if not buy now
     $sql_cart = "SELECT c.productId, p.name, p.image, p.price, c.quantity, 
-                        COALESCE(NULLIF(c.size, ''), 'null') AS size, 
-                        COALESCE(NULLIF(c.gender, ''), 'null') AS gender 
+                        COALESCE(NULLIF(c.size, ''), null) AS size, 
+                        COALESCE(NULLIF(c.gender, ''), null) AS gender 
                  FROM cart c 
                  JOIN products p ON c.productId = p.productId 
                  WHERE c.student_id = ?";
