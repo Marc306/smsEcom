@@ -1,11 +1,8 @@
-<?php  
+<?php 
 session_start();
 require "connection.php";
 
 header("Content-Type: application/json");
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 // Debug Log File
 $debug_log_file = "debug_log.txt";
@@ -60,12 +57,12 @@ if ($result_verify_student->num_rows === 0) {
 $buy_now = $data["type"] === "buy_now";
 $product_id = $data["product"]["productId"] ?? null;
 $quantity = $data["product"]["quantity"] ?? 1;
-$size = isset($data["product"]["size"]) ? $data["product"]["size"] : null;
-$gender = isset($data["product"]["gender"]) ? $data["product"]["gender"] : null;
+$size = trim($data["product"]["size"] ?? null);
+$gender = trim($data["product"]["gender"] ?? null);
 
-// Fetch product details and category
+// Fetch product details
 if ($buy_now && $product_id) {
-    $sql_product = "SELECT productId, name, image, price, typeItem FROM products WHERE productId = ?";
+    $sql_product = "SELECT productId, name, image, price FROM products WHERE productId = ?";
     $stmt_product = $conn->prepare($sql_product);
     $stmt_product->bind_param("s", $product_id);
     $stmt_product->execute();
@@ -79,12 +76,6 @@ if ($buy_now && $product_id) {
     $product = $result_product->fetch_assoc();
     $total_price = $product["price"] * $quantity;
 
-    // Ensure size and gender are NULL if the item is a book
-    if (strtolower($product["typeItem"]) === "book") {
-        $size = null;
-        $gender = null;
-    }
-
     $cart_items = [[
         "productId" => $product_id,
         "name" => $product["name"],
@@ -97,9 +88,8 @@ if ($buy_now && $product_id) {
 } else {
     // Fetch cart items if not buy now
     $sql_cart = "SELECT c.productId, p.name, p.image, p.price, c.quantity, 
-                        NULLIF(c.size, '') AS size, 
-                        NULLIF(c.gender, '') AS gender, 
-                        p.typeItem 
+                        COALESCE(NULLIF(c.size, ''), 'N/A') AS size, 
+                        COALESCE(NULLIF(c.gender, ''), 'Unspecified') AS gender 
                  FROM cart c 
                  JOIN products p ON c.productId = p.productId 
                  WHERE c.student_id = ?";
@@ -111,12 +101,6 @@ if ($buy_now && $product_id) {
     $cart_items = [];
     $total_price = 0;
     while ($row = $result_cart->fetch_assoc()) {
-        // Ensure size and gender are NULL if the item is a book
-        if (strtolower($row["typeItem"]) === "book") {
-            $row["size"] = null;
-            $row["gender"] = null;
-        }
-
         $cart_items[] = $row;
         $total_price += $row["price"] * $row["quantity"];
     }
@@ -127,75 +111,57 @@ if ($buy_now && $product_id) {
     }
 }
 
-// Start Transaction
-$conn->begin_transaction();
+// Insert order into orders table
+$sql_order = "INSERT INTO orders (student_id, total_price, payment_method, status) VALUES (?, ?, ?, 'To Pay')";
+$stmt_order = $conn->prepare($sql_order);
+$stmt_order->bind_param("sds", $student_id, $total_price, $payment_method);
+$stmt_order->execute();
+$order_id = $stmt_order->insert_id;
 
-try {
-    // Insert order into orders table
-    $sql_order = "INSERT INTO orders (student_id, total_price, payment_method, status) VALUES (?, ?, ?, 'To Pay')";
-    $stmt_order = $conn->prepare($sql_order);
-    $stmt_order->bind_param("sds", $student_id, $total_price, $payment_method);
-    $stmt_order->execute();
-    $order_id = $stmt_order->insert_id;
-
-    // Insert items into orders_items table
-    $sql_item = "INSERT INTO orders_items (order_id, productId, name, image, quantity, size, gender) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $stmt_item = $conn->prepare($sql_item);
-
-    foreach ($cart_items as $item) {
-        $stmt_item->bind_param("isssiss", $order_id, $item["productId"], $item["name"], $item["image"], $item["quantity"], $item["size"], $item["gender"]);
-        $stmt_item->execute();
-    }
-
-    // Insert payment record
-    $sql_payment = "INSERT INTO payments (order_id, amount, status) VALUES (?, ?, 'Pending')";
-    $stmt_payment = $conn->prepare($sql_payment);
-    $stmt_payment->bind_param("id", $order_id, $total_price);
-    $stmt_payment->execute();
-
-    // Insert schedule based on payment method
-    if ($payment_method === "Kasunduan" || $payment_method === "Gcash Payment") {
-        $sql_schedule = "INSERT INTO schedules (order_id, student_id, schedule_date, status) VALUES (?, ?, NULL, 'Pending')";
-    } else {
-        $pickup_date = date("Y-m-d");
-        $sql_schedule = "INSERT INTO schedules (order_id, student_id, schedule_date, status) VALUES (?, ?, ?, 'Scheduled')";
-    }
-
-    $stmt_schedule = $conn->prepare($sql_schedule);
-    $stmt_schedule->bind_param($payment_method === "Walk-In Payment" ? "iss" : "is", $order_id, $student_id, $pickup_date);
-    $stmt_schedule->execute();
-
-    // Clear cart if checkout was from cart
-    if (!$buy_now) {
-        $sql_clear_cart = "DELETE FROM cart WHERE student_id = ?";
-        $stmt_clear_cart = $conn->prepare($sql_clear_cart);
-        $stmt_clear_cart->bind_param("s", $student_id);
-        $stmt_clear_cart->execute();
-    }
-
-    // Commit transaction
-    $conn->commit();
-
-    file_put_contents($debug_log_file, "✅ Order Placed Successfully - Order ID: $order_id\n", FILE_APPEND);
-    echo json_encode(["success" => true, "message" => "Order placed successfully!", "order_id" => $order_id]);
-
-} catch (Exception $e) {
-    $conn->rollback();
-    echo json_encode(["success" => false, "error" => "Transaction failed."]);
-    file_put_contents($debug_log_file, "❌ Transaction Failed: " . $e->getMessage() . "\n", FILE_APPEND);
+// Insert items into orders_items table
+$sql_item = "INSERT INTO orders_items (order_id, productId, name, image, quantity, size, gender) VALUES (?, ?, ?, ?, ?, ?, ?)";
+$stmt_item = $conn->prepare($sql_item);
+foreach ($cart_items as $item) {
+    $stmt_item->bind_param("isssiss", $order_id, $item["productId"], $item["name"], $item["image"], $item["quantity"], $item["size"], $item["gender"]);
+    $stmt_item->execute();
 }
+
+// Insert payment record
+$sql_payment = "INSERT INTO payments (order_id, amount, status) VALUES (?, ?, 'Pending')";
+$stmt_payment = $conn->prepare($sql_payment);
+$stmt_payment->bind_param("id", $order_id, $total_price);
+$stmt_payment->execute();
+
+// Insert schedule based on payment method
+if ($payment_method === "Kasunduan" || $payment_method === "Gcash Payment") {
+    // Kasunduan and Gcash Payment require scheduling later
+    $sql_schedule = "INSERT INTO schedules (order_id, student_id, schedule_date, status) VALUES (?, ?, NULL, 'Pending')";
+    $stmt_schedule = $conn->prepare($sql_schedule);
+    $stmt_schedule->bind_param("is", $order_id, $student_id);
+    $stmt_schedule->execute();
+    file_put_contents($debug_log_file, "📅 Schedule Created for Order ID: $order_id (Status: Pending)\n", FILE_APPEND);
+} elseif ($payment_method === "Walk-In Payment") {
+    // Walk-In Payments get an immediate pickup schedule
+    $pickup_date = date("Y-m-d"); // Today’s date
+    $sql_schedule = "INSERT INTO schedules (order_id, student_id, schedule_date, status) VALUES (?, ?, ?, 'Scheduled')";
+    $stmt_schedule = $conn->prepare($sql_schedule);
+    $stmt_schedule->bind_param("iss", $order_id, $student_id, $pickup_date);
+    $stmt_schedule->execute();
+    file_put_contents($debug_log_file, "✅ Immediate Pickup Scheduled for Order ID: $order_id on $pickup_date\n", FILE_APPEND);
+}
+
+// Clear cart if checkout was from cart
+if (!$buy_now) {
+    $sql_clear_cart = "DELETE FROM cart WHERE student_id = ?";
+    $stmt_clear_cart = $conn->prepare($sql_clear_cart);
+    $stmt_clear_cart->bind_param("s", $student_id);
+    $stmt_clear_cart->execute();
+}
+
+// Debug successful order
+file_put_contents($debug_log_file, "✅ Order Placed Successfully - Order ID: $order_id\n", FILE_APPEND);
+
+// Return success response
+echo json_encode(["success" => true, "message" => "Order placed successfully!", "order_id" => $order_id, "student_id" => $student_id]);
+exit;
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

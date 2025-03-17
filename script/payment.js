@@ -62,8 +62,6 @@
 // });
 
 
-
-
 import { itemCartStorage } from "../data/checkout-cart.js";
 import { cartCounter } from "./cart-counter.js";
 import { ordersFetch } from "../data/orders-data.js";
@@ -73,37 +71,26 @@ function checkoutNowBtn() {
         let selectedMethod = document.querySelector('input[name="payment_method"]:checked');
     
         if (!selectedMethod) {
-            alert("❌ Please select a payment method before proceeding.");
+            alert("Please select a payment method.");
             return;
         }
-
+    
         let paymentMethod = selectedMethod.value.trim();
-        console.log("🟢 Selected Payment Method:", paymentMethod);
-
-        // Validate payment method to match PHP expectations
-        const validMethods = ["Kasunduan", "Walk-In Payment", "Gcash Payment"];
-        if (!validMethods.includes(paymentMethod)) {
-            alert("⚠️ Invalid payment method selected.");
-            return;
-        }
+        console.log("🟢 Selected Payment Method (Before Sending):", paymentMethod);
 
         let buyNowProduct = JSON.parse(sessionStorage.getItem("buyNowProduct"));
 
-        let requestData = { 
-            type: buyNowProduct ? "buy_now" : "cart", 
-            payment_method: paymentMethod 
-        };
+        let requestData = buyNowProduct 
+            ? { type: "buy_now", product: { ...buyNowProduct, payment_method: paymentMethod } }
+            : { type: "cart", payment_method: paymentMethod };
 
-        if (buyNowProduct) {
-            requestData.product = { ...buyNowProduct };
-            if (buyNowProduct.category !== "book") {
-                requestData.product.gender = buyNowProduct.gender;
-                requestData.product.size = buyNowProduct.size;
-            }
-        }
+        console.log("🟡 Checkout Request Data:", JSON.stringify(requestData, null, 2));
 
-        console.log("🟡 Checkout Request Data Sent:", JSON.stringify(requestData, null, 2));
-
+        // fetch("http://localhost/smsEcommerce/php/payment-logic.php", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify(requestData),
+        // })
         fetch("https://ecommerce.schoolmanagementsystem2.com/php/payment-logic.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -112,33 +99,31 @@ function checkoutNowBtn() {
         .then(async response => {
             console.log("🔵 Response Headers:", response.headers);
             const data = await response.json();
-            console.log("🔴 Server Response (JSON):", data);
+            console.log("🔴 Server Response (Raw JSON):", data);
             return data;
         })
         .then(data => {
             if (data.success) {
                 console.log("✅ Checkout Success:", data);
                 cartCounter();
-                alert("🎉 Checkout successful!");
-
+                alert("Checkout successful!");
                 sessionStorage.removeItem("buyNowProduct");
 
-                // Determine correct redirection page
                 let redirectPage = {
                     "Gcash Payment": "gcash-QrCode.php",
                     "Walk-In Payment": "user-purchase.php",
                     "Kasunduan": "kasunduan-form.php"
                 }[paymentMethod] || "user-purchase.php";
-
+                
                 window.location.href = redirectPage;
             } else {
                 console.error("❌ Checkout Failed:", data.error);
-                alert("🚨 Checkout failed: " + data.error);
+                alert("Checkout failed: " + data.error);
             }
         })
         .catch(error => {
             console.error("⚠️ Fetch Error:", error);
-            alert("An unexpected error occurred. Please check your internet connection and try again.");
+            alert("An unexpected error occurred. Please try again.");
         });
     });
 }
