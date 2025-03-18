@@ -1,5 +1,5 @@
 export function loadReceipt() { 
-    fetch("http://localhost/smsEcommerce/php/get-receipt.php")
+    fetch("https://ecommerce.schoolmanagementsystem2.com/php/get-receipt.php")
     .then(response => response.json())
     .then(data => {
         console.log("Full Response from PHP:", data);
