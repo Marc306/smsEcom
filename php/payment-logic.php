@@ -148,7 +148,7 @@ $stmt_payment->execute();
 
 // Insert schedule based on payment method
 if ($payment_method === "Kasunduan" || $payment_method === "Gcash Payment") {
-    $sql_schedule = "INSERT INTO schedules (order_id, student_id, schedule_date, status) VALUES (?, ?, NULL, 'Pending')";
+    $sql_schedule = "INSERT INTO schedules (order_id, student_id, schedule_date, status) VALUES (?, ?, NULL, 'Scheduled')";
     $stmt_schedule = $conn->prepare($sql_schedule);
     $stmt_schedule->bind_param("is", $order_id, $student_id);
     $stmt_schedule->execute();
