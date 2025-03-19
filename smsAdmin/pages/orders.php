@@ -299,7 +299,7 @@ $result = $conn->query($query);
                         
                         if ($row['payment_method'] === 'Gcash Payment') {
                             if (!empty($row['receipt_url'])) {
-                                echo '<a href="/smsEcommerce/smsAdmin/download-receipt.php?order_id=' . $row['id'] . '" class="btn btn-sm btn-primary">Download Receipt</a>';
+                                echo '<a href="https://ecommerce.schoolmanagementsystem2.com/smsAdmin/download-receipt.php?order_id=' . $row['id'] . '" class="btn btn-sm btn-primary">Download Receipt</a>';
                             } else {
                                 echo '<span class="text-muted">No receipt uploaded</span>';
                             }
