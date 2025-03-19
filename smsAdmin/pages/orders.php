@@ -559,6 +559,8 @@ function confirmPayment(orderId) {
                 if (actionCell) {
                     actionCell.innerHTML = '<span class="text-success">Order Completed</span>';
                 }
+
+                fetchAndStoreCompletedOrders();
             }
         } else {
             alert(data.error || 'Error confirming payment');
@@ -566,6 +568,45 @@ function confirmPayment(orderId) {
     })
     .catch(error => {
         alert('Error confirming payment');
+    });
+}
+
+function fetchAndStoreCompletedOrders() { 
+    // if (!confirm('Are you sure you want to fetch and store completed orders?')) {
+    //     return;
+    // }
+
+    fetch('https://ecommerce.schoolmanagementsystem2.com/smsAdmin/itemCompleted/get_orders.php', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (!data.success) {
+            alert(data.message || 'Error fetching orders.');
+            return;
+        }
+
+        return fetch('https://ecommerce.schoolmanagementsystem2.com/smsAdmin/itemCompleted/store_completed_orders.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data.orders)
+        });
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alert('Completed orders successfully stored.');
+        } else {
+            alert(result.message || 'Error storing completed orders.');
+        }
+    })
+    .catch(error => {
+        alert('Error processing request.');
     });
 }
 </script>
