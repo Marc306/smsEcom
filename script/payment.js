@@ -86,8 +86,8 @@ function checkoutNowBtn() {
                 type: "buy_now",
                 product: {
                     ...buyNowProduct,
-                    size: buyNowProduct.typeItem === "Uniform" ? buyNowProduct.size || null : null,
-                    gender: buyNowProduct.typeItem === "Uniform" ? buyNowProduct.gender || null : null,
+                    size: buyNowProduct.typeItem === "uniform" ? buyNowProduct.size || null : null,
+                    gender: buyNowProduct.typeItem === "uniform" ? buyNowProduct.gender || null : null,
                     payment_method: paymentMethod
                 }
             }
@@ -97,8 +97,8 @@ function checkoutNowBtn() {
                 cart: cartItems.map(item => ({
                     productId: item.productId,
                     quantity: item.quantity,
-                    size: item.typeItem === "Uniform" ? item.size || null : null,
-                    gender: item.typeItem === "Uniform" ? item.gender || null : null
+                    size: item.typeItem === "uniform" ? item.size || null : null,
+                    gender: item.typeItem === "uniform" ? item.gender || null : null
                 }))
             };
 
