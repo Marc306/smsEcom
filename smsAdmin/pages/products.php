@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $conn->begin_transaction();
                     try {
                         // Insert product details into products table
-                        $sql = "INSERT INTO studentaccount.products (productId, name, productDescription, price, stock, image, typeItem) 
+                        $sql = "INSERT INTO ecom_studentaccount.products (productId, name, productDescription, price, stock, image, typeItem) 
                                 VALUES (?, ?, ?, ?, ?, ?, ?)";
                         $stmt = $conn->prepare($sql);
                         $stmt->bind_param("sssddss", $productId, $name, $productDescription, $price, $stock, $newImagePath, $typeItem);
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                         // Insert selected categories into productCategories table
                         if (!empty($_POST['categories']) && is_array($_POST['categories'])) {
-                            $sql = "INSERT INTO studentaccount.productCategories (productId, productcategories) VALUES (?, ?)";
+                            $sql = "INSERT INTO ecom_studentaccount.productcategories (productId, productcategories) VALUES (?, ?)";
                             $stmt = $conn->prepare($sql);
                 
                             foreach ($_POST['categories'] as $category) {
@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     
                     try {
                         // Delete from productCategories first (due to foreign key)
-                        $sql = "DELETE FROM productCategories WHERE productId = ?";
+                        $sql = "DELETE FROM productcategories WHERE productId = ?";
                         $stmt = $conn->prepare($sql);
                         $stmt->bind_param("s", $productId);
                         
