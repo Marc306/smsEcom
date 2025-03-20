@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $productDescription = isset($_POST['productDescription']) ? $conn->real_escape_string($_POST['productDescription']) : '';
                 
                     // Define the correct upload directory
-                    $productImageDir = "../../../uploadIMGProducts/";
+                    $productImageDir = "../../uploadIMGProducts/";
                 
                     // Ensure the directory exists
                     if (!is_dir($productImageDir)) {
@@ -181,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            $imagePath = "../../../uploadIMGProducts/" . $row['image']; // Corrected path
+                            $imagePath = "../../uploadIMGProducts/" . $row['image']; // Corrected path
 
                             echo "<tr>";
                             echo "<td>{$row['productId']}</td>";
