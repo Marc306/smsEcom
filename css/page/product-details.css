@@ -205,9 +205,9 @@
     justify-content: center;
     margin-top: 10px;
     font-size: 16px;
-    /* margin-left: 250px; */
+    margin-left: 250px;
     color: var(--primary);
-    opacity: 1;
+    opacity: 0;
     transition: all 0.3s ease;
 }
 
@@ -359,6 +359,7 @@
     }
     .added-to-cart-icon{
         font-size: 12px;
+        margin-left: 15px;
     }
     .added-to-cart-icon image{
         height: 15px;
