@@ -58,17 +58,17 @@ $typeItem = trim($data["product"]["typeItem"] ?? "");  // Extracting typeItem
 
 // Validate size and gender for uniforms
 if ($typeItem === "uniform") {
-    $size = isset($_POST['size']) ? trim($_POST['size']) : null;
-    $gender = isset($_POST['gender']) ? trim($_POST['gender']) : null;
-    
+    $size = isset($data["product"]["size"]) ? trim($data["product"]["size"]) : null;
+    $gender = isset($data["product"]["gender"]) ? trim($data["product"]["gender"]) : null;
+
     if (empty($size) || empty($gender)) {
         echo json_encode(["success" => false, "error" => "Size and gender are required for uniforms."]);
         exit;
     }
 } else {
     // If not a uniform, set size and gender to NULL
-    $size = $size ?: NULL;
-    $gender = $gender ?: NULL;
+    $size = $size ?: null;
+    $gender = $gender ?: null;
 }
 
 // Fetch product details
