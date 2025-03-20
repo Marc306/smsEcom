@@ -86,19 +86,19 @@ function checkoutNowBtn() {
                 type: "buy_now",
                 product: {
                     ...buyNowProduct,
-                    size: buyNowProduct.typeItem === "uniform" ? buyNowProduct.size || null : null,
-                    gender: buyNowProduct.typeItem === "uniform" ? buyNowProduct.gender || null : null,
+                    size: buyNowProduct.typeItem === "uniform" ? buyNowProduct.size : null,
+                    gender: buyNowProduct.typeItem === "uniform" ? buyNowProduct.gender : null,
                     payment_method: paymentMethod
                 }
             }
             : {
                 type: "cart",
-                payment_method: paymentMethod,
                 cart: cartItems.map(item => ({
                     productId: item.productId,
                     quantity: item.quantity,
-                    size: item.typeItem === "uniform" ? item.size || null : null,
-                    gender: item.typeItem === "uniform" ? item.gender || null : null
+                    size: item.typeItem === "uniform" ? item.size : null,
+                    gender: item.typeItem === "uniform" ? item.gender : null,
+                    payment_method: paymentMethod
                 }))
             };
 
@@ -130,6 +130,7 @@ function checkoutNowBtn() {
 
                 window.location.href = redirectPage;
             } else {
+                console.log(data.success);
                 console.error("❌ Checkout Failed:", data.error);
                 alert("Checkout failed: " + data.error);
             }
