@@ -205,9 +205,9 @@
     justify-content: center;
     margin-top: 10px;
     font-size: 16px;
-    margin-left: 250px;
+    /* margin-left: 250px; */
     color: var(--primary);
-    opacity: 0;
+    opacity: 1;
     transition: all 0.3s ease;
 }
 
@@ -356,5 +356,11 @@
     .buy-now-btn, .add-to-cart-btn {
         padding: 12px 20px;
         font-size: 14px;
+    }
+    .added-to-cart-icon{
+        font-size: 12px;
+    }
+    .added-to-cart-icon image{
+        height: 15px;
     }
 }
