@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 include "connection.php";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=studentaccount", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=ecom_studentaccount", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Query to fetch completed orders with product details
