@@ -15,7 +15,7 @@ $query = "
         COALESCE(p.receipt_url, '') AS receipt_url,
         GROUP_CONCAT(
             CONCAT(
-                pr.productId, '|', pr.name, '|', oi.quantity, '|',
+                oi.productId, '|', oi.name, '|', oi.image, '|', oi.quantity, '|',
                 COALESCE(oi.size, ''), '|', COALESCE(oi.gender, '')
             ) SEPARATOR ';'
         ) AS items

@@ -9,10 +9,10 @@ if (!$data) {
     exit();
 }
 
-// Prepare SQL statement (Remove `completed_at`)
+// Prepare SQL statement
 $stmt = $conn->prepare("
-    INSERT INTO completed_orders (order_id, student_id, productId, quantity, total_price)
-    VALUES (?, ?, ?, ?, ?)
+    INSERT INTO completed_orders (order_id, student_id, productId, product_name, product_image, quantity, size, gender, total_price)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
 ");
 
 if (!$stmt) {
@@ -22,17 +22,27 @@ if (!$stmt) {
 
 foreach ($data as $order) {
     foreach ($order["items"] as $item) {
-        list($productId, $productName, $quantity, $size, $gender) = explode("|", $item);
+        // Ensure correct order of extracted values
+        list($productId, $productName, $productImage, $quantity, $size, $gender) = explode("|", $item);
 
+        // Prepend image path (if necessary)
+        $productImagePath = "../../uploadIMGProducts/" . $productImage;
+
+        // Bind parameters
         $stmt->bind_param(
-            "issid", // Fixed parameter types
-            $order["order_id"],
-            $order["student_id"],
-            $productId,
-            $quantity,
-            $order["total_price"]
+            "issssissd",  // Data types: (int, string, string, string, string, int, string, string, decimal)
+            $order["order_id"],      // int
+            $order["student_id"],    // string
+            $productId,              // string
+            $productName,            // string
+            $productImagePath,       // string (full path)
+            $quantity,               // int
+            $size,                   // string (nullable)
+            $gender,                 // string (nullable)
+            $order["total_price"]     // decimal
         );
 
+        // Execute statement
         if (!$stmt->execute()) {
             echo json_encode(["success" => false, "message" => "Insert failed: " . $stmt->error]);
             exit();
@@ -44,4 +54,5 @@ echo json_encode(["success" => true, "message" => "Orders successfully stored."]
 $stmt->close();
 $conn->close();
 ?>
+
 
