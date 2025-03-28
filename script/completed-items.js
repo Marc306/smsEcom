@@ -44,9 +44,7 @@ async function fetchCompletedOrders() {
         `).join('');
 
         mainContent.innerHTML = `
-            <div class="completed-items-container">
-                ${ordersHTML}
-            </div>
+            ${ordersHTML}
         `;
     } catch (error) {
         console.error('Error fetching completed orders:', error);
