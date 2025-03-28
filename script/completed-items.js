@@ -22,13 +22,13 @@ async function fetchCompletedOrders() {
 
         // Create container for completed orders
         const ordersHTML = data.orders.map(order => `
-            <div class="completed-item">
+            <div class="completed-items">
                 <div class="completed-item-header">
                     <div class="order-info">
                         <span class="order-id">Order #${order.order_id}</span>
                         <span class="completed-date">${new Date(order.completed_at).toLocaleDateString()}</span>
                     </div>
-                    <div class="order-status">${order.status}</div>
+                    <div class="order-status">Completed</div>
                 </div>
                 <div class="completed-item-content">
                     <img src="${order.product_image}" alt="${order.product_name}" class="product-image">
@@ -62,3 +62,4 @@ async function fetchCompletedOrders() {
 
 // Call the function when the page loads
 document.addEventListener('DOMContentLoaded', fetchCompletedOrders);
+
