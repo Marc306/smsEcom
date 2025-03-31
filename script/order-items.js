@@ -129,9 +129,12 @@ import { loadReceipt } from "../data/fetch-receipt.js";
 import { productsLoadFetch, products } from "../data/the-products.js";
 
 class Order {
-    constructor(orderListItem) {
-        this.orderListItem = orderListItem;
-    }
+    // constructor(orderListItem) {
+    //     this.orderListItem = orderListItem;
+    // }
+    constructor(orderListItem = []) {
+        this.orderListItem = Array.isArray(orderListItem) ? orderListItem : [];
+    }  
 
     // toPayOrders() {
     //     let orderAttributes = "";
@@ -241,6 +244,19 @@ class Order {
     //     this.uploadReceiptImage();
     // }
     toPayOrders() {
+        if (!Array.isArray(this.orderListItem)) {
+            console.error("Error: orderListItem is not an array or is undefined.", this.orderListItem);
+            console.warn("No orders found.");
+            document.querySelector(".main-content").innerHTML = `
+            <div class="completed-items-container">
+                <div class="notFound-image-div">
+                    <img src="image/icon/no-results-img.png" alt="">  
+                    <div class="text-notFound">No orders yet</div>
+                </div> 
+            </div>`;
+            return;
+        }
+
         let orderAttributes = "";
         let hasOrders = false;
     
@@ -404,13 +420,23 @@ document.addEventListener("DOMContentLoaded", () => {
             await ordersFetch();
             await productsLoadFetch();
             await itemCartStorage.cartStorage();
+
+            console.log("Fetched Orders:", orders);  // Debugging line
+
+            if (!Array.isArray(orders)) {
+                console.error("Error: orders is not an array", orders);
+                return;
+            }
+
+            const studentOrder = new Order(orders);
+            studentOrder.toPayOrders();
         } catch (error) {
             console.error("Error fetching orders:", error);
         }
 
-        const studentOrder = new Order(orders);
-        console.log(orders);
-        studentOrder.toPayOrders();
+        // const studentOrder = new Order(orders);
+        // console.log(orders);
+        // studentOrder.toPayOrders();
     }
 
     tryLoad();
