@@ -19,7 +19,21 @@ if (!$student_id) {
     exit;
 }
 
-// 🔍 Fetch orders (Fix: Ensure schedule_date is never null)
+// 🔍 Verify that the student has orders
+$sql_verify = "SELECT COUNT(*) AS order_count FROM orders WHERE student_id = ?";
+$stmt_verify = $conn->prepare($sql_verify);
+$stmt_verify->bind_param("s", $student_id);
+$stmt_verify->execute();
+$result_verify = $stmt_verify->get_result();
+$order_check = $result_verify->fetch_assoc();
+
+if ($order_check["order_count"] == 0) {
+    file_put_contents($debug_log_file, "ERROR: No orders found for student_id: $student_id\n", FILE_APPEND);
+    echo json_encode(["success" => false, "error" => "No orders found"]);
+    exit;
+}
+
+// 🔍 Fetch orders
 $sql_orders = "SELECT o.id, o.total_price, o.payment_method, o.status, o.created_at, 
                       COALESCE(s.schedule_date, 'Not scheduled') AS schedule_date
                FROM orders o 
@@ -66,4 +80,5 @@ while ($order = $result_orders->fetch_assoc()) {
 echo json_encode(["success" => true, "orders" => $orders]);
 exit;
 ?>
+
 
