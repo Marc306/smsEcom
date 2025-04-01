@@ -131,6 +131,7 @@ class AddToCart {
             // const response = await fetch("http://localhost/smsEcommerce/php/cartData.php?action=getCart");
             const data = await response.json();
             this.cartItems = data.cartItems || [];
+            localStorage.setItem("cartItems", JSON.stringify(this.cartItems)); 
             return this.cartItems;
         } 
         catch(error){

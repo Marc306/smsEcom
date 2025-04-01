@@ -81,6 +81,13 @@ function checkoutNowBtn() {
         let buyNowProduct = JSON.parse(sessionStorage.getItem("buyNowProduct"));
         let cartItems = JSON.parse(localStorage.getItem("cartItems")) || []; // Fallback for cart checkout
 
+        console.log("🚀 Checkout Cart Items:", cartItems); // Log to check if it's empty
+
+        if (cartItems.length === 0) {
+            alert("Your cart is empty!");
+            return;
+        }
+
         let requestData = buyNowProduct 
             ? {
                 type: "buy_now",
@@ -93,7 +100,7 @@ function checkoutNowBtn() {
             }
             : {
                 type: "cart",
-                payment_method: paymentMethod,
+                // payment_method: paymentMethod,
                 cart: cartItems.map(item => ({
                     productId: item.productId,
                     quantity: item.quantity,
