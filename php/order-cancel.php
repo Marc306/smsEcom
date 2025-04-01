@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-// Get student ID from session
+// Get student ID from session (string)
 $student_id = $_SESSION["student_id"] ?? null;
 if (!$student_id) {
     echo json_encode(["success" => false, "message" => "User not logged in."]);
@@ -30,7 +30,7 @@ if (!isset($data["action"], $data["productId"]) || $data["action"] !== "delete")
     exit;
 }
 
-// Sanitize and extract the product ID
+// Sanitize and extract the product ID (string)
 $productId = trim($data["productId"]);
 if (empty($productId)) {
     echo json_encode(["success" => false, "message" => "Product ID is required."]);
@@ -49,7 +49,7 @@ $sqlFind = "SELECT
             WHERE oi.productId = ? AND o.student_id = ?";
 
 $stmtFind = $conn->prepare($sqlFind);
-$stmtFind->bind_param("si", $productId, $student_id);
+$stmtFind->bind_param("ss", $productId, $student_id); // Product ID = string, Student ID = string
 $stmtFind->execute();
 $resultFind = $stmtFind->get_result();
 $orderItem = $resultFind->fetch_assoc();
@@ -63,12 +63,25 @@ if (!$orderItem) {
     exit;
 }
 
-$orderItemId = $orderItem["order_item_id"];
-$orderId = $orderItem["order_id"];
+$orderItemId = (int) $orderItem["order_item_id"]; // Convert order item ID to integer
+$orderId = (int) $orderItem["order_id"]; // Convert order ID to integer
 $paymentStatus = $orderItem["payment_status"];
 
-// Debugging: Log payment status
-error_log("Payment Status: " . $paymentStatus);
+// Double-check that the logged-in student is the same as the one in the orders table
+$sqlCheckStudent = "SELECT student_id FROM orders WHERE id = ?";
+$stmtCheckStudent = $conn->prepare($sqlCheckStudent);
+$stmtCheckStudent->bind_param("i", $orderId); // Order ID = integer
+$stmtCheckStudent->execute();
+$resultCheckStudent = $stmtCheckStudent->get_result();
+$orderStudent = $resultCheckStudent->fetch_assoc();
+
+if (!$orderStudent || $orderStudent["student_id"] !== $student_id) {
+    echo json_encode(["success" => false, "message" => "Unauthorized action: Order does not belong to you."]);
+    exit;
+}
+
+// Debugging: Log student check
+error_log("Order Student ID: " . $orderStudent["student_id"] . " | Logged-in Student ID: " . $student_id);
 
 // Start transaction
 $conn->begin_transaction();
@@ -77,28 +90,30 @@ try {
     // Delete the order item
     $sqlDeleteItem = "DELETE FROM orders_items WHERE id = ?";
     $stmtDeleteItem = $conn->prepare($sqlDeleteItem);
-    $stmtDeleteItem->bind_param("i", $orderItemId);
+    $stmtDeleteItem->bind_param("i", $orderItemId); // Order item ID = integer
     $stmtDeleteItem->execute();
 
     // Check if any items remain for the order
     $sqlCheckOrder = "SELECT COUNT(*) AS remaining FROM orders_items WHERE order_id = ?";
     $stmtCheckOrder = $conn->prepare($sqlCheckOrder);
-    $stmtCheckOrder->bind_param("i", $orderId);
+    $stmtCheckOrder->bind_param("i", $orderId); // Order ID = integer
     $stmtCheckOrder->execute();
     $resultCheckOrder = $stmtCheckOrder->get_result();
     $rowCheckOrder = $resultCheckOrder->fetch_assoc();
 
     if ($rowCheckOrder["remaining"] == 0) {
         // Delete associated payment record first
-        $sqlDeletePayment = "DELETE FROM payments WHERE order_id = ?";
+        $sqlDeletePayment = "DELETE FROM payments WHERE order_id = ? AND EXISTS (
+            SELECT 1 FROM orders WHERE id = ? AND student_id = ?
+        )";
         $stmtDeletePayment = $conn->prepare($sqlDeletePayment);
-        $stmtDeletePayment->bind_param("i", $orderId);
+        $stmtDeletePayment->bind_param("iis", $orderId, $orderId, $student_id); // Order ID = int, Student ID = string
         $stmtDeletePayment->execute();
 
         // If no more items, delete the order itself
         $sqlDeleteOrder = "DELETE FROM orders WHERE id = ? AND student_id = ?";
         $stmtDeleteOrder = $conn->prepare($sqlDeleteOrder);
-        $stmtDeleteOrder->bind_param("is", $orderId, $student_id);
+        $stmtDeleteOrder->bind_param("is", $orderId, $student_id); // Order ID = int, Student ID = string
         $stmtDeleteOrder->execute();
     }
 
@@ -113,6 +128,8 @@ try {
 
 exit;
 ?>
+
+
 
 
 
