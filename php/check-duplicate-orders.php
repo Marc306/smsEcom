@@ -19,7 +19,7 @@ $stmt->bind_param("ss", $studentId, $productId);
 $stmt->execute();
 $result = $stmt->get_result()->fetch_assoc();
 
-$response = ["duplicate" => $result["total"] >= 2]; // ✅ Prevent more than 2 purchases
+$response = ["duplicate" => $result["total"] == 1]; // ✅ Prevent more than 2 purchases
 echo json_encode($response);
 ?>
 
