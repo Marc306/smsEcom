@@ -28,7 +28,7 @@ $result = $stmt->get_result()->fetch_assoc();
 error_log("🔹 Purchase count for Product ID: $productId, Student ID: $studentId is: " . $result["total"]);
 
 // Respond with whether the student has purchased the product more than twice
-$response = ["duplicate" => $result["total"] >= 2]; // Prevent more than 2 purchases
+$response = ["duplicate" => $result["total"] >= 1]; // Prevent more than 2 purchases
 echo json_encode($response);
 ?>
 
