@@ -84,6 +84,7 @@ function checkoutNowBtn() {
         let requestData = buyNowProduct 
             ? {
                 type: "buy_now",
+                payment_method: paymentMethod,
                 product: {
                     ...buyNowProduct,
                     size: buyNowProduct.typeItem === "uniform" ? buyNowProduct.size : null,
@@ -93,7 +94,7 @@ function checkoutNowBtn() {
             }
             : {
                 type: "cart",
-                // payment_method: paymentMethod,
+                payment_method: paymentMethod,
                 cart: cartItems.map(item => ({
                     productId: item.productId,
                     quantity: item.quantity,
