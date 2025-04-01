@@ -146,8 +146,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         await ordersFetch();
         itemCartStorage.cartStorage();
+
+        checkoutNowBtn();
     } catch (error) {
         console.error("🚨 Error loading cart data:", error);
     }
-    checkoutNowBtn();
+    // checkoutNowBtn();
 });
