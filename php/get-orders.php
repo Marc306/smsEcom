@@ -1,4 +1,4 @@
-<?php
+<?php 
 session_start();
 require "connection.php"; // Ensure this connects to your database
 
@@ -19,25 +19,8 @@ if (!$student_id) {
     exit;
 }
 
-// 🔍 Verify that the student has orders
-$sql_verify = "SELECT COUNT(*) AS order_count FROM orders WHERE student_id = ?";
-$stmt_verify = $conn->prepare($sql_verify);
-$stmt_verify->bind_param("s", $student_id);
-$stmt_verify->execute();
-$result_verify = $stmt_verify->get_result();
-$order_check = $result_verify->fetch_assoc();
-
-// Log the order count for debugging
-file_put_contents($debug_log_file, "Order count: " . json_encode($order_check) . "\n", FILE_APPEND);
-
-if ($order_check["order_count"] == 0) {
-    file_put_contents($debug_log_file, "ERROR: No orders found for student_id: $student_id\n", FILE_APPEND);
-    echo json_encode(["success" => true, "orders" => []]); // Return empty orders array for consistency
-    exit;
-}
-
-// 🔍 Fetch orders
-$sql_orders = "SELECT o.id, o.total_price, o.payment_method, o.status, o.created_at, 
+// Fetch only the orders belonging to the logged-in student
+$sql_orders = "SELECT o.id, o.student_id, o.total_price, o.payment_method, o.status, o.created_at, 
                       COALESCE(s.schedule_date, 'Not scheduled') AS schedule_date
                FROM orders o 
                LEFT JOIN schedules s ON o.id = s.order_id 
@@ -50,9 +33,14 @@ $result_orders = $stmt_orders->get_result();
 
 $orders = [];
 while ($order = $result_orders->fetch_assoc()) {
+    // Ensure the order belongs to the logged-in student
+    if ($order["student_id"] != $student_id) {
+        continue; // Skip orders that do not belong to the logged-in student
+    }
+
     $order_id = $order["id"];
 
-    // 🔍 Fetch items for this order
+    // Fetch items only for this student's order
     $sql_items = "SELECT productId, name, image, quantity, size, gender FROM orders_items WHERE order_id = ?";
     $stmt_items = $conn->prepare($sql_items);
     $stmt_items->bind_param("i", $order_id);
@@ -64,7 +52,7 @@ while ($order = $result_orders->fetch_assoc()) {
         $items[] = $item;
     }
 
-    // 🔍 Fetch payment details
+    // Fetch payment details for this student's order
     $sql_payment = "SELECT amount, status FROM payments WHERE order_id = ?";
     $stmt_payment = $conn->prepare($sql_payment);
     $stmt_payment->bind_param("i", $order_id);
@@ -79,10 +67,14 @@ while ($order = $result_orders->fetch_assoc()) {
     $orders[] = $order;
 }
 
-// ✅ Return orders in JSON format
+// Log retrieved orders count
+file_put_contents($debug_log_file, "Total orders fetched: " . count($orders) . "\n", FILE_APPEND);
+
+// Return orders in JSON format
 echo json_encode(["success" => true, "orders" => $orders]);
 exit;
 ?>
+
 
 
 
