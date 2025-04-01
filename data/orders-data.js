@@ -1,19 +1,39 @@
+// export let orders = [];
+
+// export async function ordersFetch() {
+//     try {
+//         const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/get-orders.php");
+//         // const response = await fetch("http://localhost/smsEcommerce/php/get-orders.php");
+//         const ordersItem = await response.json();
+
+//         orders = ordersItem.orders;
+//         return orders; 
+
+//     } catch (error) {
+//         console.error(`Unexpected error: ${error.message}. Please try again later.`);
+//         return [];
+//     }
+// }
 export let orders = [];
 
 export async function ordersFetch() {
     try {
         const response = await fetch("https://ecommerce.schoolmanagementsystem2.com/php/get-orders.php");
-        // const response = await fetch("http://localhost/smsEcommerce/php/get-orders.php");
         const ordersItem = await response.json();
+        console.log("Fetched Orders Item:", ordersItem); // Log the full response to ensure it's correct
 
-        orders = ordersItem.orders;
-        return orders; 
-
+        if (ordersItem.success && Array.isArray(ordersItem.orders)) {
+            orders = ordersItem.orders;
+        } else {
+            console.error("Error: No orders returned or incorrect format", ordersItem);
+            orders = [];
+        }
     } catch (error) {
-        console.error(`Unexpected error: ${error.message}. Please try again later.`);
-        return [];
+        console.error("Error fetching orders:", error);
+        orders = []; // Ensure that orders is always set to an empty array on error
     }
 }
+
 
 export async function deleteOrder(productId) {
     try {

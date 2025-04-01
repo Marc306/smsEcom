@@ -63,12 +63,62 @@
 //     cartCounter(); 
 // });
 
+
+
+
+// import { itemCartStorage } from "../data/checkout-cart.js";
+// import { ordersFetch, orders } from "../data/orders-data.js";
+
+// export function cartCounter() {
+//     let itemCart = 0;
+//     let hasItems = false; 
+
+//     // Ensure elements exist to avoid errors
+//     const cartCount = document.querySelector(".cart-count");
+//     const notifElement = document.querySelector(".notif");
+//     const notifBurger = document.querySelector(".notif-burger");
+//     const notifProfile = document.querySelector(".notif-profile");
+
+//     if (!cartCount || !notifElement || !notifBurger || !notifProfile) return;
+
+//     itemCartStorage.cartItems.forEach((eachItemCart) => {
+//         const quantity = eachItemCart.quantity;
+//         if (typeof quantity === "number" && !isNaN(quantity)) {
+//             itemCart += quantity;
+//             hasItems = true;
+//         } else {
+//             console.warn(`Invalid quantity detected for productId: ${eachItemCart.productId}`, quantity);
+//         }
+//     });
+
+//     cartCount.innerHTML = itemCart || "";
+
+//     const hasOrders = orders.length !== 0;
+
+//     // Toggle notification classes based on cart & orders
+//     notifElement.classList.toggle("notif-active", hasItems || hasOrders);
+//     notifBurger.classList.toggle("notif-burger-active", hasItems || hasOrders);
+//     notifProfile.classList.toggle("notif-profile-active", hasOrders);
+// }
+
+// document.addEventListener("DOMContentLoaded", async () => {
+//     try {
+//         await itemCartStorage.cartStorage();
+//         await ordersFetch();
+//     } catch (error) {
+//         console.error("Error loading cart data:", error);
+//     }
+
+//     cartCounter();
+// });
+
+
 import { itemCartStorage } from "../data/checkout-cart.js";
 import { ordersFetch, orders } from "../data/orders-data.js";
 
 export function cartCounter() {
     let itemCart = 0;
-    let hasItems = false; 
+    let hasItems = false;
 
     // Ensure elements exist to avoid errors
     const cartCount = document.querySelector(".cart-count");
@@ -90,7 +140,8 @@ export function cartCounter() {
 
     cartCount.innerHTML = itemCart || "";
 
-    const hasOrders = orders.length !== 0;
+    // Ensure `orders` is defined before checking its length
+    const hasOrders = Array.isArray(orders) && orders.length !== 0;
 
     // Toggle notification classes based on cart & orders
     notifElement.classList.toggle("notif-active", hasItems || hasOrders);
@@ -100,11 +151,15 @@ export function cartCounter() {
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {
+        // Wait for both cartStorage and ordersFetch to finish
         await itemCartStorage.cartStorage();
-        await ordersFetch();
+        await ordersFetch();  // Wait for ordersFetch to resolve
+
+        // Now that both are done, run cartCounter
+        cartCounter();
     } catch (error) {
         console.error("Error loading cart data:", error);
     }
-
-    cartCounter();
 });
+
+
