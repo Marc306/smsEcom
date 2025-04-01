@@ -20,15 +20,16 @@ error_log("🔹 Checking duplicate for Product ID: $productId, Student ID: $stud
 // Query the database to count how many times the student has bought this product
 $query = "SELECT COUNT(*) as total FROM orders WHERE student_id = ? AND productId = ?";
 $stmt = $conn->prepare($query);
-$stmt->bind_param("ss", $studentId, $productId);
+$stmt->bind_param("ss", $studentId, $productId); // Change "ss" to "ii" if they are integers
 $stmt->execute();
 $result = $stmt->get_result()->fetch_assoc();
 
 // Debugging: Log the total count of purchases
 error_log("🔹 Purchase count for Product ID: $productId, Student ID: $studentId is: " . $result["total"]);
 
-// Respond with whether the student has purchased the product more than twice
-$response = ["duplicate" => $result["total"] >= 1]; // Prevent more than 2 purchases
+// Respond with whether the student has purchased the product more than once
+$response = ["duplicate" => $result["total"] >= 1]; // Prevent more than 1 purchase
 echo json_encode($response);
 ?>
+
 

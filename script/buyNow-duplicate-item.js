@@ -56,8 +56,10 @@ async function buyNowItemAndIfDuplicate() {
 
             const data = await response.json();
 
+            console.log(data);
+
             if (data.duplicate) {
-                alert("You have already checked out this item. You can only purchase it twice.");
+                alert("You have already checked out this item. You can only purchase it once.");
                 return;
             }
 
@@ -94,9 +96,11 @@ async function buyNowItemAndIfDuplicate() {
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         await ordersFetch(); // Load previous orders
+
+        buyNowItemAndIfDuplicate();
     } catch (error) {
         console.error("Error fetching order data:", error);
     }
 
-    buyNowItemAndIfDuplicate();
+    // buyNowItemAndIfDuplicate();
 });
