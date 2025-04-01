@@ -29,16 +29,14 @@ $payment_method = trim($data["payment_method"] ?? ($data["product"]["payment_met
 
 // Allowed payment methods
 $valid_methods = ["Kasunduan", "Walk-In Payment", "Gcash Payment"];
-$debug_log_file = "payment_debug.log"; // Ensure this file has write permissions
+
 // Log received payment method before validation
-file_put_contents($debug_log_file, "🔍 Received Payment Method: " . json_encode($payment_method) . "\n", FILE_APPEND);
+echo "📢 Received Payment Method: " . $payment_method . "\n"; // Debugging
 if (!in_array($payment_method, $valid_methods, true)) {
-    file_put_contents($debug_log_file, "❌ Invalid Payment Method Detected: " . json_encode($payment_method) . "\n", FILE_APPEND);
+    echo "❌ Invalid Payment Method Detected: " . $payment_method . "\n";
     echo json_encode(["success" => false, "error" => "Invalid payment method."]);
     exit;
 }
-// Log successful validation
-file_put_contents($debug_log_file, "✅ Valid Payment Method: " . json_encode($payment_method) . "\n", FILE_APPEND);
 
 
 // Verify student exists
