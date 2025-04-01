@@ -6,6 +6,7 @@ header("Content-Type: application/json");
 
 // Database connection
 require_once "connection.php";
+session_start(); // Start session to get student_id
 
 // Read JSON input from JavaScript fetch request
 $data = json_decode(file_get_contents("php://input"), true);
@@ -13,6 +14,13 @@ $data = json_decode(file_get_contents("php://input"), true);
 // Validate request method
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     echo json_encode(["success" => false, "message" => "Invalid request method."]);
+    exit;
+}
+
+// Get student ID from session
+$student_id = $_SESSION["student_id"] ?? null;
+if (!$student_id) {
+    echo json_encode(["success" => false, "message" => "User not logged in."]);
     exit;
 }
 
@@ -29,18 +37,19 @@ if (empty($productId)) {
     exit;
 }
 
-// Find the order item and check its payment status
+// Find the order item and check if it belongs to the logged-in student
 $sqlFind = "SELECT 
                 oi.id AS order_item_id, 
                 oi.order_id, 
+                o.student_id, 
                 COALESCE(p.status, 'Pending') AS payment_status 
             FROM orders_items oi
             JOIN orders o ON oi.order_id = o.id
             LEFT JOIN payments p ON o.id = p.order_id 
-            WHERE oi.productId = ?";
+            WHERE oi.productId = ? AND o.student_id = ?";
 
 $stmtFind = $conn->prepare($sqlFind);
-$stmtFind->bind_param("s", $productId);
+$stmtFind->bind_param("si", $productId, $student_id);
 $stmtFind->execute();
 $resultFind = $stmtFind->get_result();
 $orderItem = $resultFind->fetch_assoc();
@@ -48,9 +57,9 @@ $orderItem = $resultFind->fetch_assoc();
 // Debugging: Log query results
 error_log("Query Result: " . json_encode($orderItem));
 
-// Check if order item exists
+// Check if order item exists and belongs to the student
 if (!$orderItem) {
-    echo json_encode(["success" => false, "message" => "Order item not found."]);
+    echo json_encode(["success" => false, "message" => "Order item not found or unauthorized action."]);
     exit;
 }
 
@@ -60,12 +69,6 @@ $paymentStatus = $orderItem["payment_status"];
 
 // Debugging: Log payment status
 error_log("Payment Status: " . $paymentStatus);
-
-// Prevent cancellation if payment is not pending
-// if ($paymentStatus !== "Pending") {
-//     echo json_encode(["success" => false, "message" => "Order cannot be canceled as payment has been processed."]);
-//     exit;
-// }
 
 // Start transaction
 $conn->begin_transaction();
@@ -93,9 +96,9 @@ try {
         $stmtDeletePayment->execute();
 
         // If no more items, delete the order itself
-        $sqlDeleteOrder = "DELETE FROM orders WHERE id = ?";
+        $sqlDeleteOrder = "DELETE FROM orders WHERE id = ? AND student_id = ?";
         $stmtDeleteOrder = $conn->prepare($sqlDeleteOrder);
-        $stmtDeleteOrder->bind_param("i", $orderId);
+        $stmtDeleteOrder->bind_param("is", $orderId, $student_id);
         $stmtDeleteOrder->execute();
     }
 
@@ -110,6 +113,7 @@ try {
 
 exit;
 ?>
+
 
 
 
