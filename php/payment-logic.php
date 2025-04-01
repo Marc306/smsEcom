@@ -25,7 +25,12 @@ $data = json_decode($raw_input, true);
 file_put_contents($debug_log_file, "🔵 Raw JSON Input: " . $raw_input . "\n", FILE_APPEND);
 
 // Extract payment method
-$payment_method = trim($data["payment_method"] ?? ($data["cart"][0]["payment_method"] ?? ""));
+$payment_method = trim($data["payment_method"] ?? "");
+
+// Check if it's a Buy Now order (if product data is present)
+if ($data["type"] === "buy_now") {
+    $payment_method = trim($data["product"]["payment_method"] ?? $payment_method);
+}
 
 // Allowed payment methods
 $valid_methods = ["Kasunduan", "Walk-In Payment", "Gcash Payment"];
