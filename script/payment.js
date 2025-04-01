@@ -93,6 +93,7 @@ function checkoutNowBtn() {
             }
             : {
                 type: "cart",
+                payment_method: paymentMethod,
                 cart: cartItems.map(item => ({
                     productId: item.productId,
                     quantity: item.quantity,
