@@ -27,9 +27,12 @@ $stmt_verify->execute();
 $result_verify = $stmt_verify->get_result();
 $order_check = $result_verify->fetch_assoc();
 
+// Log the order count for debugging
+file_put_contents($debug_log_file, "Order count: " . json_encode($order_check) . "\n", FILE_APPEND);
+
 if ($order_check["order_count"] == 0) {
     file_put_contents($debug_log_file, "ERROR: No orders found for student_id: $student_id\n", FILE_APPEND);
-    echo json_encode(["success" => false, "error" => "No orders found"]);
+    echo json_encode(["success" => true, "orders" => []]); // Return empty orders array for consistency
     exit;
 }
 
@@ -80,5 +83,6 @@ while ($order = $result_orders->fetch_assoc()) {
 echo json_encode(["success" => true, "orders" => $orders]);
 exit;
 ?>
+
 
 
