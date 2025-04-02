@@ -1,19 +1,22 @@
 <?php
+//AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI
 // Set the content type for JSON responses
 header('Content-Type: application/json');
 
-// Sample authentication (use environment variables in production instead of hardcoding API keys)
-$apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI";  // Use environment variable for storing API key
+// Get the API key from an environment variable (don't hardcode in production)
+//$apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI";  // Fetch the API key from environment variables
+$apiKey = getenv('API_KEY');
 
 // Get the headers from the request
 $headers = getallheaders();
-$apiKeyHeader = isset($headers['API_KEY']) ? $headers['API_KEY'] : null;
+$apiKeyHeader = isset($headers['API_KEY']) ? $headers['API_KEY'] : null;  // Retrieve the API key from request header
 
 // Check if the correct API key is provided in the header
 if ($apiKeyHeader !== $apiKey) {
     echo json_encode(['status' => 'error', 'message' => 'Unauthorized']);
     exit;
 }
+
 
 // Get the raw POST data
 $data = json_decode(file_get_contents("php://input"), true);

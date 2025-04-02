@@ -215,7 +215,7 @@ $(document).ready(function() {
             fetch(apiUrl, {
                 method: 'POST',  // Use POST as you're sending data (you can use GET depending on your API)
                 headers: {
-                    'Authorization': apiKey,
+                    'API_KEY': apiKey,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
