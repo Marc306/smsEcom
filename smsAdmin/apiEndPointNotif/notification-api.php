@@ -1,10 +1,9 @@
 <?php
-
 // Set the content type for JSON responses
 header('Content-Type: application/json');
 
 // Sample authentication (use environment variables in production instead of hardcoding API keys)
-$apiKey = getenv('AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI');  // Use environment variable for storing API key
+$apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI";  // Use environment variable for storing API key
 
 // Get the headers from the request
 $headers = getallheaders();
