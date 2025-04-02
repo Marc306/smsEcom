@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 
 // Get the API key from an environment variable (don't hardcode in production)
 //$apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI";  // Fetch the API key from environment variables
-$apiKey = getenv('API_KEY');
+$apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI";
 
 // Get the headers from the request
 $headers = getallheaders();
