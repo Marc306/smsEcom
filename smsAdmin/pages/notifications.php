@@ -175,9 +175,10 @@ $(document).ready(function() {
         var notificationType = $(this).val();
         var studentId = $('#student_id').val();
         var studentName = $('#student_id option:selected').text().split(" - ")[1]; // Extract the student name
+        var message = "Default Message";
 
         if (notificationType && studentId) {
-            generateMessage(notificationType, studentName)
+            generateMessage(notificationType, studentName, message)
                 .then(generatedMessage => {
                     $('#message').val(generatedMessage);  // Set the generated message in the message field
                 })
@@ -190,7 +191,7 @@ $(document).ready(function() {
     });
 
     // Function to generate message based on notification type using an API
-    function generateMessage(type, studentName) {
+    function generateMessage(type, studentId, message) {
         const apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI"; // Store your API key securely, avoid hardcoding it in production.
 
         return new Promise((resolve, reject) => {
