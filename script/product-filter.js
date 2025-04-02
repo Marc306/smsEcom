@@ -38,7 +38,7 @@ class FilterSideProduct extends Product {
                     filteredProducts = this.productList;
                 } else {
                     filteredProducts = this.productList.filter((product) =>
-                        product.productCategories.includes(categoryFilter)
+                        product.productcategories.includes(categoryFilter)
                     );
                 }
                 localStorage.setItem("selectedCategory", JSON.stringify(filteredProducts));

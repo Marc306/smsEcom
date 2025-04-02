@@ -221,14 +221,18 @@ $(document).ready(function() {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    student_name: studentName,
-                    notification_type: type
+                    student_id: studentId, // Using student_id
+                    notification_type: type,
+                    message: message // added message key.
                 })
             })
             .then(response => response.json())
             .then(data => {
-                // Assuming the API sends back a message field that contains the message body
-                resolve(`Hello ${studentName}, ${data.message}`);
+                if (data.status === 'success') {
+                    resolve(`Hello ${studentId}, ${data.message}`); //uses data.message from php.
+                } else {
+                    reject(`Hello ${studentId}, ${data.message}`); //uses data.message from php.
+                }
             })
             .catch(error => {
                 console.error('Error fetching the message:', error);
