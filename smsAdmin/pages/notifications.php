@@ -211,11 +211,13 @@ $(document).ready(function() {
                     return;
             }
 
+            console.log('API URL:', apiUrl);
+
             // Fetch the message from the API
             fetch(apiUrl, {
                 method: 'POST',  // Use POST as you're sending data (you can use GET depending on your API)
                 headers: {
-                    'API_KEY': "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI",
+                    'API_KEY': apiKey,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
