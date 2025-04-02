@@ -202,7 +202,7 @@ $(document).ready(function() {
                     prompt = `Compose a product update notification for student ${studentName}, informing them about updates to uniforms or books in our ecommerce store. The message to include is: ${message}. Keep the message concise and relevant to school supplies.`;
                     break;
                 case 'order_status':
-                    message = `Hello ${studentName}`;
+                    prompt = `Compose a brief order status notification for student ${studentName}, about their uniform or book purchase. Include the following message: "${message}".`;
                     break;
                 case 'reminder':
                     prompt = `Compose a reminder notification for student ${studentName}, regarding upcoming deadlines or availability of uniforms or books. The message to include is: ${message}. Make it clear and actionable.`;
