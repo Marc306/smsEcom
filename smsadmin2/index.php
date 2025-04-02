@@ -79,7 +79,7 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
                             </a>
                         </li>
                         <li>
-                            <a href="logout.php" class="nav-link text-white">
+                            <a href="logout2.php" class="nav-link text-white">
                                 <i class="fas fa-sign-out-alt me-2"></i>Logout
                             </a>
                         </li>
