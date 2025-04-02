@@ -3,11 +3,15 @@
 // Set the content type for JSON responses
 header('Content-Type: application/json');
 
-// Sample authentication (you can replace this with actual security checks)
-$apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI";  // Replace with your actual API key
+// Sample authentication (use environment variables in production instead of hardcoding API keys)
+$apiKey = getenv('AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI');  // Use environment variable for storing API key
+
+// Get the headers from the request
+$headers = getallheaders();
+$apiKeyHeader = isset($headers['API_KEY']) ? $headers['API_KEY'] : null;
 
 // Check if the correct API key is provided in the header
-if ($_SERVER['HTTP_API_KEY'] !== $apiKey) {
+if ($apiKeyHeader !== $apiKey) {
     echo json_encode(['status' => 'error', 'message' => 'Unauthorized']);
     exit;
 }
@@ -46,19 +50,18 @@ if (isset($data['notification_type']) && isset($data['student_id']) && isset($da
 // Functions to handle each notification type
 function sendProductUpdateNotification($studentId, $message) {
     // Logic to send product update notification, e.g., save to DB or trigger external service
-    // Here, we'll just log the action for simplicity.
     error_log("Sending product update to student ID $studentId: $message");
 }
 
 function sendOrderStatusNotification($studentId, $message) {
     // Logic to send order status notification, e.g., save to DB or trigger external service
-    // Here, we'll just log the action for simplicity.
     error_log("Sending order status to student ID $studentId: $message");
 }
 
 function sendReminderNotification($studentId, $message) {
     // Logic to send reminder notification, e.g., save to DB or trigger external service
-    // Here, we'll just log the action for simplicity.
     error_log("Sending reminder to student ID $studentId: $message");
 }
+
 ?>
+
