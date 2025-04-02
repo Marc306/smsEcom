@@ -28,7 +28,7 @@
             <p class="gcash-number"><strong>GCash Number: 09XXXXXXXXX</strong></p>
             <button id="copyNumber">Copy GCash Number</button>
 
-            <a href="user-purchase.php" class="back-link">⬅ Back to Checkout</a>
+            <a href="user-toPay.php" class="back-link">⬅ Back to Checkout</a>
         </div>
     </div>
 

@@ -126,9 +126,9 @@ function checkoutNowBtn() {
 
                 let redirectPage = {
                     "Gcash Payment": "gcash-QrCode.php",
-                    "Walk-In Payment": "user-purchase.php",
+                    "Walk-In Payment": "user-toPay.php",
                     "Kasunduan": "kasunduan-form.php"
-                }[paymentMethod] || "user-purchase.php";
+                }[paymentMethod] || "user-toPay.php";
 
                 window.location.href = redirectPage;
             } else {
