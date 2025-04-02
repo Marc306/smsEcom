@@ -3,7 +3,7 @@ require_once 'config2/database2.php';
 session_start();
 
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header("Location: login.php"); // Redirect to login if not logged in
+    header("Location: login2.php"); // Redirect to login if not logged in
     exit(); // Stop further execution
 }
 ?>
@@ -59,22 +59,22 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active" data-page="dashboard">
+                            <a href="#" class="nav-link active" data-page="dashboard2">
                                 <i class="fas fa-home me-2"></i>Dashboard
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white" data-page="orders">
+                            <a href="#" class="nav-link text-white" data-page="orders2">
                                 <i class="fas fa-shopping-cart me-2"></i>Orders
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white" data-page="products">
+                            <a href="#" class="nav-link text-white" data-page="products2">
                                 <i class="fas fa-box me-2"></i>Products
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white" data-page="pickup">
+                            <a href="#" class="nav-link text-white" data-page="pickup2">
                                 <i class="fas fa-calendar me-2"></i>Pickup Schedule
                             </a>
                         </li>
@@ -104,12 +104,12 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
     <script>
         $(document).ready(function() {
             // Load dashboard by default
-            loadPage('dashboard');
+            loadPage('dashboard2');
 
             // Handle navigation
             $('.nav-link').click(function(e) {
                 // Skip the logout link
-                if ($(this).attr('href') === 'logout.php') {
+                if ($(this).attr('href') === 'logout2.php') {
                     return; // Do not trigger page load for logout
                 }
 
