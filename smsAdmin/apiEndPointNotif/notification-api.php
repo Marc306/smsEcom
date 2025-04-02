@@ -11,6 +11,11 @@ $apiKey = getenv('API_KEY');
 $headers = getallheaders();
 $apiKeyHeader = isset($headers['API_KEY']) ? $headers['API_KEY'] : null;  // Retrieve the API key from request header
 
+echo json_encode([
+    'received_api_key' => $apiKeyHeader,
+    'expected_api_key' => $apiKey
+]);
+
 // Check if the correct API key is provided in the header
 if ($apiKeyHeader !== $apiKey) {
     echo json_encode(['status' => 'error', 'message' => 'Unauthorized']);
