@@ -237,7 +237,7 @@ $(document).ready(function() {
             })
             .catch(error => {
                 console.error('Error fetching the message:', error);
-                reject(`Hello ${studentName}, we encountered an error while fetching the message.`);
+                reject(`Hello ${studentId}, we encountered an error while fetching the message.`);
             });
         });
     }
