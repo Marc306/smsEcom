@@ -369,6 +369,8 @@ class Details {
                 productDetails.gender = gender;
                 productDetails.size = size;
             }
+
+            console.log(productDetails);
     
             sessionStorage.setItem("buyNowProduct", JSON.stringify(productDetails));
 

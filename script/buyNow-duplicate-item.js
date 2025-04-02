@@ -3,6 +3,8 @@ import { ordersFetch } from "../data/orders-data.js";
 export async function buyNowItemAndIfDuplicate() {
     const storedProduct = sessionStorage.getItem("buyNowProduct");
 
+    console.log("Stored Product:", storedProduct);
+
     if (!storedProduct) {
         console.error("❌ Error: No product found in session storage.");
         return;
