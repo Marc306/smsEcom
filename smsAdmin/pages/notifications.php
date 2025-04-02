@@ -199,13 +199,13 @@ $(document).ready(function() {
 
             switch (type) {
                 case 'product_update':
-                    prompt = `Compose a product update notification for student ${studentName}. The default message is: ${message}`;
+                    prompt = `Compose a product update notification for student ${studentName}, informing them about updates to uniforms or books in our ecommerce store. The message to include is: ${message}. Keep the message concise and relevant to school supplies.`;
                     break;
                 case 'order_status':
-                    prompt = `Compose an order status notification for student ${studentName}. The default message is: ${message}`;
+                    prompt = `Compose an order status notification for student ${studentName}, regarding their purchase of uniforms or books. The message to include is: ${message}. Provide relevant order details.`;
                     break;
                 case 'reminder':
-                    prompt = `Compose a reminder notification for student ${studentName}. The default message is: ${message}`;
+                    prompt = `Compose a reminder notification for student ${studentName}, regarding upcoming deadlines or availability of uniforms or books. The message to include is: ${message}. Make it clear and actionable.`;
                     break;
                 default:
                     resolve(`Hello ${studentName}, we couldn't find a specific message.`);
