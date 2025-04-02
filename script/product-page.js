@@ -70,37 +70,37 @@ class Product {
     }
 }
 
-// //Load and display products when the DOM is ready
-// document.addEventListener("DOMContentLoaded", async () => {
-//     try {
-//         await productsLoadFetch();
-//         const allProduct = new Product(products);
-//         await allProduct.displayProduct(); //Wait for full product rendering
-//     } catch (error) {
-//         console.error("Error loading products:", error);
-//     }
-// });
-
-// Load and display products when the DOM is ready
+//Load and display products when the DOM is ready
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        // Fetch products initially
         await productsLoadFetch();
         const allProduct = new Product(products);
-
-        // Fetch stock data once and display products initially
-        const initialStockData = await allProduct.stockHandler.fetchStockData();
-        await allProduct.displayProduct(initialStockData);
-
-        // Refresh products every 10 seconds (10000ms)
-        setInterval(async () => {
-            console.log("Refreshing product data...");
-            await allProduct.refreshProducts(); // Update the product display with fresh stock data
-        }, 10000); // Refresh every 10 seconds
+        await allProduct.displayProduct(); //Wait for full product rendering
     } catch (error) {
         console.error("Error loading products:", error);
     }
 });
+
+// Load and display products when the DOM is ready
+// document.addEventListener("DOMContentLoaded", async () => {
+//     try {
+//         // Fetch products initially
+//         await productsLoadFetch();
+//         const allProduct = new Product(products);
+
+//         // Fetch stock data once and display products initially
+//         const initialStockData = await allProduct.stockHandler.fetchStockData();
+//         await allProduct.displayProduct(initialStockData);
+
+//         // Refresh products every 10 seconds (10000ms)
+//         setInterval(async () => {
+//             console.log("Refreshing product data...");
+//             await allProduct.refreshProducts(); // Update the product display with fresh stock data
+//         }, 10000); // Refresh every 10 seconds
+//     } catch (error) {
+//         console.error("Error loading products:", error);
+//     }
+// });
 
 
 
