@@ -191,7 +191,7 @@ $(document).ready(function() {
     });
 
     function generateMessage(type, studentName, message) { // studentName instead of studentId
-        const apiKey = "YOUR_GOOGLE_API_KEY"; // Replace with your actual Google API key.
+        const apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI"; // Replace with your actual Google API key.
         const apiUrl = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro-002:generateContent";
 
         return new Promise((resolve, reject) => {
