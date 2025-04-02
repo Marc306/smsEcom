@@ -174,70 +174,67 @@ $(document).ready(function() {
     $('#notification_type').on('change', function() {
         var notificationType = $(this).val();
         var studentId = $('#student_id').val();
-        var studentName = $('#student_id option:selected').text().split(" - ")[1]; // Extract the student name
+        var studentName = $('#student_id option:selected').text().split(" - ")[1];
         var message = "Default Message";
 
         if (notificationType && studentId) {
             generateMessage(notificationType, studentName, message)
                 .then(generatedMessage => {
-                    $('#message').val(generatedMessage);  // Set the generated message in the message field
+                    $('#message').val(generatedMessage);
                 })
                 .catch(error => {
-                    $('#message').val('Error: ' + error);  // Show error if something goes wrong
+                    $('#message').val('Error: ' + error);
                 });
         } else {
-            $('#message').val('');  // Clear message if no notification type or student is selected
+            $('#message').val('');
         }
     });
 
-    // Function to generate message based on notification type using an API
-    function generateMessage(type, studentId, message) {
-        const apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI"; // Store your API key securely, avoid hardcoding it in production.
+    function generateMessage(type, studentName, message) { // studentName instead of studentId
+        const apiKey = "YOUR_GOOGLE_API_KEY"; // Replace with your actual Google API key.
+        const apiUrl = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro-002:generateContent";
 
         return new Promise((resolve, reject) => {
-            // Determine the endpoint and data to send based on notification type
-            let apiUrl = '';
+            let prompt;
+
             switch (type) {
                 case 'product_update':
-                    apiUrl = 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/apiEndPointNotif/notification-api.php'; // Replace with your actual API endpoint
+                    prompt = `Compose a product update notification for student ${studentName}. The default message is: ${message}`;
                     break;
                 case 'order_status':
-                    apiUrl = 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/apiEndPointNotif/notification-api.php'; // Replace with your actual API endpoint
+                    prompt = `Compose an order status notification for student ${studentName}. The default message is: ${message}`;
                     break;
                 case 'reminder':
-                    apiUrl = 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/apiEndPointNotif/notification-api.php'; // Replace with your actual API endpoint
+                    prompt = `Compose a reminder notification for student ${studentName}. The default message is: ${message}`;
                     break;
                 default:
                     resolve(`Hello ${studentName}, we couldn't find a specific message.`);
                     return;
             }
 
-            console.log('API URL:', apiUrl);
-
-            // Fetch the message from the API
             fetch(apiUrl, {
-                method: 'POST',  // Use POST as you're sending data (you can use GET depending on your API)
+                method: 'POST',
                 headers: {
-                    'API_KEY': apiKey,
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'x-goog-api-key': apiKey,
                 },
                 body: JSON.stringify({
-                    student_id: studentId, // Using student_id
-                    notification_type: type,
-                    message: message // added message key.
+                    contents: [{
+                        parts: [{ text: prompt }]
+                    }]
                 })
             })
             .then(response => response.json())
             .then(data => {
-                if (data.status === 'success') {
-                    resolve(`Hello ${studentId}, ${data.message}`); //uses data.message from php.
+                if (data.candidates && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts[0].text) {
+                    resolve(`Hello ${studentName}, ${data.candidates[0].content.parts[0].text}`);
                 } else {
-                    reject(`Hello ${studentId}, ${data.message}`); //uses data.message from php.
+                    reject(`Hello ${studentName}, could not extract message from Gemini API.`);
                 }
             })
             .catch(error => {
-                console.error('Error fetching the message:', error);
-                reject(`Hello ${studentId}, we encountered an error while fetching the message.`);
+                console.error('Error fetching message from Gemini API:', error);
+                reject(`Hello ${studentName}, we encountered an error while fetching the message.`);
             });
         });
     }
