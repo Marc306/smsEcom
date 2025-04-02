@@ -376,7 +376,7 @@ class Details {
             await buyNowItemAndIfDuplicate();
 
             // Redirect to the payment option page
-            window.location.href = "http://localhost/smsEcommerce/payment-option.php";
+            window.location.href = "https://ecommerce.schoolmanagementsystem2.com/payment-option.php";
         });
     }
 }
