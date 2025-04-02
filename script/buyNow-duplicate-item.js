@@ -9,6 +9,7 @@ export async function buyNowItemAndIfDuplicate() {
         console.error("❌ Error: No product found in session storage.");
         return;
     }
+    
 
     let product;
     try {
