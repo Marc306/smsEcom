@@ -156,8 +156,320 @@ if (isset($conn)) {
         </div>
     </div>
 </div>
-
 <script>
+$(document).ready(function() {
+    // Enable form validation
+    var forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+
+    // Automated message generation based on notification type
+    $('#notification_type').on('change', function() {
+        var notificationType = $(this).val();
+        var studentId = $('#student_id').val();
+        var studentName = $('#student_id option:selected').text().split(" - ")[1]; // Extract the student name
+
+        if (notificationType && studentId) {
+            generateMessage(notificationType, studentName)
+                .then(generatedMessage => {
+                    $('#message').val(generatedMessage);  // Set the generated message in the message field
+                })
+                .catch(error => {
+                    $('#message').val('Error: ' + error);  // Show error if something goes wrong
+                });
+        } else {
+            $('#message').val('');  // Clear message if no notification type or student is selected
+        }
+    });
+
+    // Function to generate message based on notification type using an API
+    function generateMessage(type, studentName) {
+        const apiKey = "AIzaSyCDi_pimz_P7z_HsEgv36A7OsL-ggNVEvI"; // Store your API key securely, avoid hardcoding it in production.
+
+        return new Promise((resolve, reject) => {
+            // Determine the endpoint and data to send based on notification type
+            let apiUrl = '';
+            switch (type) {
+                case 'product_update':
+                    apiUrl = 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/apiEndPointNotif/notification-api.php'; // Replace with your actual API endpoint
+                    break;
+                case 'order_status':
+                    apiUrl = 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/apiEndPointNotif/notification-api.php'; // Replace with your actual API endpoint
+                    break;
+                case 'reminder':
+                    apiUrl = 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/apiEndPointNotif/notification-api.php'; // Replace with your actual API endpoint
+                    break;
+                default:
+                    resolve(`Hello ${studentName}, we couldn't find a specific message.`);
+                    return;
+            }
+
+            // Fetch the message from the API
+            fetch(apiUrl, {
+                method: 'POST',  // Use POST as you're sending data (you can use GET depending on your API)
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    student_name: studentName,
+                    notification_type: type
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Assuming the API sends back a message field that contains the message body
+                resolve(`Hello ${studentName}, ${data.message}`);
+            })
+            .catch(error => {
+                console.error('Error fetching the message:', error);
+                reject(`Hello ${studentName}, we encountered an error while fetching the message.`);
+            });
+        });
+    }
+
+    // Initialize DataTable with responsive features
+    var notificationsTable = $('#notificationsTable').DataTable({
+        "ajax": {
+            "url": 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/functions/get_notifications.php',
+            "type": "GET",
+            "error": function(xhr, error, thrown) {
+                console.error('DataTables Ajax error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Failed to load notifications. Please try again.'
+                });
+            }
+        },
+        "columns": [
+            { "data": "student_id" },
+            { "data": "message", "render": function(data) { return '<div class="text-break">' + data + '</div>'; } },
+            { "data": "notification_type", "render": function(data) { return '<span class="badge bg-secondary">' + data + '</span>'; } },
+            { "data": "is_read", "render": function(data) { return data == 1 ? '<span class="badge bg-success">Read</span>' : '<span class="badge bg-warning text-dark">Unread</span>'; } },
+            { "data": "created_at", "render": function(data) { return new Date(data).toLocaleString(); } }
+        ],
+        "order": [[4, "desc"]],
+        "responsive": true,
+        "pageLength": 10,
+        "language": {
+            "emptyTable": "No notifications found",
+            "zeroRecords": "No matching notifications found",
+            "info": "Showing _START_ to _END_ of _TOTAL_ notifications",
+            "infoEmpty": "No notifications available",
+            "infoFiltered": "(filtered from _MAX_ total notifications)",
+            "search": "Search notifications:",
+            "paginate": {
+                "first": "First",
+                "last": "Last",
+                "next": "Next",
+                "previous": "Previous"
+            }
+        },
+        "dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+               "<'row'<'col-sm-12'tr>>" +
+               "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>"
+    });
+
+    // Refresh button handler
+    $('#refreshBtn').on('click', function() {
+        const $btn = $(this);
+        const $spinner = $('#refreshSpinner');
+        
+        $btn.prop('disabled', true);
+        $spinner.removeClass('d-none');
+        
+        notificationsTable.ajax.reload(function() {
+            $btn.prop('disabled', false);
+            $spinner.addClass('d-none');
+        });
+    });
+
+    // Handle form submission
+    $('#addNotificationForm').on('submit', function(e) { 
+        e.preventDefault();
+
+        if (!this.checkValidity()) {
+            e.stopPropagation();
+            $(this).addClass('was-validated');
+            return;
+        }
+
+        const $form = $(this);
+        const formData = $form.serialize();
+        console.log('Submitting Data:', formData); // Debugging
+
+        $.ajax({
+            url: 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/functions/add_notification.php',
+            type: 'POST',
+            data: formData,
+            dataType: 'json',  
+            success: function(response) {
+                console.log('Server Response:', response); // Debugging log
+                if (response.status === 'success') {
+                    Swal.fire({ icon: 'success', title: 'Success', text: 'Notification sent successfully!' });
+                    $form[0].reset();
+                    $form.removeClass('was-validated');
+                    notificationsTable.ajax.reload();
+                } else {
+                    Swal.fire({ icon: 'error', title: 'Error', text: response.message || 'Failed to send notification.' });
+                }
+            },
+            error: function(xhr) {
+                console.error('AJAX error:', xhr.responseText);
+                Swal.fire({ icon: 'error', title: 'Error', text: 'An error occurred while sending the notification.' });
+            }
+        });
+    });
+});
+</script>
+
+<!-- <script>
+$(document).ready(function() {
+    // Enable form validation
+    var forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+
+    // Automated message generation based on notification type
+    $('#notification_type').on('change', function() {
+        var notificationType = $(this).val();
+        var studentId = $('#student_id').val();
+        var studentName = $('#student_id option:selected').text().split(" - ")[1]; // Extract the student name
+
+        if (notificationType && studentId) {
+            var generatedMessage = generateMessage(notificationType, studentName);
+            $('#message').val(generatedMessage);
+        } else {
+            $('#message').val('');
+        }
+    });
+
+    // Function to generate message based on notification type
+    function generateMessage(type, studentName) {
+        switch (type) {
+            case 'product_update':
+                return `Hello ${studentName}, a new update is available for the product you were interested in! Check out the latest features.`;
+            case 'order_status':
+                return `Hello ${studentName}, your order has been processed and shipped! You can track it using your tracking number.`;
+            case 'reminder':
+                return `Hello ${studentName}, this is a reminder that your assignment is due in 2 days. Please ensure you submit it on time.`;
+            default:
+                return '';
+        }
+    }
+
+    // Initialize DataTable with responsive features
+    var notificationsTable = $('#notificationsTable').DataTable({
+        "ajax": {
+            "url": 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/functions/get_notifications.php',
+            "type": "GET",
+            "error": function(xhr, error, thrown) {
+                console.error('DataTables Ajax error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Failed to load notifications. Please try again.'
+                });
+            }
+        },
+        "columns": [
+            { "data": "student_id" },
+            { "data": "message", "render": function(data) { return '<div class="text-break">' + data + '</div>'; } },
+            { "data": "notification_type", "render": function(data) { return '<span class="badge bg-secondary">' + data + '</span>'; } },
+            { "data": "is_read", "render": function(data) { return data == 1 ? '<span class="badge bg-success">Read</span>' : '<span class="badge bg-warning text-dark">Unread</span>'; } },
+            { "data": "created_at", "render": function(data) { return new Date(data).toLocaleString(); } }
+        ],
+        "order": [[4, "desc"]],
+        "responsive": true,
+        "pageLength": 10,
+        "language": {
+            "emptyTable": "No notifications found",
+            "zeroRecords": "No matching notifications found",
+            "info": "Showing _START_ to _END_ of _TOTAL_ notifications",
+            "infoEmpty": "No notifications available",
+            "infoFiltered": "(filtered from _MAX_ total notifications)",
+            "search": "Search notifications:",
+            "paginate": {
+                "first": "First",
+                "last": "Last",
+                "next": "Next",
+                "previous": "Previous"
+            }
+        },
+        "dom": "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+               "<'row'<'col-sm-12'tr>>" +
+               "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>"
+    });
+
+    // Refresh button handler
+    $('#refreshBtn').on('click', function() {
+        const $btn = $(this);
+        const $spinner = $('#refreshSpinner');
+        
+        $btn.prop('disabled', true);
+        $spinner.removeClass('d-none');
+        
+        notificationsTable.ajax.reload(function() {
+            $btn.prop('disabled', false);
+            $spinner.addClass('d-none');
+        });
+    });
+
+    // Handle form submission
+    $('#addNotificationForm').on('submit', function(e) { 
+        e.preventDefault();
+
+        if (!this.checkValidity()) {
+            e.stopPropagation();
+            $(this).addClass('was-validated');
+            return;
+        }
+
+        const $form = $(this);
+        const formData = $form.serialize();
+        console.log('Submitting Data:', formData); // Debugging
+
+        $.ajax({
+            url: 'https://ecommerce.schoolmanagementsystem2.com/smsAdmin/functions/add_notification.php',
+            type: 'POST',
+            data: formData,
+            dataType: 'json',  
+            success: function(response) {
+                console.log('Server Response:', response); // Debugging log
+                if (response.status === 'success') {
+                    Swal.fire({ icon: 'success', title: 'Success', text: 'Notification sent successfully!' });
+                    $form[0].reset();
+                    $form.removeClass('was-validated');
+                    notificationsTable.ajax.reload();
+                } else {
+                    Swal.fire({ icon: 'error', title: 'Error', text: response.message || 'Failed to send notification.' });
+                }
+            },
+            error: function(xhr) {
+                console.error('AJAX error:', xhr.responseText);
+                Swal.fire({ icon: 'error', title: 'Error', text: 'An error occurred while sending the notification.' });
+            }
+        });
+    });
+});
+</script> -->
+
+<!-- <script>
 $(document).ready(function() {
     // Enable form validation
     var forms = document.querySelectorAll('.needs-validation');
@@ -294,3 +606,5 @@ $(document).ready(function() {
         });
     });
 });
+
+</script> -->
