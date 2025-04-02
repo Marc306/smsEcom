@@ -95,7 +95,7 @@
                     <span class="a-tag">My Account</span>
                 </a>
                 
-                <a class="sidebar-link" href="user-purchase.php">
+                <a class="sidebar-link" href="user-toPay.php">
                     <img class="icon-sideBar" src="image/items.png" alt="">
                     <span class="a-tag">My Purchase</span>
                     <span class="purchase-notif"></span>
@@ -117,16 +117,16 @@
 
         <main class="main-div">
             <div class="selected-transaction">
-                <a class="all-transaction" href="user-purchase.php">
+                <!-- <a class="all-transaction" href="user-purchase.php">
                     All
-                </a>
-                <a class="toPay-transaction" href="user-topay.php">
+                </a> -->
+                <a class="toPay-transaction" href="user-toPay.php">
                     To Pay
                 </a>
                 <a class="toReceive-transaction" href="user-toReceive.php">
                     To Receive
                 </a>
-                <a class="completed-transaction" href="user-complete.php">
+                <a class="completed-transaction" href="user-completed.php">
                     Completed
                 </a> 
             </div>

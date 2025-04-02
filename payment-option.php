@@ -60,13 +60,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="payment-options">
-                    <div class="payment-option mb-3">
+                    <!-- <div class="payment-option mb-3">
                         <input type="radio" id="kasunduan" name="payment_method" value="Kasunduan">
                         <label for="kasunduan">
                             <h2><img class="icon-sign" src="image/icon/sign.png" alt=""> Agreement</h2>
                             <p>Use <a href="#">Agreement</a> if you want to buy the product you've chosen because it's necessary but don't currently have a budget. You can pay in the cashier by the given deadline.</p>
                         </label>
-                    </div>
+                    </div> -->
 
                     <div class="payment-option mb-3">
                         <input type="radio" id="walkin" name="payment_method" value="Walk-In Payment">
