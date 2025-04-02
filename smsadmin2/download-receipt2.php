@@ -1,5 +1,5 @@
 <?php
-require_once 'config/database2.php';
+require_once 'config2/database2.php';
 
 if (!isset($_GET['order_id'])) {
     die('Order ID not provided');

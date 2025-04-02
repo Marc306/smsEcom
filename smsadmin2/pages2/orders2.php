@@ -1,5 +1,5 @@
 <?php
-require_once '../config/database2.php';
+require_once '../config2/database2.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     ob_clean();
@@ -299,7 +299,7 @@ $result = $conn->query($query);
                         
                         if ($row['payment_method'] === 'Gcash Payment') {
                             if (!empty($row['receipt_url'])) {
-                                echo '<a href="https://ecommerce.schoolmanagementsystem2.com/smsadmin/download-receipt2.php?order_id=' . $row['id'] . '" class="btn btn-sm btn-primary">Download Receipt</a>';
+                                echo '<a href="https://ecommerce.schoolmanagementsystem2.com/smsadmin2/download-receipt2.php?order_id=' . $row['id'] . '" class="btn btn-sm btn-primary">Download Receipt</a>';
                             } else {
                                 echo '<span class="text-muted">No receipt uploaded</span>';
                             }

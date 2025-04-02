@@ -1,5 +1,5 @@
 <?php
-require_once '../config/database2.php';
+require_once '../config2/database2.php';
 
 // Get date range for calendar
 $start_date = date('Y-m-d');

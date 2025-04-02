@@ -1,5 +1,5 @@
 <?php
-require_once '../config/database2.php';
+require_once '../config2/database2.php';
 
 // Get total orders
 $sql = "SELECT COUNT(*) as total FROM orders";

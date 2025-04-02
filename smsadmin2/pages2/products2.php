@@ -1,5 +1,5 @@
 <?php 
-require_once '../config/database2.php';
+require_once '../config2/database2.php';
 
 // Handle product operations
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

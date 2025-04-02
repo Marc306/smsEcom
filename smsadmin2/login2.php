@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config/database2.php'; // Include your database connection
+require_once 'config2/database2.php'; // Include your database connection
 
 // Check if the user is already logged in
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {

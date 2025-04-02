@@ -1,5 +1,5 @@
 <?php
-require_once 'config/database.php';
+require_once 'config2/database2.php';
 session_start();
 
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
@@ -76,16 +76,6 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
                         <li>
                             <a href="#" class="nav-link text-white" data-page="pickup">
                                 <i class="fas fa-calendar me-2"></i>Pickup Schedule
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white" data-page="message-chat">
-                                <i class="fas fa-comment-alt"></i> Messages
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white" data-page="notifications">
-                                <i class="fas fa-bell me-2"></i>Notifications
                             </a>
                         </li>
                         <li>

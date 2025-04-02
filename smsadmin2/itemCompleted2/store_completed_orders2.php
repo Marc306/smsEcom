@@ -1,6 +1,6 @@
 <?php 
 header("Content-Type: application/json");
-require_once "../config/database2.php"; // Include database connection
+require_once "../config2/database2.php"; // Include database connection
 
 $data = json_decode(file_get_contents("php://input"), true);
 
