@@ -120,7 +120,7 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
             });
 
             function loadPage(page) {
-                $.get('pages/' + page + '.php', function(data) {
+                $.get('pages2/' + page + '.php', function(data) {
                     $('#content-area').html(data);
                 });
             }
