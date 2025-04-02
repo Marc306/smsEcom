@@ -2,6 +2,7 @@ import { pdl } from "../data/product-detail-list.js";
 import { products, productsLoadFetch } from "../data/the-products.js";
 import { itemCartStorage } from "../data/checkout-cart.js";
 import { cartCounter } from "./cart-counter.js";
+import { buyNowItemAndIfDuplicate } from "./buyNow-duplicate-item.js";
 
 class Details {
     matchingIdProduct;
@@ -169,9 +170,16 @@ class Details {
             }
     
             sessionStorage.setItem("buyNowProduct", JSON.stringify(productDetails));
-    
-            // ✅ Ensure correct redirection
-            window.location.href = "https://ecommerce.schoolmanagementsystem2.com/payment-option.php";
+
+            // Call the `buyNowItemAndIfDuplicate()` function and wait for it to complete
+            buyNowItemAndIfDuplicate().then(() => {
+                // ✅ Ensure correct redirection only after `buyNowItemAndIfDuplicate` is complete
+                window.location.href = "https://ecommerce.schoolmanagementsystem2.com/payment-option.php";
+            }).catch(error => {
+                // Handle any errors that occurred during the duplication check
+                console.error('Error during the duplicate check:', error);
+                alert('An error occurred. Please try again later.');
+            });
             // window.location.href = "http://localhost/smsEcommerce/payment-option.php";
         });
     }
@@ -184,12 +192,17 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             await productsLoadFetch();
             await itemCartStorage.cartStorage();
+
+            await buyNowItemAndIfDuplicate();
+
+            const displayDetailsOfProduct = new Details(products, pdl);
+            displayDetailsOfProduct.displayDetails();
         } catch (error) {
             console.log(error);
         }
 
-        const displayDetailsOfProduct = new Details(products, pdl);
-        displayDetailsOfProduct.displayDetails();
+        // const displayDetailsOfProduct = new Details(products, pdl);
+        // displayDetailsOfProduct.displayDetails();
     }
 
     fetchProductDetailsLoad();

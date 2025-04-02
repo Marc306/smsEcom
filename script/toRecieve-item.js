@@ -229,4 +229,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     tryLoad();
+
+    // Re-fetch orders every 10 seconds
+    setInterval(async () => {
+        await ordersFetch();
+        await productsLoadFetch();
+        await itemCartStorage.cartStorage();
+        const studentOrder = new Order(orders);
+        studentOrder.toRecieveOrders();
+    }, 10000); // Refresh every 10 seconds
 });

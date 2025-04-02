@@ -1,6 +1,6 @@
 import { ordersFetch } from "../data/orders-data.js";
 
-async function buyNowItemAndIfDuplicate() {
+export async function buyNowItemAndIfDuplicate() {
     const storedProduct = sessionStorage.getItem("buyNowProduct");
 
     if (!storedProduct) {
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         await ordersFetch(); // Load previous orders
 
-        buyNowItemAndIfDuplicate();
+        await buyNowItemAndIfDuplicate();
     } catch (error) {
         console.error("Error fetching order data:", error);
     }

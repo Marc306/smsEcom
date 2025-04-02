@@ -414,8 +414,9 @@ class Order {
     }
 }
 
+// Repeatedly fetch orders and update the UI
 document.addEventListener("DOMContentLoaded", () => {
-    async function tryLoad(){
+    async function tryLoad() {
         try {
             await ordersFetch();
             await productsLoadFetch();
@@ -433,11 +434,16 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error("Error fetching orders:", error);
         }
-
-        // const studentOrder = new Order(orders);
-        // console.log(orders);
-        // studentOrder.toPayOrders();
     }
 
+    // Initial load of orders
     tryLoad();
+
+    // Re-fetch orders every 10 seconds
+    setInterval(async () => {
+        await ordersFetch();
+        await itemCartStorage.cartStorage();
+        const studentOrder = new Order(orders);
+        studentOrder.toPayOrders();
+    }, 10000); // Refresh every 10 seconds
 });

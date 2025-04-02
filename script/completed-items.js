@@ -59,5 +59,10 @@ async function fetchCompletedOrders() {
 }
 
 // Call the function when the page loads
-document.addEventListener('DOMContentLoaded', fetchCompletedOrders);
+document.addEventListener('DOMContentLoaded', () => {
+    fetchCompletedOrders();
+    
+    // Refresh the data every 10 seconds (10000 milliseconds)
+    setInterval(fetchCompletedOrders, 10000);
+});
 
