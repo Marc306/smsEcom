@@ -26,7 +26,7 @@
                             </div>
                             
                             <div>
-                                <a id="downloadQR" href="gcash-qr-code.png" download="GCash-QR-Code.png" class="btn btn-primary mb-3">
+                                <a id="downloadQR" href="image/admin-gcash-QrCode.PNG" download="GCash-QR-Code.png" class="btn btn-primary mb-3">
                                     <i class="bi bi-download me-2"></i>Download QR Code
                                 </a>
                             </div>
