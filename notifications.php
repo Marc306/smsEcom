@@ -213,7 +213,7 @@ $conn->close();
                         <span class="a-tag">My Account</span>
                     </a>
                     
-                    <a class="sidebar-link" href="user-purchase.php">
+                    <a class="sidebar-link" href="user-toPay.php">
                         <img class="icon-sideBar" src="image/items.png" alt="">
                         <span class="a-tag">My Purchase</span>
                         <span class="purchase-notif"></span>

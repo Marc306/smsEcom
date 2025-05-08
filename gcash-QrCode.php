@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <!-- <link rel="stylesheet" href="css/page/QRcode.css"> -->
 </head>
-<body class="bg-light">
+<body style="background: linear-gradient(to right, #0076FF, #00C4FF);">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
                 <div class="card shadow-sm">
                     <div class="card-body p-4">
                         <div class="text-center mb-4">
-                            <img src="image/gcash-logo.png" alt="GCash Logo" class="img-fluid mb-3" style="max-height: 60px;">
+                            <img src="image/icon/gcash-logo.png" alt="GCash Logo" class="img-fluid mb-3" style="max-height: 60px;">
                             <h2 class="card-title text-primary">Pay via GCash</h2>
                             <p class="text-muted">Scan the QR code below or download it to upload in GCash</p>
                         </div>

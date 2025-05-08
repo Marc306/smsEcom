@@ -104,7 +104,7 @@
                 <a class="sidebar-link" href="#">
                     <img class="icon-sideBar" src="image/icon/notification.png" alt=""> 
                     <span class="a-tag">Notification</span>
-                    <span class="notif-number">1</span>
+                    <span class="notif-number"></span>
                 </a>
                 
                 <a class="sidebar-link" href="php/logout.php?logout=true">
